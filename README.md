@@ -1,1 +1,1 @@
-# covid-beds-availability-app
+# covid beds availability app
