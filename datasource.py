@@ -66,18 +66,48 @@ def extract_datasource_govt():
             data = {}
             for values in lines:
                 count = values.pop(0)
-                data[count] = dict(zip(keys, values))
+                if count != '' and values[2] != '' and values[3] != '':
+                    data[count] = dict(zip(keys, values))
             readFile.close()
-            # for keys, values in data.items():
-            #     print(keys, values)
-            import os
-            os.remove("file_govt.csv")
             return data
     except FileNotFoundError:
         pass
 
 
-data = extract_datasource_govt()
+def extract_datasource_pvt():
+    generate_datasource()
+    lines = list()
+    try:
+        with open('file_pvt.csv', 'r') as readFile:
+            reader = csv.reader(readFile)
+            for row in reader:
+                lines.append(row)
+                for field in row:
+                    if field == 'Sl.' or field == 'TOTAL':
+                        lines.remove(row)
+            keys = ["district", "hospital", "total_beds", "available_beds"]
+            data = {}
+            for values in lines:
+                count = values.pop(0).replace('.', '')
+                if count != '' and values[2] != '' and values[3] != '':
+                    data[count] = dict(zip(keys, values))
+            readFile.close()
+            return data
+    except FileNotFoundError:
+        pass
+
+
+def extract_all_datasource():
+    govt = extract_datasource_govt()
+    pvt = extract_datasource_pvt()
+    yesterday = get_yesterday().strftime("%d%m%Y")
+    import os
+    os.remove("file_pvt.csv")
+    os.remove("file_govt.csv")
+    return {yesterday: {'govt': govt, 'pvt': pvt}}
+
+
+data = extract_all_datasource()
 print(data)
 
 
