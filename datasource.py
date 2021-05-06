@@ -1,7 +1,4 @@
 import csv
-import json
-import pprint
-
 import schedule
 import time
 from collections import defaultdict
@@ -9,7 +6,10 @@ import requests
 import lxml.etree as etree
 import tabula, urllib
 
-# this is a datasource scheduler
+
+# this is a datasource scheduler.
+# it will be executed everyday at 6 AM
+# in he morning to capture the latest data
 
 
 def get_yesterday():
@@ -109,7 +109,6 @@ def extract_all_datasource():
 
 def connect_db():
     from pymongo import MongoClient
-    import pprint
     return MongoClient(host="localhost", port=27017)
 
 
@@ -122,18 +121,22 @@ def disconnect_db(client):
     client.close()
 
 
-data = extract_all_datasource()
-# print(json.dumps(data, sort_keys=True, indent=4))
-client = connect_db()
-collection = get_db_collection(client)
-for documnt in collection.find():
-    pprint.pprint(documnt)
-disconnect_db(client)
+def insert_datasource():
+    data = extract_all_datasource()
+    yesterday = get_yesterday().strftime("%d%m%Y")
+    client = connect_db()
+    collection = get_db_collection(client)
+    documnt = collection.find()
+    if yesterday not in documnt:
+        action = collection.insert_one(data)
+        print('Data updated. Object id ', action.inserted_id)
+    disconnect_db(client)
 
 
-# # schedule.every().day.at("06:00").do(extract_datasource)
-# schedule.every(1).minutes.do(extract_datasource)
-#
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+insert_datasource()
+schedule.every().day.at("06:00").do(insert_datasource)
+
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
