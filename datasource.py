@@ -1,9 +1,11 @@
 import csv
 import json
-
 import schedule
 import time
 from collections import defaultdict
+import requests
+import lxml.etree as etree
+import tabula, urllib
 
 # this is a datasource scheduler
 
@@ -14,49 +16,28 @@ def get_yesterday():
     return today - timedelta(days=1)
 
 
-def get_yesterday_govt():
-    yesterday = get_yesterday()
-    day = yesterday.strftime("%d")
-    month = yesterday.strftime("%m")
-    year = yesterday.strftime("%Y")
-    return f"{day}.{month}_.{year}"
-
-
-def get_yesterday_pvt():
-    yesterday = get_yesterday()
-    day = yesterday.day
-    month = yesterday.month
-    year = yesterday.strftime("%Y")
-    return f"{day}-{month}-.{year}"
-
-
 def generate_current_date_datasource_govt_url():
-    yesterday = get_yesterday_govt()
-    'https://www.wbhealth.gov.in/pages/corona/bed_availability_pvt'
-    # return f'https://www.wbhealth.gov.in/uploaded_files/corona/Vacant_bed_status_as_on_{yesterday}_.pdf'
-    return f'https://www.wbhealth.gov.in/uploaded_files/corona/Vacant_bed_status_as_on_03.05_.2021_.pdf'
+    r = requests.get('https://www.wbhealth.gov.in/pages/corona/bed_availability')
+    parser = etree.HTMLParser()
+    tree = etree.HTML(r.text, parser)
+    node = tree.xpath("(.//a[@target='_blank']/@href)[1]")
+    return node[0]
 
 
 def generate_current_date_datasource_pvt_url():
-    yesterday = get_yesterday_pvt()
-    # return f'https://www.wbhealth.gov.in/uploaded_files/corona/Status_of_Vacant_Beds_as_on_{yesterday}_.pdf'
-    return f'https://www.wbhealth.gov.in/uploaded_files/corona/Status_of_Vacant_Beds_as_on_4-5-.2021_.pdf'
-
-
-def generate_datasource():
-    import tabula, urllib
-    url_govt = generate_current_date_datasource_govt_url()
-    url_pvt = generate_current_date_datasource_pvt_url()
-    # df = tabula.read_pdf(url, multiple_tables=True, pages='all', encoding='utf-8')
-    try:
-        tabula.convert_into(url_govt, "file_govt.csv", pages="all")
-        tabula.convert_into(url_pvt, "file_pvt.csv", pages="all")
-    except urllib.error.HTTPError:
-        pass
+    r = requests.get('https://www.wbhealth.gov.in/pages/corona/bed_availability_pvt')
+    parser = etree.HTMLParser()
+    tree = etree.HTML(r.text, parser)
+    node = tree.xpath("(.//a[@target='_blank']/@href)[1]")
+    return node[0]
 
 
 def extract_datasource_govt():
-    generate_datasource()
+    url_govt = generate_current_date_datasource_govt_url()
+    try:
+        tabula.convert_into(url_govt, "file_govt.csv", pages="all")
+    except urllib.error.HTTPError:
+        pass
     lines = list()
     try:
         with open('file_govt.csv', 'r') as readFile:
@@ -82,7 +63,11 @@ def extract_datasource_govt():
 
 
 def extract_datasource_pvt():
-    generate_datasource()
+    url_pvt = generate_current_date_datasource_pvt_url()
+    try:
+        tabula.convert_into(url_pvt, "file_pvt.csv", pages="all")
+    except urllib.error.HTTPError:
+        pass
     lines = list()
     try:
         with open('file_pvt.csv', 'r') as readFile:

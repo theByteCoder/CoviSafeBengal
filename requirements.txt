@@ -3,3 +3,4 @@ Django==3.2.1
 requests==2.25.1
 tabula-py==2.2.0
 urllib3==1.26.4
+lxml==4.6.3
