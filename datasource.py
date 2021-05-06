@@ -1,9 +1,12 @@
 import csv
+import json
+
 import schedule
 import time
-
+from collections import defaultdict
 
 # this is a datasource scheduler
+
 
 def get_yesterday():
     from datetime import date, timedelta
@@ -29,6 +32,7 @@ def get_yesterday_pvt():
 
 def generate_current_date_datasource_govt_url():
     yesterday = get_yesterday_govt()
+    'https://www.wbhealth.gov.in/pages/corona/bed_availability_pvt'
     # return f'https://www.wbhealth.gov.in/uploaded_files/corona/Vacant_bed_status_as_on_{yesterday}_.pdf'
     return f'https://www.wbhealth.gov.in/uploaded_files/corona/Vacant_bed_status_as_on_03.05_.2021_.pdf'
 
@@ -62,12 +66,15 @@ def extract_datasource_govt():
                 for field in row:
                     if field == 'Sr no' or field == 'Grand Total' or 'BED AVAILABILITY STATUS' in field:
                         lines.remove(row)
-            keys = ["district", "hospital", "total_beds", "available_beds"]
-            data = {}
+            data = defaultdict(dict)
             for values in lines:
                 count = values.pop(0)
                 if count != '' and values[2] != '' and values[3] != '':
-                    data[count] = dict(zip(keys, values))
+                    dstrct = values.pop(0)
+                    hosptl = values.pop(0).replace('\n', ' ').replace('.', '')
+                    totl_beds = values.pop(0)
+                    avl_beds = values.pop(0)
+                    data[dstrct][hosptl] = {"total_beds": totl_beds, "available_beds": avl_beds}
             readFile.close()
             return data
     except FileNotFoundError:
@@ -85,12 +92,15 @@ def extract_datasource_pvt():
                 for field in row:
                     if field == 'Sl.' or field == 'TOTAL':
                         lines.remove(row)
-            keys = ["district", "hospital", "total_beds", "available_beds"]
-            data = {}
+            data = defaultdict(dict)
             for values in lines:
                 count = values.pop(0).replace('.', '')
                 if count != '' and values[2] != '' and values[3] != '':
-                    data[count] = dict(zip(keys, values))
+                    dstrct = values.pop(0)
+                    hosptl = values.pop(0).replace('\n', ' ').replace('.', '')
+                    totl_beds = values.pop(0)
+                    avl_beds = values.pop(0)
+                    data[dstrct][hosptl] = {"total_beds": totl_beds, "available_beds": avl_beds}
             readFile.close()
             return data
     except FileNotFoundError:
@@ -102,13 +112,17 @@ def extract_all_datasource():
     pvt = extract_datasource_pvt()
     yesterday = get_yesterday().strftime("%d%m%Y")
     import os
-    os.remove("file_pvt.csv")
-    os.remove("file_govt.csv")
+    try:
+        os.remove("file_pvt.csv")
+        os.remove("file_govt.csv")
+    except FileNotFoundError:
+        pass
     return {yesterday: {'govt': govt, 'pvt': pvt}}
 
 
 data = extract_all_datasource()
-print(data)
+print(json.dumps(data, sort_keys=True, indent=4))
+
 
 
 # # schedule.every().day.at("06:00").do(extract_datasource)
