@@ -1,5 +1,7 @@
 import csv
 import json
+import pprint
+
 import schedule
 import time
 from collections import defaultdict
@@ -105,9 +107,28 @@ def extract_all_datasource():
     return {yesterday: {'govt': govt, 'pvt': pvt}}
 
 
-data = extract_all_datasource()
-print(json.dumps(data, sort_keys=True, indent=4))
+def connect_db():
+    from pymongo import MongoClient
+    import pprint
+    return MongoClient(host="localhost", port=27017)
 
+
+def get_db_collection(client):
+    db = client.covibeds
+    return db.availablebeds
+
+
+def disconnect_db(client):
+    client.close()
+
+
+data = extract_all_datasource()
+# print(json.dumps(data, sort_keys=True, indent=4))
+client = connect_db()
+collection = get_db_collection(client)
+for documnt in collection.find():
+    pprint.pprint(documnt)
+disconnect_db(client)
 
 
 # # schedule.every().day.at("06:00").do(extract_datasource)
