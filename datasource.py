@@ -1,6 +1,9 @@
 import csv
+import time
+
 import requests
 import lxml.etree as etree
+import schedule
 import tabula, urllib
 
 
@@ -131,8 +134,8 @@ def insert_datasource():
     disconnect_db(client)
 
 
-insert_datasource()
-# schedule.every().day.at("06:00").do(insert_datasource)
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+# insert_datasource()
+schedule.every().day.at("06:00").do(insert_datasource)
+while True:
+    schedule.run_pending()
+    time.sleep(1)

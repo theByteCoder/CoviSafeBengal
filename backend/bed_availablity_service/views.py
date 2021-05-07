@@ -19,6 +19,11 @@ def fetch(request):
         entries = AvailableBeds.objects.all()
         for entry in entries:
             if entry.date == yesterday:
-                return JsonResponse({'id': str(entry._id), 'date': entry.date, 'data': entry.data}, safe=False)
+                return JsonResponse({'response': {'id': str(entry._id),
+                                                  'date': entry.date,
+                                                  'data': entry.data}},
+                                    safe=False)
+            else:
+                return JsonResponse({'response': f"Entries not available for {yesterday}"})
     else:
-        return JsonResponse('Invalid request type', safe=False)
+        return JsonResponse({'response': 'Invalid request type'}, safe=False)
