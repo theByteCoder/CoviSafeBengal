@@ -1,12 +1,10 @@
 import "./App.css";
-import Welcome from "./Welcome";
+import Display from "./components/Display";
 
 function App() {
   return (
     <div className="App">
-      <Welcome name="John" />
-      <Welcome name="Mary" />
-      <Welcome name="Alex" />
+      <Display name="Subhasish" />
     </div>
   );
 }
