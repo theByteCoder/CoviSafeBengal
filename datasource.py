@@ -1,7 +1,4 @@
 import csv
-import schedule
-import time
-from collections import defaultdict
 import requests
 import lxml.etree as etree
 import tabula, urllib
@@ -49,7 +46,7 @@ def extract_datasource_govt():
                 for field in row:
                     if field == 'Sr no' or field == 'Grand Total' or 'BED AVAILABILITY STATUS' in field:
                         lines.remove(row)
-            data = defaultdict(dict)
+            data = []
             for values in lines:
                 count = values.pop(0)
                 if count != '' and values[2] != '' and values[3] != '':
@@ -57,7 +54,9 @@ def extract_datasource_govt():
                     hosptl = values.pop(0).replace('\n', ' ').replace('.', '')
                     totl_beds = values.pop(0)
                     avl_beds = values.pop(0)
-                    data[dstrct][hosptl] = {"total_beds": totl_beds, "available_beds": avl_beds}
+                    data.append(
+                        {"district": dstrct, "hospital": hosptl,"total_beds": totl_beds, "available_beds": avl_beds}
+                    )
             readFile.close()
             return data
     except FileNotFoundError:
@@ -79,7 +78,7 @@ def extract_datasource_pvt():
                 for field in row:
                     if field == 'Sl.' or field == 'TOTAL':
                         lines.remove(row)
-            data = defaultdict(dict)
+            data = []
             for values in lines:
                 count = values.pop(0).replace('.', '')
                 if count != '' and values[2] != '' and values[3] != '':
@@ -87,7 +86,9 @@ def extract_datasource_pvt():
                     hosptl = values.pop(0).replace('\n', ' ').replace('.', '')
                     totl_beds = values.pop(0)
                     avl_beds = values.pop(0)
-                    data[dstrct][hosptl] = {"total_beds": totl_beds, "available_beds": avl_beds}
+                    data.append(
+                        {"district": dstrct, "hospital": hosptl, "total_beds": totl_beds, "available_beds": avl_beds}
+                                )
             readFile.close()
             return data
     except FileNotFoundError:
@@ -104,7 +105,7 @@ def extract_all_datasource():
         os.remove("file_govt.csv")
     except FileNotFoundError:
         pass
-    return {yesterday: {'govt': govt, 'pvt': pvt}}
+    return {'date': yesterday, 'data': {'govt': govt, 'pvt': pvt}}
 
 
 def connect_db():
@@ -114,7 +115,7 @@ def connect_db():
 
 def get_db_collection(client):
     db = client.covibeds
-    return db.availablebeds
+    return db.bed_availablity_service_availablebeds
 
 
 def disconnect_db(client):
@@ -123,20 +124,15 @@ def disconnect_db(client):
 
 def insert_datasource():
     data = extract_all_datasource()
-    yesterday = get_yesterday().strftime("%d%m%Y")
     client = connect_db()
     collection = get_db_collection(client)
-    documnt = collection.find()
-    if yesterday not in documnt:
-        action = collection.insert_one(data)
-        print('Data updated. Object id ', action.inserted_id)
+    action = collection.insert_one(data)
+    print('Data updated. Object id ', action.inserted_id)
     disconnect_db(client)
 
 
 insert_datasource()
-schedule.every().day.at("06:00").do(insert_datasource)
-
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# schedule.every().day.at("06:00").do(insert_datasource)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
