@@ -94,4 +94,12 @@ def fetch_all(request):
                         'lat': val['address']['results'][0]['geometry']['location']['lat'],
                         'long': val['address']['results'][0]['geometry']['location']['lng']}
                 pvt.append(data)
-        return JsonResponse({'response': {'govt': govt, 'pvt': pvt}}, safe=False)
+        return JsonResponse({'response': [{'govt': govt}, {'pvt': pvt}]}, safe=False)
+
+
+def get_curr_loc(request):
+    if request.method == 'GET':
+        r = requests.post('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk')
+        loc = r.json()
+        return JsonResponse({'response': {'lat': loc['location']['lat'], 'lng': loc['location']['lng']}})
+    return JsonResponse({'response': {}})
