@@ -5,7 +5,7 @@ from djongo import models
 
 
 class AvailableBeds(models.Model):
-    _id = models.ObjectIdField(primary_key=True)
+    _id = models.ObjectIdField()
     date = models.CharField(max_length=10)
     data = models.JSONField()
 
