@@ -11,27 +11,28 @@ import GoogleMaps from "./Maps";
 
 const useStyles = makeStyles({
   root: {
-    height: 680,
-    maxWidth: 360,
+    height: 400,
+    width: 400,
+    maxWidth: 260,
     margin: 10,
   },
   media: {
-    margin: 10,
+    margin: 6,
   },
   map: {
-    margin: 10,
+    margin: 2,
   },
-  action: {
-    height: 600,
+  actionArea: {
+    height: 300,
     marginBottom: 40,
   },
-  directions: {
+  actions: {
     position: "relative",
-    float: "right",
+    float: "left",
   },
 });
 
-const MapCards = ({ item, handleGetDirections }) => {
+const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
   const classes = useStyles();
 
   const hospital = item.hospital;
@@ -46,16 +47,13 @@ const MapCards = ({ item, handleGetDirections }) => {
   return (
     <>
       <Card className={classes.root}>
-        <CardActionArea className={classes.action}>
+        <CardActionArea className={classes.actionArea}>
           <CardMedia className={classes.map}>
             <GoogleMaps lat={lat} lng={lng} showDirection={false} />
           </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {hospital}, {district}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {address}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Total Beds - {totalBeds}
@@ -65,7 +63,16 @@ const MapCards = ({ item, handleGetDirections }) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions className={classes.directions}>
+        <CardActions className={classes.actions}>
+          <Button
+            size="medium"
+            color="primary"
+            onClick={() => {
+              handleGetAddress(true, address);
+            }}
+          >
+            Address
+          </Button>
           <Button
             size="medium"
             color="primary"
