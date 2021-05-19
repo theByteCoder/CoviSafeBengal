@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   popupBox: {
     position: "fixed",
-    background: "#00000050",
+    background: "#00000099",
     width: "100%",
     height: "100vh",
     top: 0,
@@ -53,7 +53,7 @@ const Address = ({ handleClose, address }) => {
           onClick={handleClose}
         />
         {address.length && (
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textPrimary" component="p">
             {address}
           </Typography>
         )}

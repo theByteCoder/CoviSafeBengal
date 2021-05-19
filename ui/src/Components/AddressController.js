@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Address from "./Address";
 
 const AddressController = ({ isOpen, handleGetAddress, address }) => {

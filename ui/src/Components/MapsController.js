@@ -9,6 +9,8 @@ import AddressController from "./AddressController";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    // background: "#A9A9A9",
+    // filter: "brightness(80%)",
   },
   control: {
     padding: theme.spacing(2),
@@ -76,8 +78,8 @@ const MapsController = () => {
   }, []);
 
   return (
-    <>
-      <Grid container className={classes.root} spacing={0}>
+    <div className={classes.root}>
+      <Grid container spacing={0}>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={0}>
             {displayData.map((value, index) => (
@@ -116,7 +118,7 @@ const MapsController = () => {
           origin={origin}
         />
       )}
-    </>
+    </div>
   );
 };
 
