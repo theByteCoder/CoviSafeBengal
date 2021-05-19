@@ -80,7 +80,7 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
           <Typography
             className={classes.name}
             gutterBottom
-            variant="h8"
+            variant="h6"
             component="h4"
           >
             {hospital}, {district}
