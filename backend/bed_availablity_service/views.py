@@ -94,7 +94,7 @@ def fetch_all(request):
                         'lat': val['address']['results'][0]['geometry']['location']['lat'],
                         'long': val['address']['results'][0]['geometry']['location']['lng']}
                 pvt.append(data)
-        return JsonResponse({'response': [{'govt': govt}, {'pvt': pvt}]}, safe=False)
+        return JsonResponse({'response': {'govt': govt, 'pvt': pvt}}, safe=False)
 
 
 def get_curr_loc(request):
