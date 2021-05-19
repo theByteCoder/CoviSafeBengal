@@ -2,13 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { isEmpty } from "lodash";
-import {
-  GoogleMap,
-  DirectionsRenderer,
-  DirectionsService,
-  Marker,
-  useLoadScript,
-} from "@react-google-maps/api";
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import MapDirectionsRenderer from "./MapDirectionsRenderer";
 
 const useStyles = makeStyles({
   popupBox: {
@@ -60,6 +55,11 @@ const Directions = ({ handleClose, destLoc, origin }) => {
     googleMapsApiKey: "AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk",
   });
 
+  const places = [
+    { latitude: origin.lat, longitude: origin.lng },
+    { latitude: destLoc.lat, longitude: destLoc.lng },
+  ];
+
   if (loadError) return "Error loading Maps";
   if (!isLoaded) return "Loading Maps";
 
@@ -78,8 +78,7 @@ const Directions = ({ handleClose, destLoc, origin }) => {
             center={origin}
             gestureHandling="cooperative"
           >
-            <Marker position={destLoc} />
-            <Marker position={origin} />
+            <MapDirectionsRenderer places={places} travelMode={"DRIVING"} />
           </GoogleMap>
         )}
       </div>

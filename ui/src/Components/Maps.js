@@ -5,7 +5,7 @@ const GoogleMaps = ({ lat, lng }) => {
   const mapContainerStyle = {
     top: 0,
     width: "100%",
-    height: 200,
+    height: 220,
   };
   const destination = {
     lat: lat,

@@ -14,7 +14,9 @@ const useStyles = makeStyles({
     height: 400,
     width: 400,
     maxWidth: 260,
-    margin: 10,
+    marginRight: 10,
+    marginTop: 30,
+    // backgroundColor: "#B0E0E6",
   },
   media: {
     margin: 6,
@@ -23,12 +25,34 @@ const useStyles = makeStyles({
     margin: 2,
   },
   actionArea: {
-    height: 300,
+    height: 200,
     marginBottom: 40,
   },
+  content: {
+    margin: 2,
+    height: 60,
+  },
   actions: {
+    marginTop: 20,
+    marginLeft: 2,
     position: "relative",
+  },
+  actionsAddress: {
     float: "left",
+  },
+  actionsDirection: {
+    paddingLeft: 60,
+    float: "right",
+  },
+  name: {
+    marginTop: -20,
+    marginBottom: 10,
+    height: "100%",
+  },
+  availableB: {
+    marginTop: 10,
+    marginBottom: 10,
+    height: "100%",
   },
 });
 
@@ -51,22 +75,33 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
           <CardMedia className={classes.map}>
             <GoogleMaps lat={lat} lng={lng} showDirection={false} />
           </CardMedia>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {hospital}, {district}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Total Beds - {totalBeds}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Available Beds - {availableBeds}
-            </Typography>
-          </CardContent>
         </CardActionArea>
+        <CardContent className={classes.content}>
+          <Typography
+            className={classes.name}
+            gutterBottom
+            variant="h8"
+            component="h4"
+          >
+            {hospital}, {district}
+          </Typography>
+          <Typography variant="body2" color="textPrimary" component="p">
+            Total Beds - {totalBeds}
+          </Typography>
+          <Typography
+            className={classes.availableB}
+            variant="body2"
+            color="textPrimary"
+            component="p"
+          >
+            Available Beds - {availableBeds}
+          </Typography>
+        </CardContent>
         <CardActions className={classes.actions}>
           <Button
             size="medium"
             color="primary"
+            className={classes.actionsAddress}
             onClick={() => {
               handleGetAddress(true, address);
             }}
@@ -76,6 +111,7 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
           <Button
             size="medium"
             color="primary"
+            className={classes.actionsDirection}
             onClick={() => {
               handleGetDirections(true, destinationLocation);
             }}
