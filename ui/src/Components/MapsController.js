@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import MapCards from "./MapsCard";
 import Button from "@material-ui/core/Button";
 import DirectionController from "./DirectionController";
+import AddressController from "./AddressController";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,10 +24,18 @@ const MapsController = () => {
 
   const [disableShowMore, setDisableShowMore] = useState(false);
 
-  const [getDirections, setGetDirections] = useState(false);
+  const [getAddress, setGetAddress] = useState(false);
+  const [address, setAddress] = useState({});
 
+  const [getDirections, setGetDirections] = useState(false);
   const [destinationLocation, setDestinationLocation] = useState({});
+
   const [origin, setOrigin] = useState({});
+
+  const handleGetAddress = (showAddress, address = "") => {
+    setAddress(address);
+    setGetAddress(showAddress);
+  };
 
   const handleGetDirections = (showDirection, destinationLocation = {}) => {
     setDestinationLocation(destinationLocation);
@@ -75,6 +84,7 @@ const MapsController = () => {
               <Grid key={index} item>
                 <MapCards
                   item={value}
+                  handleGetAddress={handleGetAddress}
                   handleGetDirections={handleGetDirections}
                   key={index}
                 />
@@ -91,6 +101,13 @@ const MapsController = () => {
       >
         {displayData.length === 0 ? "Search" : "Show More"}
       </Button>
+      {getAddress && (
+        <AddressController
+          isOpen={getAddress}
+          handleGetAddress={handleGetAddress}
+          address={address}
+        />
+      )}
       {getDirections && (
         <DirectionController
           isOpen={getDirections}
