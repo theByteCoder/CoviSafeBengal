@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
-import Paper from "@material-ui/core/Paper";
 import MapCards from "./MapsCard";
 import Button from "@material-ui/core/Button";
 import DirectionController from "./DirectionController";
@@ -13,10 +8,6 @@ import DirectionController from "./DirectionController";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    height: 140,
-    width: 100,
   },
   control: {
     padding: theme.spacing(2),
@@ -28,8 +19,6 @@ const MapsController = () => {
   const [dataGovt, setDataGovt] = useState([]);
   const [dataPvt, setDataPvt] = useState([]);
 
-  const [currLoc, setCurrLoc] = useState({});
-
   const [displayData, setDisplayData] = useState([]);
 
   const [disableShowMore, setDisableShowMore] = useState(false);
@@ -37,6 +26,7 @@ const MapsController = () => {
   const [getDirections, setGetDirections] = useState(false);
 
   const [destinationLocation, setDestinationLocation] = useState({});
+  const [origin, setOrigin] = useState({});
 
   const handleGetDirections = (showDirection, destinationLocation = {}) => {
     setDestinationLocation(destinationLocation);
@@ -67,7 +57,10 @@ const MapsController = () => {
     fetch("http://127.0.0.1:7070/location/current/").then((response) => {
       if (response.ok) {
         response.json().then((response) => {
-          setCurrLoc({ ...response.response });
+          setOrigin({
+            lat: response.response.lat,
+            lng: response.response.lng,
+          });
         });
       }
     });
@@ -75,16 +68,15 @@ const MapsController = () => {
 
   return (
     <>
-      <Grid container className={classes.root} spacing={2}>
+      <Grid container className={classes.root} spacing={0}>
         <Grid item xs={12}>
-          <Grid container justify="center" spacing={10}>
+          <Grid container justify="center" spacing={0}>
             {displayData.map((value, index) => (
               <Grid key={index} item>
                 <MapCards
                   item={value}
                   handleGetDirections={handleGetDirections}
                   key={index}
-                  currLoc={currLoc}
                 />
               </Grid>
             ))}
@@ -104,7 +96,7 @@ const MapsController = () => {
           isOpen={getDirections}
           handleGetDirections={handleGetDirections}
           destLoc={destinationLocation}
-          currLoc={currLoc}
+          origin={origin}
         />
       )}
     </>
