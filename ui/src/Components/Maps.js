@@ -1,20 +1,10 @@
 import React from "react";
-import { isEmpty } from "lodash";
-import {
-  GoogleMap,
-  DirectionsRenderer,
-  Marker,
-  useLoadScript,
-} from "@react-google-maps/api";
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 
-const GoogleMaps = ({ lat, lng, showDirection }) => {
+const GoogleMaps = ({ lat, lng }) => {
   const mapContainerStyle = {
     width: 340,
     height: 400,
-  };
-  const directionMapContainerStyle = {
-    width: 1250,
-    height: 593,
   };
   const destination = {
     lat: lat,
@@ -30,13 +20,11 @@ const GoogleMaps = ({ lat, lng, showDirection }) => {
 
   return (
     <GoogleMap
-      mapContainerStyle={
-        showDirection ? directionMapContainerStyle : mapContainerStyle
-      }
+      mapContainerStyle={mapContainerStyle}
       zoom={16}
       center={destination}
     >
-      <Marker key={1} position={destination} />
+      <Marker position={destination} />
     </GoogleMap>
   );
 };
