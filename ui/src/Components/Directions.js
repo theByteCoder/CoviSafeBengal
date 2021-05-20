@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { isEmpty } from "lodash";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import MapDirectionsRenderer from "./MapDirectionsRenderer";
+// import TravelMode from "./TravelMode";
 
 const useStyles = makeStyles({
   popupBox: {
@@ -12,6 +13,9 @@ const useStyles = makeStyles({
     width: "100%",
     height: "100vh",
     top: 0,
+    // to be used for travel mode
+    // height: "110vh",
+    // top: -10,
     left: 0,
   },
   box: {
@@ -45,10 +49,16 @@ const useStyles = makeStyles({
 
 const Directions = ({ handleClose, destLoc, origin }) => {
   const classes = useStyles();
+  // to be used for travel mode
+  //   const [travelMode, setTravelMode] = useState("DRIVING");
+  //   const handleSetMode = (modeEvent) => {
+  //     setTravelMode(modeEvent);
+  //   };
 
   const directionMapContainerStyle = {
     width: "100%",
     height: "100%",
+    // height: "90%", // to be used for travel mode
   };
 
   const { isLoaded, loadError } = useLoadScript({
@@ -71,6 +81,8 @@ const Directions = ({ handleClose, destLoc, origin }) => {
           color="secondary"
           onClick={handleClose}
         />
+        {/* to be used for travel mode */}
+        {/* <TravelMode travelMode={travelMode} handleSetMode={handleSetMode} /> */}
         {!isEmpty(origin) && (
           <GoogleMap
             mapContainerStyle={directionMapContainerStyle}
