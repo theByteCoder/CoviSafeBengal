@@ -24,6 +24,7 @@ const useStyles = makeStyles({
     padding: "20px",
     border: "1px solid #999",
     overflow: "hidden",
+    backgroundColor: "rgba(128,0,0,0.85)",
   },
   closeIcon: {
     content: "x",
@@ -39,6 +40,9 @@ const useStyles = makeStyles({
     border: "1px solid #999",
     fontSize: "20px",
   },
+  addressText: {
+    color: "white",
+  },
 });
 
 const Address = ({ handleClose, address }) => {
@@ -53,7 +57,12 @@ const Address = ({ handleClose, address }) => {
           onClick={handleClose}
         />
         {address.length && (
-          <Typography variant="body2" color="textPrimary" component="p">
+          <Typography
+            className={classes.addressText}
+            variant="body2"
+            color="textPrimary"
+            component="p"
+          >
             {address}
           </Typography>
         )}

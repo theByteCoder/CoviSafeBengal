@@ -1,26 +1,7 @@
-import MapsController from "./Components/MapsController";
-
-const containerParent = {
-  height: "100%",
-  width: "100%",
-  overflow: "hidden",
-};
-
-const containerChild = {
-  height: "100%",
-  width: "100%",
-  overflow: "auto",
-  paddingRight: "20px",
-};
+import Main from "./Components/Main";
 
 function App() {
-  return (
-    <div className={containerParent}>
-      <div className={containerChild}>
-        <MapsController />
-      </div>
-    </div>
-  );
+  return <Main />;
 }
 
 export default App;
