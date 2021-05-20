@@ -5,6 +5,11 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import MapsController from "./MapsController";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormLabel from "@material-ui/core/FormLabel";
+import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   parent: {
@@ -21,14 +26,19 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = () => {
   const classes = useStyles();
-  const [selectedDistrict, setSelectedDistrict] = useState("None");
+
+  const [selectedDistrict, setSelectedDistrict] = useState("Kolkata");
+  const [hospitalType, setHospitalType] = useState("govt");
+
   const [districts, setDistricts] = useState([]);
   const [allData, setAllData] = useState([]);
-  const [showData, setShowData] = useState(false);
 
-  const handleChange = (event) => {
+  const handleDistrictChange = (event) => {
     setSelectedDistrict(event.target.value);
-    setShowData(true);
+  };
+
+  const handleHospitalChange = (event) => {
+    setHospitalType(event.target.value);
   };
 
   useEffect(() => {
@@ -52,7 +62,7 @@ const Main = () => {
           labelId="district"
           id="select-district"
           value={selectedDistrict}
-          onChange={handleChange}
+          onChange={handleDistrictChange}
           displayEmpty
           className={classes.selectEmpty}
         >
@@ -63,11 +73,32 @@ const Main = () => {
           ))}
         </Select>
       </FormControl>
-      {showData && (
+      <FormControl component="fieldset">
+        <FormLabel component="legend">Hospitals</FormLabel>
+        <RadioGroup
+          row
+          aria-label="position"
+          name="position"
+          defaultValue="govt"
+          onChange={handleHospitalChange}
+        >
+          <FormControlLabel
+            value="govt"
+            control={<Radio color="primary" />}
+            label="Government"
+          />
+          <FormControlLabel
+            value="pvt"
+            control={<Radio color="primary" />}
+            label="Private"
+          />
+        </RadioGroup>
+      </FormControl>
+      {!isEmpty(allData) && selectedDistrict.length && hospitalType.length && (
         <MapsController
           allData={allData}
           selectedDistrict={selectedDistrict}
-          type="govt"
+          type={hospitalType}
         />
       )}
     </div>
