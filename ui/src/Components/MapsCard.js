@@ -16,7 +16,8 @@ const useStyles = makeStyles({
     width: 300,
     maxWidth: 280,
     marginRight: 10,
-    marginTop: 30,
+    marginTop: 5,
+    marginBottom: 30,
     backgroundColor: "#A52A2A",
   },
   media: {
