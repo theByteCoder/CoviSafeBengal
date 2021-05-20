@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { isEmpty } from "lodash";
@@ -25,7 +25,8 @@ const useStyles = makeStyles({
     height: "80%",
     margin: "0 auto",
     marginTop: "calc(100vh - 85vh - 20px)",
-    background: "#fff",
+    // background: "#fff",
+    backgroundColor: "rgba(128,0,0,0.85)",
     borderRadius: "4px",
     padding: "20px",
     border: "1px solid #999",
