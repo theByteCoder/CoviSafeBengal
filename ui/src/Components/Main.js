@@ -8,16 +8,20 @@ import MapsController from "./MapsController";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormLabel from "@material-ui/core/FormLabel";
 import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   parent: {
     background: "#FFDEAD",
   },
-  formControl: {
+  formControlDropdown: {
     margin: theme.spacing(1),
     width: 160,
+  },
+  formControlRadio: {
+    top: 10,
+    margin: theme.spacing(1),
+    width: 400,
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -54,7 +58,7 @@ const Main = () => {
 
   return (
     <div className={classes.parent}>
-      <FormControl className={classes.formControl}>
+      <FormControl className={classes.formControlDropdown}>
         <InputLabel shrink id="label-district">
           District
         </InputLabel>
@@ -73,8 +77,7 @@ const Main = () => {
           ))}
         </Select>
       </FormControl>
-      <FormControl component="fieldset">
-        <FormLabel component="legend">Hospitals</FormLabel>
+      <FormControl className={classes.formControlRadio} component="fieldset">
         <RadioGroup
           row
           aria-label="position"
@@ -85,12 +88,12 @@ const Main = () => {
           <FormControlLabel
             value="govt"
             control={<Radio color="primary" />}
-            label="Government"
+            label="Government Hospitals"
           />
           <FormControlLabel
             value="pvt"
             control={<Radio color="primary" />}
-            label="Private"
+            label="Private Hospitals"
           />
         </RadioGroup>
       </FormControl>
