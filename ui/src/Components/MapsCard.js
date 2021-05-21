@@ -47,24 +47,24 @@ const useStyles = makeStyles({
   },
   totalB: {
     marginLeft: 0,
-    marginTop: 10,
+    marginTop: 45,
     color: "rgba(255, 255, 255, 0.7)",
   },
   availableB: {
     marginLeft: 0,
-    marginTop: 10,
+    marginTop: 8,
     height: "100%",
     color: "rgba(255, 255, 255, 0.7)",
   },
   actionsAddress: {
     height: 20,
-    marginTop: -30,
+    marginTop: 5,
     float: "left",
     color: "#90caf9",
     transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
   },
   actionsDirection: {
-    marginTop: -30,
+    marginTop: 5,
     height: 20,
     left: 70,
     float: "right",
@@ -121,7 +121,6 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
         <CardActions className={classes.actions}>
           <Button
             size="medium"
-            // color="inherit"
             className={classes.actionsAddress}
             onClick={() => {
               handleGetAddress(true, address);
@@ -131,7 +130,6 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
           </Button>
           <Button
             size="medium"
-            // color="inherit"
             className={classes.actionsDirection}
             onClick={() => {
               handleGetDirections(true, destinationLocation);

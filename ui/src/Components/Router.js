@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -16,8 +16,12 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Main from "./Main";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
 
-const drawerWidth = 240;
+const drawerWidth = 189;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,7 +81,33 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
-  Icons: { color: "white" },
+  Icons: {
+    color: "white",
+    position: "fixed",
+  },
+  iconText: {
+    top: 115,
+  },
+  dropdownLabel: {
+    color: "rgba(255, 255, 255, 0.7)",
+  },
+  formControlDistrict: {
+    left: 60,
+    width: 200,
+    position: "relative",
+  },
+  formControlHospital: {
+    left: 80,
+    width: 200,
+    position: "relative",
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+    color: "rgba(255, 255, 255, 0.7)",
+  },
+  welcome: {
+    position: "relative",
+  },
 }));
 
 const Router = () => {
@@ -103,6 +133,31 @@ const Router = () => {
     setOpenDrawer(false);
   };
 
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [hospitalType, setHospitalType] = useState("");
+
+  const [districts, setDistricts] = useState([]);
+  const [allData, setAllData] = useState([]);
+
+  const handleDistrictChange = (event) => {
+    setSelectedDistrict(event.target.value);
+  };
+
+  const handleHospitalChange = (event) => {
+    setHospitalType(event.target.value);
+  };
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:7070/address/all/").then((response) => {
+      if (response.ok) {
+        response.json().then((response) => {
+          setDistricts(Object.keys(response.response));
+          setAllData(response.response);
+        });
+      }
+    });
+  }, []);
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -122,9 +177,60 @@ const Router = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" className={classes.welcome} noWrap>
             Welcome to Covid Hospital Details
           </Typography>
+          {showHospital && (
+            <FormControl className={classes.formControlDistrict}>
+              <InputLabel
+                className={classes.dropdownLabel}
+                shrink
+                id="label-district"
+              >
+                District
+              </InputLabel>
+              <Select
+                labelId="district"
+                id="select-district"
+                value={selectedDistrict}
+                onChange={handleDistrictChange}
+                displayEmpty
+                className={classes.selectEmpty}
+              >
+                {districts.map((each, key) => (
+                  <MenuItem value={each} key={key}>
+                    {each}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          )}
+          {showHospital && (
+            <FormControl className={classes.formControlHospital}>
+              <InputLabel
+                className={classes.dropdownLabel}
+                shrink
+                id="label-hospital"
+              >
+                Hospital Type
+              </InputLabel>
+              <Select
+                labelId="government"
+                id="select-government"
+                value={hospitalType}
+                onChange={handleHospitalChange}
+                displayEmpty
+                className={classes.selectEmpty}
+              >
+                <MenuItem value="govt" key="Government">
+                  Government
+                </MenuItem>
+                <MenuItem value="pvt" key="Private">
+                  Private
+                </MenuItem>
+              </Select>
+            </FormControl>
+          )}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -141,7 +247,7 @@ const Router = () => {
             <IconButton>
               <HomeIcon className={classes.Icons} />
             </IconButton>
-            <ListItemText primary="Home" />
+            <ListItemText className={classes.iconText} primary="Home" />
           </ListItem>
         </List>
         <Divider />
@@ -150,12 +256,12 @@ const Router = () => {
             <ListItemIcon>
               <LocalHospitalIcon className={classes.Icons} />
             </ListItemIcon>
-            <ListItemText primary="Hospitals" />
+            <ListItemText className={classes.iconText} primary="Hospitals" />
           </ListItem>
         </List>
         <Divider />
       </Drawer>
-      {!showHospital && (
+      {showHospital && (
         <main
           className={clsx(classes.content, {
             [classes.contentShift]: openDrawer,
@@ -164,7 +270,13 @@ const Router = () => {
           <div className={classes.drawerHeader} />
         </main>
       )}
-      {showHospital && <Main />}
+      {showHospital && (
+        <Main
+          allData={allData}
+          selectedDistrict={selectedDistrict}
+          hospitalType={hospitalType}
+        />
+      )}
     </div>
   );
 };
