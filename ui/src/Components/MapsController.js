@@ -7,8 +7,9 @@ import AddressController from "./AddressController";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    top: 100,
     flexGrow: 1,
-    backgroundColor: "#FFDEAD",
+    backgroundColor: "#333",
     // filter: "brightness(80%)",
   },
   control: {
@@ -22,8 +23,9 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
   const [requestedData, setRequestedData] = useState([]);
 
   useEffect(() => {
-    console.log(allData[selectedDistrict]);
-    setRequestedData(allData[selectedDistrict][type]);
+    if (allData) {
+      setRequestedData(allData[selectedDistrict][type]);
+    }
   }, [allData, selectedDistrict, type]);
 
   const [getAddress, setGetAddress] = useState(false);

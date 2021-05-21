@@ -1,7 +1,7 @@
-import Main from "./Components/Main";
+import Routers from "./Components/Router";
 
 function App() {
-  return <Main />;
+  return <Routers />;
 }
 
 export default App;

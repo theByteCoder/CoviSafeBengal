@@ -12,19 +12,24 @@ import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   parent: {
-    background: "#FFDEAD",
+    background: "#333",
   },
   formControlDropdown: {
-    margin: theme.spacing(1),
+    left: 40,
+    margin: theme.spacing(10),
     width: 160,
+  },
+  dropdownLabel: {
+    color: "rgba(255, 255, 255, 0.7)",
   },
   formControlRadio: {
     top: 10,
-    margin: theme.spacing(1),
+    margin: theme.spacing(10),
     width: 400,
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
+    color: "rgba(255, 255, 255, 0.7)",
   },
 }));
 
@@ -59,7 +64,11 @@ const Main = () => {
   return (
     <div className={classes.parent}>
       <FormControl className={classes.formControlDropdown}>
-        <InputLabel shrink id="label-district">
+        <InputLabel
+          className={classes.dropdownLabel}
+          shrink
+          id="label-district"
+        >
           District
         </InputLabel>
         <Select
