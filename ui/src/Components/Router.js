@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
+import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -44,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   menuButton: {
+    position: "fixed",
     marginRight: theme.spacing(2),
   },
   hide: {
@@ -87,12 +89,12 @@ const useStyles = makeStyles((theme) => ({
   hospitalIconText: { left: -10, position: "relative" },
   dropdownLabel: { color: "rgba(255, 255, 255, 0.7)" },
   formControlDistrict: {
-    left: 60,
+    margin: 10,
     width: 200,
     position: "relative",
   },
   formControlHospital: {
-    left: 80,
+    margin: 10,
     width: 200,
     position: "relative",
   },
@@ -100,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     color: "rgba(255, 255, 255, 0.7)",
   },
-  welcome: { position: "relative" },
+  welcome: { margin: 10, marginLeft: 40, position: "relative" },
 }));
 
 const Router = () => {
@@ -161,69 +163,78 @@ const Router = () => {
         })}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, openDrawer && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.welcome} noWrap>
-            Welcome to Covid Hospital Details
-          </Typography>
-          {showHospital && (
-            <FormControl className={classes.formControlDistrict}>
-              <InputLabel
-                className={classes.dropdownLabel}
-                shrink
-                id="label-district"
-              >
-                District
-              </InputLabel>
-              <Select
-                labelId="district"
-                id="select-district"
-                value={selectedDistrict}
-                onChange={handleDistrictChange}
-                displayEmpty
-                className={classes.selectEmpty}
-              >
-                {districts.map((each, key) => (
-                  <MenuItem value={each} key={key}>
-                    {each}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          )}
-          {showHospital && (
-            <FormControl className={classes.formControlHospital}>
-              <InputLabel
-                className={classes.dropdownLabel}
-                shrink
-                id="label-hospital"
-              >
-                Hospital Type
-              </InputLabel>
-              <Select
-                labelId="government"
-                id="select-government"
-                value={hospitalType}
-                onChange={handleHospitalChange}
-                displayEmpty
-                className={classes.selectEmpty}
-              >
-                <MenuItem value="govt" key="Government">
-                  Government
-                </MenuItem>
-                <MenuItem value="pvt" key="Private">
-                  Private
-                </MenuItem>
-              </Select>
-            </FormControl>
-          )}
+          <Grid container spacing={0}>
+            <Grid item xs={12}>
+              <Grid container>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  onClick={handleDrawerOpen}
+                  edge="start"
+                  className={clsx(
+                    classes.menuButton,
+                    openDrawer && classes.hide
+                  )}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" className={classes.welcome} noWrap>
+                  Welcome to Covid Hospital Details
+                </Typography>
+                {showHospital && (
+                  <FormControl className={classes.formControlDistrict}>
+                    <InputLabel
+                      className={classes.dropdownLabel}
+                      shrink
+                      id="label-district"
+                    >
+                      District
+                    </InputLabel>
+                    <Select
+                      labelId="district"
+                      id="select-district"
+                      value={selectedDistrict}
+                      onChange={handleDistrictChange}
+                      displayEmpty
+                      className={classes.selectEmpty}
+                    >
+                      {districts.map((each, key) => (
+                        <MenuItem value={each} key={key}>
+                          {each}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                )}
+                {showHospital && (
+                  <FormControl className={classes.formControlHospital}>
+                    <InputLabel
+                      className={classes.dropdownLabel}
+                      shrink
+                      id="label-hospital"
+                    >
+                      Hospital Type
+                    </InputLabel>
+                    <Select
+                      labelId="government"
+                      id="select-government"
+                      value={hospitalType}
+                      onChange={handleHospitalChange}
+                      displayEmpty
+                      className={classes.selectEmpty}
+                    >
+                      <MenuItem value="govt" key="Government">
+                        Government
+                      </MenuItem>
+                      <MenuItem value="pvt" key="Private">
+                        Private
+                      </MenuItem>
+                    </Select>
+                  </FormControl>
+                )}
+              </Grid>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Drawer

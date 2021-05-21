@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import MapCards from "./MapsCard";
 import DirectionController from "./DirectionController";
 import AddressController from "./AddressController";
-import NotFound from "./NotFound";
+import Toastbar from "./Toastbar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,7 +72,11 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
                 </Grid>
               ))
             ) : (
-              <NotFound text={"No data found"} />
+              <Toastbar
+                showSnack={true}
+                text={"No data found"}
+                variant="error"
+              />
             )}
           </Grid>
         </Grid>
