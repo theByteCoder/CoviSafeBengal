@@ -1,14 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import MapsController from "./MapsController";
-import NotFound from "./NotFound";
+import Toastbar from "./Toastbar";
 
 import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   parent: {
     background: "#333",
-    marginTop: theme.spacing(10),
+    marginTop: theme.spacing(23),
   },
 }));
 
@@ -24,7 +24,11 @@ const Main = ({ allData, selectedDistrict, hospitalType }) => {
           type={hospitalType}
         />
       ) : (
-        <NotFound text={"Please select District and Hospital Type"} />
+        <Toastbar
+          showSnack={true}
+          text={"Please select District and Hospital Type"}
+          variant="error"
+        />
       )}
     </div>
   );

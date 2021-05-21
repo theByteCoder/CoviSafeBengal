@@ -6,13 +6,13 @@ import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import MapDirectionsRenderer from "./MapDirectionsRenderer";
 // import TravelMode from "./TravelMode";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   popupBox: {
     position: "fixed",
     background: "#00000050",
     width: "100%",
     height: "100vh",
-    top: 20,
+    top: 40,
     // to be used for travel mode
     // height: "110vh",
     // top: -10,
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
     border: "1px solid #999",
     fontSize: "20px",
   },
-});
+}));
 
 const Directions = ({ handleClose, destLoc, origin }) => {
   const classes = useStyles();
