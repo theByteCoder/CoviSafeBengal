@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import MapsController from "./MapsController";
+import NotFound from "./NotFound";
+
 import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +24,7 @@ const Main = ({ allData, selectedDistrict, hospitalType }) => {
           type={hospitalType}
         />
       ) : (
-        ""
+        <NotFound text={"Please select District and Hospital Type"} />
       )}
     </div>
   );

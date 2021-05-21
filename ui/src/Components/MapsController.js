@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import MapCards from "./MapsCard";
 import DirectionController from "./DirectionController";
 import AddressController from "./AddressController";
+import NotFound from "./NotFound";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,17 +59,21 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <Grid container justify="center" spacing={0}>
-            {requestedData.map((value, index) => (
-              <Grid key={index} item>
-                <MapCards
-                  item={value}
-                  handleGetAddress={handleGetAddress}
-                  handleGetDirections={handleGetDirections}
-                  key={index}
-                />
-              </Grid>
-            ))}
+          <Grid container>
+            {requestedData.length ? (
+              requestedData.map((value, index) => (
+                <Grid key={index} item>
+                  <MapCards
+                    item={value}
+                    handleGetAddress={handleGetAddress}
+                    handleGetDirections={handleGetDirections}
+                    key={index}
+                  />
+                </Grid>
+              ))
+            ) : (
+              <NotFound text={"No data found"} />
+            )}
           </Grid>
         </Grid>
       </Grid>

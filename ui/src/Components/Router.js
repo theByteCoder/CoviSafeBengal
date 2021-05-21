@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
   },
   content: {
-    flexGrow: 1,
+    flexGrow: -1,
     padding: theme.spacing(3),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
@@ -81,16 +81,11 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
-  Icons: {
-    color: "white",
-    position: "fixed",
-  },
-  iconText: {
-    top: 115,
-  },
-  dropdownLabel: {
-    color: "rgba(255, 255, 255, 0.7)",
-  },
+  homeIcon: { color: "white", position: "fixed" },
+  hospitalIcon: { color: "white", position: "relative" },
+  homeIconText: { left: 20, position: "relative" },
+  hospitalIconText: { left: -10, position: "relative" },
+  dropdownLabel: { color: "rgba(255, 255, 255, 0.7)" },
   formControlDistrict: {
     left: 60,
     width: 200,
@@ -105,9 +100,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     color: "rgba(255, 255, 255, 0.7)",
   },
-  welcome: {
-    position: "relative",
-  },
+  welcome: { position: "relative" },
 }));
 
 const Router = () => {
@@ -245,18 +238,19 @@ const Router = () => {
         <List>
           <ListItem button onClick={handleShowHome} key="Home">
             <IconButton>
-              <HomeIcon className={classes.Icons} />
+              <HomeIcon className={classes.homeIcon} />
             </IconButton>
-            <ListItemText className={classes.iconText} primary="Home" />
+            <ListItemText className={classes.homeIconText} primary="Home" />
           </ListItem>
-        </List>
-        <Divider />
-        <List>
+          <Divider />
           <ListItem button onClick={handleShowHospitals} key="Hospitals">
             <ListItemIcon>
-              <LocalHospitalIcon className={classes.Icons} />
+              <LocalHospitalIcon className={classes.hospitalIcon} />
             </ListItemIcon>
-            <ListItemText className={classes.iconText} primary="Hospitals" />
+            <ListItemText
+              className={classes.hospitalIconText}
+              primary="Hospitals"
+            />
           </ListItem>
         </List>
         <Divider />
