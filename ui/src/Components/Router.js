@@ -90,12 +90,16 @@ const useStyles = makeStyles((theme) => ({
   hospitalIconText: { left: -10, position: "relative" },
   dropdownLabel: { color: "rgba(255, 255, 255, 0.7)" },
   formControlDistrict: {
-    margin: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    paddingBottom: 2,
     width: 200,
     position: "relative",
   },
   formControlHospital: {
-    margin: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    paddingBottom: 2,
     width: 200,
     position: "relative",
   },
