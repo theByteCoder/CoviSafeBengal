@@ -9,11 +9,11 @@ const useStyles = makeStyles({
     background: "#00000099",
     width: "100%",
     height: "100vh",
-    top: 0,
+    top: 60,
     left: 0,
   },
   box: {
-    top: 50,
+    top: 60,
     position: "relative",
     width: "40%",
     height: "15%",

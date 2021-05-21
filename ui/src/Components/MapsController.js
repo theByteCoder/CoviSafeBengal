@@ -12,9 +12,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#333",
     // filter: "brightness(80%)",
   },
-  control: {
-    padding: theme.spacing(2),
-  },
 }));
 
 const MapsController = ({ allData, selectedDistrict, type }) => {

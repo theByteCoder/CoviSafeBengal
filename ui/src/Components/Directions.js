@@ -12,14 +12,14 @@ const useStyles = makeStyles({
     background: "#00000050",
     width: "100%",
     height: "100vh",
-    top: 0,
+    top: 20,
     // to be used for travel mode
     // height: "110vh",
     // top: -10,
     left: 0,
   },
   box: {
-    top: -50,
+    top: 10,
     position: "relative",
     width: "90%",
     height: "80%",
