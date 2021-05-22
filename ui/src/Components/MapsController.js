@@ -43,18 +43,24 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
   const [destination, setDestination] = useState({});
 
   useEffect(() => {
-    fetch("https://53c2ed098d40.ngrok.io/location/current/").then(
-      (response) => {
-        if (response.ok) {
-          response.json().then((response) => {
-            setOrigin({
-              lat: response.response.lat,
-              lng: response.response.lng,
-            });
-          });
-        }
-      }
-    );
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setOrigin({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
+    });
+    // fetch("https://f30e157a8138.ngrok.io/location/current/").then(
+    //   (response) => {
+    //     if (response.ok) {
+    //       response.json().then((response) => {
+    //         setOrigin({
+    //           lat: response.response.lat,
+    //           lng: response.response.lng,
+    //         });
+    //       });
+    //     }
+    //   }
+    // );
   }, []);
 
   return (

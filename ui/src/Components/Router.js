@@ -169,7 +169,7 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("https://53c2ed098d40.ngrok.io/address/all/").then((response) => {
+    fetch("https://f30e157a8138.ngrok.io/address/all/").then((response) => {
       if (response.ok) {
         response.json().then((response) => {
           setDistricts(Object.keys(response.response));
@@ -321,8 +321,8 @@ const Router = () => {
             variant="body1"
             component="p"
           >
-            We have developed this application to help find suitable hospitals,
-            that have available beds for Covid patients.
+            We have developed this application to help find suitable hospitals
+            in West Bengal, that have available beds for Covid patients.
           </Typography>
           <Typography
             className={classes.welcomeParaGap}
@@ -347,15 +347,17 @@ const Router = () => {
                 Government of West Bengal
               </a>
             }
-            . We claim no ownership of the data.
+            . We claim no ownership of the data. We will add other states in
+            India to the application, as and when we find reliable data sources
+            from states.
           </Typography>
           <Typography
             className={classes.welcomeAuthorGap}
             variant="body2"
             component="p"
           >
-            Authors - Subhasish Ghosh, Sk Asik, Deb Dutta, Manmohan Singh, Piyu
-            Paul, Rimi Ghosh, Sourabh Paul.
+            Authors - Piyu Paul, Rimi Ghosh, Subhasish Ghosh, Sk Asik, Deb
+            Dutta, Manmohan Singh, Sourabh Paul.
           </Typography>
         </div>
       )}
