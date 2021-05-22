@@ -43,16 +43,18 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
   const [destination, setDestination] = useState({});
 
   useEffect(() => {
-    fetch("http://127.0.0.1:7070/location/current/").then((response) => {
-      if (response.ok) {
-        response.json().then((response) => {
-          setOrigin({
-            lat: response.response.lat,
-            lng: response.response.lng,
+    fetch("https://53c2ed098d40.ngrok.io/location/current/").then(
+      (response) => {
+        if (response.ok) {
+          response.json().then((response) => {
+            setOrigin({
+              lat: response.response.lat,
+              lng: response.response.lng,
+            });
           });
-        });
+        }
       }
-    });
+    );
   }, []);
 
   return (

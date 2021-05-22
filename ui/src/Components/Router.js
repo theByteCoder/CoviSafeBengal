@@ -148,7 +148,7 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("http://127.0.0.1:7070/address/all/").then((response) => {
+    fetch("https://53c2ed098d40.ngrok.io/address/all/").then((response) => {
       if (response.ok) {
         response.json().then((response) => {
           setDistricts(Object.keys(response.response));

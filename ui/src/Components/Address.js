@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   box: {
     top: 60,
     position: "relative",
-    maxWidth: "85%",
+    maxWidth: "55%",
     maxHeight: "85%",
     margin: "0 auto",
     marginTop: "calc(100vh - 85vh - 20px)",
