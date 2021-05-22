@@ -90,15 +90,15 @@ const useStyles = makeStyles((theme) => ({
   hospitalIconText: { left: -10, position: "relative" },
   dropdownLabel: { color: "rgba(255, 255, 255, 0.7)" },
   formControlDistrict: {
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 50,
+    marginRight: 50,
     paddingBottom: 2,
     width: 200,
     position: "relative",
   },
   formControlHospital: {
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 50,
+    marginRight: 50,
     paddingBottom: 2,
     width: 200,
     position: "relative",
@@ -108,13 +108,29 @@ const useStyles = makeStyles((theme) => ({
     color: "rgba(255, 255, 255, 0.7)",
   },
   welcome: { margin: 10, marginLeft: 40, position: "relative" },
+  hello: {
+    color: "rgba(255, 255, 255, 0.7)",
+    margin: 100,
+    marginTop: theme.spacing(23),
+    position: "absolute",
+  },
+  welcomeHeaderGap: {
+    marginTop: 10,
+    marginBottom: 60,
+  },
+  welcomeParaGap: {
+    marginTop: 20,
+  },
+  welcomeAuthorGap: {
+    marginTop: 180,
+  },
 }));
 
 const Router = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [showHospital, setShowHospital] = useState(false);
-
+  const [header, setHeader] = useState("Welcome to Covid Hospital Details");
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
@@ -123,6 +139,7 @@ const Router = () => {
     if (showHospital === true) {
       setShowHospital(false);
     }
+    setHeader("Home");
     setOpenDrawer(false);
   };
 
@@ -130,6 +147,7 @@ const Router = () => {
     if (showHospital === false) {
       setShowHospital(true);
     }
+    setHeader("Hospitals");
     setOpenDrawer(false);
   };
 
@@ -148,7 +166,7 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("http://127.0.0.1:7070/address/all/").then((response) => {
+    fetch("https://53c2ed098d40.ngrok.io/address/all/").then((response) => {
       if (response.ok) {
         response.json().then((response) => {
           setDistricts(Object.keys(response.response));
@@ -184,7 +202,7 @@ const Router = () => {
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.welcome} noWrap>
-                  Welcome to Covid Hospital Details
+                  {header}
                 </Typography>
                 {showHospital && (
                   <FormControl className={classes.formControlDistrict}>
@@ -280,12 +298,55 @@ const Router = () => {
           <div className={classes.drawerHeader} />
         </main>
       )}
-      {showHospital && (
+      {showHospital ? (
         <Main
           allData={allData}
           selectedDistrict={selectedDistrict}
           hospitalType={hospitalType}
         />
+      ) : (
+        <div className={classes.hello}>
+          <Typography
+            className={classes.welcomeHeaderGap}
+            variant="body1"
+            component="p"
+          >
+            Welcome to Covid hospital details for West Bengal, India.
+          </Typography>
+          <Typography
+            className={classes.welcomeParaGap}
+            variant="body1"
+            component="p"
+          >
+            We have developed this application to help find suitable hospitals,
+            that have available beds for Covid patients.
+          </Typography>
+          <Typography
+            className={classes.welcomeParaGap}
+            variant="body1"
+            component="p"
+          >
+            This application provides district wise data, for both government
+            and private hospitals. Additionally, the address and directions to
+            the hospital is also provides.
+          </Typography>
+          <Typography
+            className={classes.welcomeParaGap}
+            variant="body1"
+            component="p"
+          >
+            Disclaimer - All data is provided by the Government of West Bengal,
+            http://www.wbhealth.gov.in/. We claim no ownership of the data.
+          </Typography>
+          <Typography
+            className={classes.welcomeAuthorGap}
+            variant="body2"
+            component="p"
+          >
+            Authors - Subhasish Ghosh, Sk Asik, Deb Dutta, Manmohan Singh, Piyu
+            Paul, Rimi Ghosh, Sourabh Paul.
+          </Typography>
+        </div>
       )}
     </div>
   );
