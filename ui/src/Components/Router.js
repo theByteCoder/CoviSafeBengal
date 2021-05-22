@@ -124,6 +124,9 @@ const useStyles = makeStyles((theme) => ({
   welcomeAuthorGap: {
     marginTop: 180,
   },
+  whiteLink: {
+    color: "white",
+  },
 }));
 
 const Router = () => {
@@ -335,8 +338,16 @@ const Router = () => {
             variant="body1"
             component="p"
           >
-            Disclaimer - All data is provided by the Government of West Bengal,
-            http://www.wbhealth.gov.in/. We claim no ownership of the data.
+            Disclaimer - All data is provided by the honourable{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="http://www.wbhealth.gov.in/"
+              >
+                Government of West Bengal
+              </a>
+            }
+            . We claim no ownership of the data.
           </Typography>
           <Typography
             className={classes.welcomeAuthorGap}
