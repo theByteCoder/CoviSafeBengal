@@ -81,7 +81,7 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
   const availableBeds = item.available_beds;
   const address = item.address;
   const lat = item.lat;
-  const lng = item.long;
+  const lng = item.lng;
   const destinationLocation = { lat: lat, lng: lng };
 
   return (
