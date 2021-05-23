@@ -82,7 +82,7 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
             ) : (
               <Toastbar
                 showSnack={true}
-                text={"No data found"}
+                text={"No data found."}
                 variant="error"
               />
             )}

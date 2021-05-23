@@ -4,10 +4,18 @@ import requests
 from bson import ObjectId
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from configparser import ConfigParser
 from .models import *
 
 
 # Create your views here.
+
+
+def get_db_object_id():
+    config = ConfigParser()
+    config.read('config.cfg')
+    object_id = config['mongodb']['object_id']
+    return object_id
 
 
 def generate_yesterday():
@@ -44,6 +52,14 @@ def generate_geolocation(data):
                     'total_beds': each['total_beds'], 'available_beds': each['available_beds'], 'address': r.json()}
         pvt_response.append(new_data)
     return {'govt': govt_response, 'pvt': pvt_response}
+
+
+@csrf_exempt
+def fetch_all_new(request):
+    if request.method == 'GET':
+        object_id = get_db_object_id()
+        entries = AvailableBeds.objects.get(_id=ObjectId(object_id))
+        return JsonResponse({'response': entries.data}, safe=False)
 
 
 @csrf_exempt
@@ -106,25 +122,27 @@ def fetch_data():
     for each in entries.data['govt']:
         val = json.loads(json.dumps(each))
         if val:
-            data = {'hospital': val['hospital'],
-                    'district': val['district'],
-                    'total_beds': val['total_beds'],
-                    'available_beds': val['available_beds'],
-                    'address': val['address']['results'][0]['formatted_address'],
-                    'lat': val['address']['results'][0]['geometry']['location']['lat'],
-                    'long': val['address']['results'][0]['geometry']['location']['lng']}
-            govt.append(data)
+            if len(val['hospital']):
+                data = {'hospital': val['hospital'],
+                        'district': val['district'],
+                        'total_beds': val['total_beds'],
+                        'available_beds': val['available_beds'],
+                        'address': val['address']['results'][0]['formatted_address'],
+                        'lat': val['address']['results'][0]['geometry']['location']['lat'],
+                        'long': val['address']['results'][0]['geometry']['location']['lng']}
+                govt.append(data)
     for each in entries.data['pvt']:
         val = json.loads(json.dumps(each))
         if val:
-            data = {'hospital': val['hospital'],
-                    'district': val['district'],
-                    'total_beds': val['total_beds'],
-                    'available_beds': val['available_beds'],
-                    'address': val['address']['results'][0]['formatted_address'],
-                    'lat': val['address']['results'][0]['geometry']['location']['lat'],
-                    'long': val['address']['results'][0]['geometry']['location']['lng']}
-        pvt.append(data)
+            if len(val['hospital']):
+                data = {'hospital': val['hospital'],
+                        'district': val['district'],
+                        'total_beds': val['total_beds'],
+                        'available_beds': val['available_beds'],
+                        'address': val['address']['results'][0]['formatted_address'],
+                        'lat': val['address']['results'][0]['geometry']['location']['lat'],
+                        'long': val['address']['results'][0]['geometry']['location']['lng']}
+            pvt.append(data)
     return {'govt': govt, 'pvt': pvt}
 
 
@@ -174,17 +192,23 @@ def fetch_morphed_data(request):
     if request.method == 'GET':
         morphed_data = generate_morphed_data()
         # Paschim Bardhaman
-        morphed_data['Paschim Bardhaman']['govt'] = [*morphed_data['Paschim Bardhaman']['govt'], *morphed_data['Paschim Bardwan']['govt']]
-        morphed_data['Paschim Bardhaman']['pvt'] = [*morphed_data['Paschim Bardhaman']['pvt'], *morphed_data['Paschim Bardwan']['pvt']]
+        morphed_data['Paschim Bardhaman']['govt'] = [*morphed_data['Paschim Bardhaman']['govt'],
+                                                     *morphed_data['Paschim Bardwan']['govt']]
+        morphed_data['Paschim Bardhaman']['pvt'] = [*morphed_data['Paschim Bardhaman']['pvt'],
+                                                    *morphed_data['Paschim Bardwan']['pvt']]
         del morphed_data['Paschim Bardwan']
         # North 24 Pgs
-        morphed_data['North 24 Pgs']['govt'] = [*morphed_data['North 24 Pgs']['govt'], *morphed_data['N-24Pgs']['govt'], *morphed_data['N-24 Pgs']['govt']]
-        morphed_data['North 24 Pgs']['pvt'] = [*morphed_data['North 24 Pgs']['pvt'], *morphed_data['N-24Pgs']['pvt'], *morphed_data['N-24 Pgs']['pvt']]
+        morphed_data['North 24 Pgs']['govt'] = [*morphed_data['North 24 Pgs']['govt'], *morphed_data['N-24Pgs']['govt'],
+                                                *morphed_data['N-24 Pgs']['govt']]
+        morphed_data['North 24 Pgs']['pvt'] = [*morphed_data['North 24 Pgs']['pvt'], *morphed_data['N-24Pgs']['pvt'],
+                                               *morphed_data['N-24 Pgs']['pvt']]
         del morphed_data['N-24Pgs']
         del morphed_data['N-24 Pgs']
         # South 24 Parganas
-        morphed_data['South 24 Parganas']['govt'] = [*morphed_data['South 24 Parganas']['govt'], *morphed_data['S-24 Pgs']['govt']]
-        morphed_data['South 24 Parganas']['pvt'] = [*morphed_data['South 24 Parganas']['pvt'], *morphed_data['S-24 Pgs']['pvt']]
+        morphed_data['South 24 Parganas']['govt'] = [*morphed_data['South 24 Parganas']['govt'],
+                                                     *morphed_data['S-24 Pgs']['govt']]
+        morphed_data['South 24 Parganas']['pvt'] = [*morphed_data['South 24 Parganas']['pvt'],
+                                                    *morphed_data['S-24 Pgs']['pvt']]
         del morphed_data['S-24 Pgs']
         return JsonResponse({'response': morphed_data}, safe=False)
 

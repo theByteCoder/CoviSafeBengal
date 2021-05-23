@@ -26,7 +26,7 @@ const Main = ({ allData, selectedDistrict, hospitalType }) => {
       ) : (
         <Toastbar
           showSnack={true}
-          text={"Please select District and Hospital Type"}
+          text={"Please select District and Hospital Type."}
           variant="info"
         />
       )}
