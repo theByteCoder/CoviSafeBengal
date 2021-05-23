@@ -1,15 +1,21 @@
 import csv
 import time
 
-import requests
 import lxml.etree as etree
+import requests
 import schedule
-import tabula, urllib
+import tabula
+import urllib
+from webscrapper import get_daily_data
 
 
 # this is a datasource scheduler.
 # it will be executed everyday at 6 AM
 # in he morning to capture the latest data
+
+
+def scrapper():
+    return get_daily_data()
 
 
 def get_yesterday():
@@ -134,8 +140,9 @@ def insert_datasource():
     disconnect_db(client)
 
 
+scrapper()
 # insert_datasource()
-schedule.every().day.at("06:00").do(insert_datasource)
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# schedule.every().day.at("06:00").do(insert_datasource)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
