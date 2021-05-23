@@ -61,8 +61,8 @@ def set_db_object_id(object_id):
         config.write(conf)
 
 
-insert_datasource()
-# schedule.every().day.at("06:00").do(insert_datasource)
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+# insert_datasource()
+schedule.every().day.at("06:00").do(insert_datasource)
+while True:
+    schedule.run_pending()
+    time.sleep(1)

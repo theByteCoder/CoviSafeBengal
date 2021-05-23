@@ -125,10 +125,8 @@ def fetch_data():
             if len(val['hospital']):
                 data = {'hospital': val['hospital'],
                         'district': val['district'],
-                        # 'total_beds': val['total_beds'],
-                        # 'available_beds': val['available_beds'],
-                        'total_beds': "",
-                        'available_beds': "",
+                        'total_beds': val['total_beds'],
+                        'available_beds': val['available_beds'],
                         'address': val['address']['results'][0]['formatted_address'],
                         'lat': val['address']['results'][0]['geometry']['location']['lat'],
                         'long': val['address']['results'][0]['geometry']['location']['lng']}
@@ -139,10 +137,8 @@ def fetch_data():
             if len(val['hospital']):
                 data = {'hospital': val['hospital'],
                         'district': val['district'],
-                        # 'total_beds': val['total_beds'],
-                        # 'available_beds': val['available_beds'],
-                        'total_beds': "",
-                        'available_beds': "",
+                        'total_beds': val['total_beds'],
+                        'available_beds': val['available_beds'],
                         'address': val['address']['results'][0]['formatted_address'],
                         'lat': val['address']['results'][0]['geometry']['location']['lat'],
                         'long': val['address']['results'][0]['geometry']['location']['lng']}
