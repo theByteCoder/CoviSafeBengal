@@ -343,6 +343,8 @@ const Router = () => {
               <a
                 className={classes.whiteLink}
                 href="http://www.wbhealth.gov.in/"
+                target="_blank"
+                rel="noreferrer"
               >
                 Government of West Bengal
               </a>
@@ -356,8 +358,84 @@ const Router = () => {
             variant="body2"
             component="p"
           >
-            Authors - Piyu Paul, Rimi Ghosh, Subhasish Ghosh, Sk Asik, Deb
-            Dutta, Manmohan Singh, Sourabh Paul.
+            Authors -{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://www.linkedin.com/in/piyu-paul-9a059299/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Piyu Paul
+              </a>
+            }
+            ,{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://www.facebook.com/profile.php?id=100010634407989"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Rimi Ghosh
+              </a>
+            }
+            ,{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://www.linkedin.com/in/subhasish-ghosh-00102897/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Subhasish Ghosh
+              </a>
+            }
+            ,{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://www.linkedin.com/in/sk-asik/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Sk Asik
+              </a>
+            }
+            ,{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://mobile.twitter.com/debdutta91"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Deb Dutta
+              </a>
+            }
+            ,{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://www.linkedin.com/in/manmohan-singh-81259589/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Manmohan Singh
+              </a>
+            }
+            ,{" "}
+            {
+              <a
+                className={classes.whiteLink}
+                href="https://www.linkedin.com/in/sourabh-paul-45b9b0132/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Sourabh Paul
+              </a>
+            }
+            .
           </Typography>
         </div>
       )}
