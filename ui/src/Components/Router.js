@@ -169,7 +169,7 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("https://f30e157a8138.ngrok.io/address/all/").then((response) => {
+    fetch("https://f30e157a8138.ngrok.io/v2/address/all/").then((response) => {
       if (response.ok) {
         response.json().then((response) => {
           setDistricts(Object.keys(response.response));
