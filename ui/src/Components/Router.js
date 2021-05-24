@@ -274,6 +274,9 @@ const Router = () => {
                       <MenuItem value="pvt" key="Private">
                         Private
                       </MenuItem>
+                      <MenuItem value="requisitioned" key="Requisitioned">
+                        Government Requisitioned
+                      </MenuItem>
                     </Select>
                   </FormControl>
                 )}
