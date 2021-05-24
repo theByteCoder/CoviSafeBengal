@@ -76,7 +76,6 @@ const Daily = () => {
         fetch("https://api.covid19india.org/v4/min/data.min.json").then((response) => {
             if (response.ok) {
                 response.json().then((response) => {
-                    console.log(response['WB']);
                     setDate(response['WB'].meta.tested.last_updated);
                     setConfirmed(response['WB'].total['confirmed']);
                     setDeceased(response['WB'].total['deceased']);
