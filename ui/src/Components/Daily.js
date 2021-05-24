@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "inline",
+    height: "80%",
     backgroundColor: "#fff",
     color: "rgba(255, 255, 255, 0.7)",
   },
@@ -34,17 +35,17 @@ const Daily = () => {
       {
         label: "Confirmed",
         data: [confirmed],
-        backgroundColor: "rgb(255, 99, 132)",
+        backgroundColor: "red",
       },
       {
         label: "Deceased",
         data: [deceased],
-        backgroundColor: "rgb(54, 162, 235)",
+        backgroundColor: "blue",
       },
       {
         label: "Recovered",
         data: [recovered],
-        backgroundColor: "rgb(75, 192, 192)",
+        backgroundColor: "green",
       },
       // {
       //     label: 'Tested',
@@ -61,8 +62,14 @@ const Daily = () => {
 
   const options = {
     scales: {
+      xAxes: [
+        {
+          stacked: true,
+        },
+      ],
       yAxes: [
         {
+          stacked: true,
           ticks: {
             beginAtZero: true,
           },

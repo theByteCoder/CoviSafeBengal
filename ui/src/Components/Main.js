@@ -7,8 +7,10 @@ import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   parent: {
+    position: "absolute",
     background: "#333",
-    marginTop: theme.spacing(23),
+    marginTop: theme.spacing(20),
+    marginLeft: 60,
   },
 }));
 
