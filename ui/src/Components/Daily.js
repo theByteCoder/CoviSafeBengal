@@ -100,7 +100,7 @@ const Daily = () => {
                 <li> Confirmed {confirmed} </li>
                 <li> Deceased {deceased} </li>
                 <li> Recovered {recovered} </li>
-                <li> Tested {tested}. </li>
+                <li> Tested {tested} </li>
                 <li> Vaccinated {vaccinated}. </li>
             </ul>
             <div className={classes.chartContainer}>
