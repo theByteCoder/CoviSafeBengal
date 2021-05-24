@@ -61,18 +61,6 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
         lng: position.coords.longitude,
       });
     });
-    // fetch("https://f30e157a8138.ngrok.io/location/current/").then(
-    //   (response) => {
-    //     if (response.ok) {
-    //       response.json().then((response) => {
-    //         setOrigin({
-    //           lat: response.response.lat,
-    //           lng: response.response.lng,
-    //         });
-    //       });
-    //     }
-    //   }
-    // );
   }, []);
 
   return (

@@ -21,6 +21,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import InfoIcon from "@material-ui/icons/Info";
+import Daily from "./Daily";
 
 const drawerWidth = 189;
 
@@ -114,6 +116,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(23),
     position: "absolute",
   },
+  chart: {
+    color: "rgba(255, 255, 255, 0.7)",
+    margin: 100,
+    width: "50%",
+  },
   welcomeHeaderGap: {
     marginTop: 10,
     marginBottom: 60,
@@ -133,26 +140,41 @@ const Router = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [showHospital, setShowHospital] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+  const [showHome, setShowHome] = useState(false);
   const [header, setHeader] = useState("Welcome to Covid Hospital Details");
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
 
   const handleShowHome = () => {
-    if (showHospital === true) {
-      setShowHospital(false);
-    }
+    setShowHospital(false);
+    setShowInfo(false);
+    setShowHome(true);
     setHeader("Home");
     setOpenDrawer(false);
   };
 
   const handleShowHospitals = () => {
-    if (showHospital === false) {
-      setShowHospital(true);
-    }
+    setShowInfo(false);
+    setShowHome(false);
+    setShowHospital(true);
     setHeader("Hospitals");
     setOpenDrawer(false);
   };
+
+  const handleShowInfo = () => {
+    setShowHospital(false);
+    setShowHome(false);
+    setShowInfo(true);
+    setHeader("Extra Information");
+    setOpenDrawer(false);
+  };
+
+  // const handleView = () => {
+  //   if(showHospital)
+  //     return true;
+  // };
 
   const [selectedDistrict, setSelectedDistrict] = useState("");
   const [hospitalType, setHospitalType] = useState("");
@@ -169,7 +191,7 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("https://f30e157a8138.ngrok.io/v2/address/all/").then((response) => {
+    fetch("https://78093952caf8.ngrok.io/v2/address/all/").then((response) => {
       if (response.ok) {
         response.json().then((response) => {
           setDistricts(Object.keys(response.response));
@@ -289,6 +311,19 @@ const Router = () => {
               primary="Hospitals"
             />
           </ListItem>
+          <ListItem
+            button
+            onClick={handleShowInfo}
+            key="Additional Information"
+          >
+            <ListItemIcon>
+              <InfoIcon className={classes.hospitalIcon} />
+            </ListItemIcon>
+            <ListItemText
+              className={classes.hospitalIconText}
+              primary="Extra Info"
+            />
+          </ListItem>
         </List>
         <Divider />
       </Drawer>
@@ -301,13 +336,14 @@ const Router = () => {
           <div className={classes.drawerHeader} />
         </main>
       )}
-      {showHospital ? (
+      {showHospital && (
         <Main
           allData={allData}
           selectedDistrict={selectedDistrict}
           hospitalType={hospitalType}
         />
-      ) : (
+      )}
+      {showHome && (
         <div className={classes.hello}>
           <Typography
             className={classes.welcomeHeaderGap}
@@ -437,6 +473,11 @@ const Router = () => {
             }
             .
           </Typography>
+        </div>
+      )}
+      {showInfo && (
+        <div className={classes.chart}>
+          <Daily />
         </div>
       )}
     </div>
