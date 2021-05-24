@@ -101,7 +101,7 @@ const Daily = () => {
                 <li> Deceased {deceased} </li>
                 <li> Recovered {recovered} </li>
                 <li> Tested {tested} </li>
-                <li> Vaccinated {vaccinated}. </li>
+                <li> Vaccinated {vaccinated} </li>
             </ul>
             <div className={classes.chartContainer}>
                 <Bar data={data} options={options} />
