@@ -11,7 +11,7 @@ import GoogleMaps from "./Maps";
 
 const useStyles = makeStyles({
   root: {
-    height: 420,
+    height: 500,
     width: 300,
     maxWidth: 280,
     marginRight: 10,
@@ -63,9 +63,24 @@ const useStyles = makeStyles({
     color: "#90caf9",
     transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
   },
-  actionsDirection: {
+  actionsContact: {
     marginTop: 5,
     height: 20,
+    left: 89,
+    float: "right",
+    color: "#90caf9",
+    transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  },
+  actionsDirection: {
+    height: 0,
+    top: -20,
+    float: "left",
+    color: "#90caf9",
+    transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  },
+  actionsRegister: {
+    top: -20,
+    height: 0,
     left: 70,
     float: "right",
     color: "#90caf9",
@@ -73,13 +88,22 @@ const useStyles = makeStyles({
   },
 });
 
-const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
+const MapCards = ({
+  item,
+  handleGetAddress,
+  handleGetContact,
+  handleGetDirections,
+  handleGetRegistration,
+}) => {
   const classes = useStyles();
 
   const hospital = item.hospital;
   const totalBeds = item.total_beds;
   const availableBeds = item.available_beds;
   const address = item.address;
+  const contact = item.contact;
+  const onlineRegistration = item.online_registration;
+  const lastUpdated = item.last_updated;
   const lat = item.lat;
   const lng = item.lng;
   const destinationLocation = { lat: lat, lng: lng };
@@ -96,7 +120,7 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
           <Typography
             className={classes.name}
             gutterBottom
-            variant="h9"
+            variant="body1"
             component="h4"
           >
             {hospital}
@@ -130,12 +154,32 @@ const MapCards = ({ item, handleGetAddress, handleGetDirections }) => {
           </Button>
           <Button
             size="medium"
+            className={classes.actionsContact}
+            onClick={() => {
+              handleGetContact(true, contact);
+            }}
+          >
+            Contact
+          </Button>
+        </CardActions>
+        <CardActions className={classes.actions}>
+          <Button
+            size="medium"
             className={classes.actionsDirection}
             onClick={() => {
               handleGetDirections(true, destinationLocation);
             }}
           >
             Directions
+          </Button>
+          <Button
+            size="medium"
+            className={classes.actionsRegister}
+            onClick={() => {
+              handleGetRegistration(onlineRegistration);
+            }}
+          >
+            Register
           </Button>
         </CardActions>
       </Card>
