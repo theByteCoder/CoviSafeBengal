@@ -94,7 +94,7 @@ const Daily = () => {
                 className={classes.welcomeHeaderGap}
                 variant="body1"
                 component="p" >
-                West Bengal Covid Data for {date}.
+                West Bengal Covid Data for {date}
             </Typography>
             <ul>
                 <li> Confirmed {confirmed} </li>
