@@ -99,7 +99,7 @@ const Daily = () => {
             <ul>
                 <li> Confirmed {confirmed} </li>
                 <li> Deceased {deceased} </li>
-                <li> Recovered {recovered}. </li>
+                <li> Recovered {recovered} </li>
                 <li> Tested {tested}. </li>
                 <li> Vaccinated {vaccinated}. </li>
             </ul>
