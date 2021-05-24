@@ -473,7 +473,7 @@ const Router = () => {
       )}
       {showInfo && (
          <div className={classes.chart}>
-          <Daily></Daily>
+          <Daily />
          </div>
       )}
     </div>
