@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import MapCards from "./MapsCard";
 import DirectionController from "./DirectionController";
 import AddressController from "./AddressController";
+import ContactController from "./ContactController";
 import Toastbar from "./Toastbar";
 
 const useStyles = makeStyles((theme) => ({
@@ -27,10 +28,21 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
   }, [allData, selectedDistrict, type]);
 
   const [getAddress, setGetAddress] = useState(false);
-  const [address, setAddress] = useState({});
+  const [address, setAddress] = useState("");
   const handleGetAddress = (showAddress, address = "") => {
     setAddress(address);
     setGetAddress(showAddress);
+  };
+
+  const [getContact, setGetContact] = useState(false);
+  const [contact, setContact] = useState({});
+  const handleGetContact = (showContact, contact = "") => {
+    setContact(contact);
+    setGetContact(showContact);
+  };
+
+  const handleGetRegistration = (onlineRegistration) => {
+    window.open(onlineRegistration, "_blank");
   };
 
   const [getDirections, setGetDirections] = useState(false);
@@ -74,7 +86,9 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
                   <MapCards
                     item={value}
                     handleGetAddress={handleGetAddress}
+                    handleGetContact={handleGetContact}
                     handleGetDirections={handleGetDirections}
+                    handleGetRegistration={handleGetRegistration}
                     key={index}
                   />
                 </Grid>
@@ -102,6 +116,13 @@ const MapsController = ({ allData, selectedDistrict, type }) => {
           handleGetDirections={handleGetDirections}
           destLoc={destination}
           origin={origin}
+        />
+      )}
+      {getContact && (
+        <ContactController
+          isOpen={getContact}
+          handleGetContact={handleGetContact}
+          contact={contact}
         />
       )}
     </div>
