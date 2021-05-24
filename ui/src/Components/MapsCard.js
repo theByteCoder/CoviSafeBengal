@@ -40,10 +40,11 @@ const useStyles = makeStyles({
   },
   name: {
     marginLeft: 0,
-    marginTop: -50,
+    marginTop: -45,
     marginBottom: 10,
     height: "100%",
-    color: "white",
+    fontWeight: "bold",
+    color: "rgba(255, 255, 255, 0.7)",
   },
   totalB: {
     marginLeft: 0,
@@ -58,7 +59,7 @@ const useStyles = makeStyles({
   },
   actionsAddress: {
     height: 20,
-    marginTop: 5,
+    marginTop: 15,
     float: "left",
     color: "#90caf9",
     transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
@@ -85,6 +86,11 @@ const useStyles = makeStyles({
     float: "right",
     color: "#90caf9",
     transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  },
+  updatedOn: {
+    fontSize: 12,
+    marginLeft: 20,
+    color: "rgba(255, 255, 255, 0.7)",
   },
 });
 
@@ -121,7 +127,7 @@ const MapCards = ({
             className={classes.name}
             gutterBottom
             variant="body1"
-            component="h4"
+            component="h5"
           >
             {hospital}
           </Typography>
@@ -182,6 +188,7 @@ const MapCards = ({
             Register
           </Button>
         </CardActions>
+        <div className={classes.updatedOn}>{lastUpdated}</div>
       </Card>
     </>
   );
