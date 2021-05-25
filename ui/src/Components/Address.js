@@ -55,7 +55,7 @@ const Address = ({ handleClose, address }) => {
           color="secondary"
           onClick={handleClose}
         />
-        {address.length && (
+        {address.length ? (
           <Typography
             className={classes.addressText}
             variant="body2"
@@ -63,6 +63,15 @@ const Address = ({ handleClose, address }) => {
             component="p"
           >
             {address}
+          </Typography>
+        ) : (
+          <Typography
+            className={classes.addressText}
+            variant="body2"
+            color="textPrimary"
+            component="p"
+          >
+            Address details unavailable.
           </Typography>
         )}
       </div>
