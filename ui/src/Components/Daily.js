@@ -79,20 +79,20 @@ const Daily = () => {
   };
 
   useEffect(() => {
-    fetch("https://api.covid19india.org/v4/min/data.min.json").then(
-      (response) => {
-        if (response.ok) {
-          response.json().then((response) => {
-            setDate(response["WB"].meta.tested.last_updated);
-            setConfirmed(response["WB"].total["confirmed"]);
-            setDeceased(response["WB"].total["deceased"]);
-            setRecovered(response["WB"].total["recovered"]);
-            setTested(response["WB"].total["tested"]);
-            setVaccinated(response["WB"].total["vaccinated"]);
-          });
-        }
+    fetch(
+      `${process.env.REACT_APP_COVID_API_BASE_URL}/v4/min/data.min.json`
+    ).then((response) => {
+      if (response.ok) {
+        response.json().then((response) => {
+          setDate(response["WB"].meta.tested.last_updated);
+          setConfirmed(response["WB"].total["confirmed"]);
+          setDeceased(response["WB"].total["deceased"]);
+          setRecovered(response["WB"].total["recovered"]);
+          setTested(response["WB"].total["tested"]);
+          setVaccinated(response["WB"].total["vaccinated"]);
+        });
       }
-    );
+    });
   }, []);
 
   return (

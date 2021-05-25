@@ -188,14 +188,16 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("https://3b4fb61a91ff.ngrok.io/v2/address/all/").then((response) => {
-      if (response.ok) {
-        response.json().then((response) => {
-          setDistricts(Object.keys(response.response));
-          setAllData(response.response);
-        });
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/v2/address/all/`).then(
+      (response) => {
+        if (response.ok) {
+          response.json().then((response) => {
+            setDistricts(Object.keys(response.response));
+            setAllData(response.response);
+          });
+        }
       }
-    });
+    );
   }, []);
 
   return (
