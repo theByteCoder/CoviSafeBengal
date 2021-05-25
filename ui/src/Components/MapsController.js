@@ -16,16 +16,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MapsController = ({ allData, selectedDistrict, type }) => {
+const MapsController = ({ hospitalsData, selectedDistrict, type }) => {
   const classes = useStyles();
 
   const [requestedData, setRequestedData] = useState([]);
 
   useEffect(() => {
-    if (allData) {
-      setRequestedData(allData[selectedDistrict][type]);
+    if (hospitalsData) {
+      setRequestedData(hospitalsData[selectedDistrict][type]);
     }
-  }, [allData, selectedDistrict, type]);
+  }, [hospitalsData, selectedDistrict, type]);
 
   const [getAddress, setGetAddress] = useState(false);
   const [address, setAddress] = useState("");

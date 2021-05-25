@@ -13,6 +13,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
+import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -142,8 +143,9 @@ const Router = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [showHospital, setShowHospital] = useState(false);
+  const [showSafeHome, setShowSafeHome] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   const [header, setHeader] = useState("Welcome to Covid Hospital Details");
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -152,6 +154,7 @@ const Router = () => {
   const handleShowHome = () => {
     setShowHospital(false);
     setShowInfo(false);
+    setShowSafeHome(false);
     setShowHome(true);
     setHeader("Home");
     setOpenDrawer(false);
@@ -160,27 +163,48 @@ const Router = () => {
   const handleShowHospitals = () => {
     setShowInfo(false);
     setShowHome(false);
+    setShowSafeHome(false);
     setShowHospital(true);
     setHeader("Hospitals");
+    setOpenDrawer(false);
+  };
+
+  const handleShowSafeHome = () => {
+    setShowInfo(false);
+    setShowHome(false);
+    setShowHospital(false);
+    setShowSafeHome(true);
+    setHeader("Safe Homes");
     setOpenDrawer(false);
   };
 
   const handleShowInfo = () => {
     setShowHospital(false);
     setShowHome(false);
+    setShowSafeHome(false);
     setShowInfo(true);
     setHeader("Extra Information");
     setOpenDrawer(false);
   };
 
-  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [selectedDistrictHospital, setSelectedDistrictHospital] = useState("");
+  const [selectedDistrictSafeHome, setSelectedDistrictSafeHome] = useState("");
+
   const [hospitalType, setHospitalType] = useState("");
+  const safeHomeType = "data";
 
-  const [districts, setDistricts] = useState([]);
-  const [allData, setAllData] = useState([]);
+  const [districtsHospital, setDistrictsHospital] = useState([]);
+  const [districtsSafeHome, setDistrictsSafeHome] = useState([]);
 
-  const handleDistrictChange = (event) => {
-    setSelectedDistrict(event.target.value);
+  const [hospitalsData, setHospitalsData] = useState([]);
+  const [safeHomesData, setSafeHomesData] = useState([]);
+
+  const handleDistrictChangeHospital = (event) => {
+    setSelectedDistrictHospital(event.target.value);
+  };
+
+  const handleDistrictChangeSafeHome = (event) => {
+    setSelectedDistrictSafeHome(event.target.value);
   };
 
   const handleHospitalChange = (event) => {
@@ -192,8 +216,10 @@ const Router = () => {
       (response) => {
         if (response.ok) {
           response.json().then((response) => {
-            setDistricts(Object.keys(response.response.hospitals));
-            setAllData(response.response.hospitals);
+            setDistrictsHospital(Object.keys(response.response.hospitals));
+            setDistrictsSafeHome(Object.keys(response.response.safe_homes));
+            setHospitalsData(response.response.hospitals);
+            setSafeHomesData(response.response.safe_homes);
           });
         }
       }
@@ -240,12 +266,12 @@ const Router = () => {
                     <Select
                       labelId="district"
                       id="select-district"
-                      value={selectedDistrict}
-                      onChange={handleDistrictChange}
+                      value={selectedDistrictHospital}
+                      onChange={handleDistrictChangeHospital}
                       displayEmpty
                       className={classes.selectEmpty}
                     >
-                      {districts.map((each, key) => (
+                      {districtsHospital.map((each, key) => (
                         <MenuItem value={each} key={key}>
                           {each}
                         </MenuItem>
@@ -282,6 +308,32 @@ const Router = () => {
                     </Select>
                   </FormControl>
                 )}
+
+                {showSafeHome && (
+                  <FormControl className={classes.formControlDistrict}>
+                    <InputLabel
+                      className={classes.dropdownLabel}
+                      shrink
+                      id="label-district"
+                    >
+                      District
+                    </InputLabel>
+                    <Select
+                      labelId="district"
+                      id="select-district"
+                      value={selectedDistrictSafeHome}
+                      onChange={handleDistrictChangeSafeHome}
+                      displayEmpty
+                      className={classes.selectEmpty}
+                    >
+                      {districtsSafeHome.map((each, key) => (
+                        <MenuItem value={each} key={key}>
+                          {each}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                )}
               </Grid>
             </Grid>
           </Grid>
@@ -313,11 +365,16 @@ const Router = () => {
               primary="Hospitals"
             />
           </ListItem>
-          <ListItem
-            button
-            onClick={handleShowInfo}
-            key="Additional Information"
-          >
+          <ListItem button onClick={handleShowSafeHome} key="SafeHomes">
+            <ListItemIcon>
+              <HomeWorkIcon className={classes.hospitalIcon} />
+            </ListItemIcon>
+            <ListItemText
+              className={classes.hospitalIconText}
+              primary="Safe Homes"
+            />
+          </ListItem>
+          <ListItem button onClick={handleShowInfo} key="AdditionalInformation">
             <ListItemIcon>
               <InfoIcon className={classes.hospitalIcon} />
             </ListItemIcon>
@@ -340,9 +397,18 @@ const Router = () => {
       )}
       {showHospital && (
         <Main
-          allData={allData}
-          selectedDistrict={selectedDistrict}
+          hospitalsData={hospitalsData}
+          selectedDistrict={selectedDistrictHospital}
           hospitalType={hospitalType}
+          pleaseSelectText={"Please select District and Hospital Type."}
+        />
+      )}
+      {showSafeHome && (
+        <Main
+          hospitalsData={safeHomesData}
+          selectedDistrict={selectedDistrictSafeHome}
+          hospitalType={safeHomeType}
+          pleaseSelectText={"Please select District."}
         />
       )}
       {showHome && (
@@ -352,24 +418,27 @@ const Router = () => {
             variant="body1"
             component="p"
           >
-            Welcome to Covid hospital details for West Bengal, India.
+            Welcome,
           </Typography>
           <Typography
             className={classes.welcomeParaGap}
             variant="body1"
             component="p"
           >
-            We have developed this application to help find suitable hospitals
-            in West Bengal, that have available beds for Covid patients.
+            We have developed this application to help users find suitable
+            hospitals and safe homes in West Bengal, that have available beds
+            for Covid patients.
           </Typography>
           <Typography
             className={classes.welcomeParaGap}
             variant="body1"
             component="p"
           >
-            This application provides district wise data, for both government
-            and private hospitals. Additionally, the address and directions to
-            the hospital is also provides.
+            This application provides district wise data, for both government,
+            private and government requisitioned hospitals and safe homes. Users
+            can get directions to the hospital or safe home, call the hospital
+            or safe home, register for beds in the hospital or safe home. We
+            have also provided the last update date and time for convenience.
           </Typography>
           <Typography
             className={classes.welcomeParaGap}
