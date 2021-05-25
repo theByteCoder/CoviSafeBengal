@@ -4,6 +4,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import { isEmpty } from "lodash";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import MapDirectionsRenderer from "./MapDirectionsRenderer";
+import Typography from "@material-ui/core/Typography";
 // import TravelMode from "./TravelMode";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #999",
     fontSize: "20px",
   },
+  noInfoText: {
+    color: "white",
+  },
 }));
 
 const Directions = ({ handleClose, destLoc, origin }) => {
@@ -83,7 +87,7 @@ const Directions = ({ handleClose, destLoc, origin }) => {
         />
         {/* to be used for travel mode */}
         {/* <TravelMode travelMode={travelMode} handleSetMode={handleSetMode} /> */}
-        {!isEmpty(origin) && (
+        {!isEmpty(origin) ? (
           <GoogleMap
             mapContainerStyle={directionMapContainerStyle}
             zoom={12}
@@ -92,6 +96,15 @@ const Directions = ({ handleClose, destLoc, origin }) => {
           >
             <MapDirectionsRenderer places={places} travelMode={"DRIVING"} />
           </GoogleMap>
+        ) : (
+          <Typography
+            className={classes.noInfoText}
+            variant="body2"
+            color="textPrimary"
+            component="p"
+          >
+            Direction details unavailable.
+          </Typography>
         )}
       </div>
     </div>

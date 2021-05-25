@@ -45,6 +45,9 @@ const useStyles = makeStyles({
     color: "white",
     textDecoration: "none",
   },
+  noInfoText: {
+    color: "white",
+  },
 });
 
 const Contact = ({ handleClose, contact }) => {
@@ -74,7 +77,7 @@ const Contact = ({ handleClose, contact }) => {
           color="secondary"
           onClick={handleClose}
         />
-        {contacts.length &&
+        {contacts.length ? (
           contacts.map((item, key) => {
             return (
               <Typography
@@ -90,7 +93,17 @@ const Contact = ({ handleClose, contact }) => {
                 {item}
               </Typography>
             );
-          })}
+          })
+        ) : (
+          <Typography
+            className={classes.noInfoText}
+            variant="body2"
+            color="textPrimary"
+            component="p"
+          >
+            Contact details unavailable.
+          </Typography>
+        )}
       </div>
     </div>
   );

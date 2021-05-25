@@ -147,6 +147,19 @@ const Router = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [showHome, setShowHome] = useState(true);
   const [header, setHeader] = useState("Welcome to Covid Hospital Details");
+
+  const [selectedDistrictHospital, setSelectedDistrictHospital] = useState("");
+  const [selectedDistrictSafeHome, setSelectedDistrictSafeHome] = useState("");
+
+  const [hospitalType, setHospitalType] = useState("");
+  const safeHomeType = "data";
+
+  const [districtsHospital, setDistrictsHospital] = useState([]);
+  const [districtsSafeHome, setDistrictsSafeHome] = useState([]);
+
+  const [hospitalsData, setHospitalsData] = useState([]);
+  const [safeHomesData, setSafeHomesData] = useState([]);
+
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
   };
@@ -186,18 +199,6 @@ const Router = () => {
     setHeader("Extra Information");
     setOpenDrawer(false);
   };
-
-  const [selectedDistrictHospital, setSelectedDistrictHospital] = useState("");
-  const [selectedDistrictSafeHome, setSelectedDistrictSafeHome] = useState("");
-
-  const [hospitalType, setHospitalType] = useState("");
-  const safeHomeType = "data";
-
-  const [districtsHospital, setDistrictsHospital] = useState([]);
-  const [districtsSafeHome, setDistrictsSafeHome] = useState([]);
-
-  const [hospitalsData, setHospitalsData] = useState([]);
-  const [safeHomesData, setSafeHomesData] = useState([]);
 
   const handleDistrictChangeHospital = (event) => {
     setSelectedDistrictHospital(event.target.value);
