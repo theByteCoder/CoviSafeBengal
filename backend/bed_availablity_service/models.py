@@ -7,7 +7,8 @@ from djongo import models
 class AvailableBeds(models.Model):
     _id = models.ObjectIdField()
     date = models.CharField(max_length=10)
-    data = models.JSONField()
+    hospitals = models.JSONField(default=dict)
+    safe_homes = models.JSONField(default=dict)
 
     def __str__(self):
         return self._id

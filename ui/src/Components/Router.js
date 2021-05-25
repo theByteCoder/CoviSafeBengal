@@ -112,13 +112,15 @@ const useStyles = makeStyles((theme) => ({
   welcome: { margin: 10, marginLeft: 40, position: "relative" },
   hello: {
     color: "rgba(255, 255, 255, 0.7)",
-    margin: 100,
-    marginTop: theme.spacing(23),
+    margin: 60,
+    marginTop: theme.spacing(20),
     position: "absolute",
   },
   chart: {
+    marginTop: theme.spacing(16),
+    position: "absolute",
     color: "rgba(255, 255, 255, 0.7)",
-    margin: 100,
+    margin: 60,
     width: "50%",
   },
   welcomeHeaderGap: {
@@ -171,11 +173,6 @@ const Router = () => {
     setOpenDrawer(false);
   };
 
-  // const handleView = () => {
-  //   if(showHospital)
-  //     return true;
-  // };
-
   const [selectedDistrict, setSelectedDistrict] = useState("");
   const [hospitalType, setHospitalType] = useState("");
 
@@ -191,14 +188,16 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch("https://78093952caf8.ngrok.io/v2/address/all/").then((response) => {
-      if (response.ok) {
-        response.json().then((response) => {
-          setDistricts(Object.keys(response.response));
-          setAllData(response.response);
-        });
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/v2/address/all/`).then(
+      (response) => {
+        if (response.ok) {
+          response.json().then((response) => {
+            setDistricts(Object.keys(response.response.hospitals));
+            setAllData(response.response.hospitals);
+          });
+        }
       }
-    });
+    );
   }, []);
 
   return (
@@ -276,6 +275,9 @@ const Router = () => {
                       </MenuItem>
                       <MenuItem value="pvt" key="Private">
                         Private
+                      </MenuItem>
+                      <MenuItem value="requisitioned" key="Requisitioned">
+                        Government Requisitioned
                       </MenuItem>
                     </Select>
                   </FormControl>
