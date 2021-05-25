@@ -1,7 +1,7 @@
 import pprint
 import time
 import schedule
-from webscrapper import get_daily_data
+from webscrapper import get_daily_hospital_data, get_daily_safe_home_data
 from configparser import ConfigParser
 
 # this is a datasource scheduler.
@@ -15,16 +15,23 @@ def get_yesterday():
     return today - timedelta(days=1)
 
 
-def scrapper():
-    data = get_daily_data()
-    return data
+def hospital_scrapper():
+    hospital_data = get_daily_hospital_data()
+    return hospital_data
+
+
+def safe_home_scrapper():
+    safe_home_data = get_daily_safe_home_data()
+    return safe_home_data
 
 
 def extract_all_datasource():
-    data = scrapper()
-    pprint.pprint(data)
+    hospital_data = hospital_scrapper()
+    safe_home_data = safe_home_scrapper()
     yesterday = get_yesterday().strftime("%d%m%Y")
-    return {'date': yesterday, 'data': data}
+    data = {'date': yesterday, 'hospitals': hospital_data, 'safe_homes': safe_home_data}
+    pprint.pprint(data)
+    return data 
 
 
 def connect_db():
@@ -61,8 +68,8 @@ def set_db_object_id(object_id):
         config.write(conf)
 
 
-# insert_datasource()
-schedule.every().day.at("06:00").do(insert_datasource)
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+insert_datasource()
+# schedule.every().day.at("06:00").do(insert_datasource)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
