@@ -59,7 +59,7 @@ def fetch_all_new(request):
     if request.method == 'GET':
         object_id = get_db_object_id()
         entries = AvailableBeds.objects.get(_id=ObjectId(object_id))
-        return JsonResponse({'response': entries.data}, safe=False)
+        return JsonResponse({'response': {'hospitals': entries.hospitals, 'safe_homes': entries.safe_homes}}, safe=False)
 
 
 @csrf_exempt

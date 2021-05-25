@@ -192,8 +192,8 @@ const Router = () => {
       (response) => {
         if (response.ok) {
           response.json().then((response) => {
-            setDistricts(Object.keys(response.response));
-            setAllData(response.response);
+            setDistricts(Object.keys(response.response.hospitals));
+            setAllData(response.response.hospitals);
           });
         }
       }
