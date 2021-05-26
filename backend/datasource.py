@@ -1,7 +1,6 @@
-import pprint
 import time
 import schedule
-from webscrapper import get_daily_hospital_data, get_daily_safe_home_data
+from webscrapper import get_daily_hospital_data, get_daily_safe_home_data, get_daily_ambulance_data
 from configparser import ConfigParser
 from datetime import date, timedelta, datetime
 
@@ -22,21 +21,25 @@ def get_updated_at_time():
 
 def hospital_scrapper():
     hospital_data = get_daily_hospital_data()
-    return hospital_data
+    yesterday = get_yesterday()
+    updated_at = get_updated_at_time()
+    data = {'date': yesterday, 'updated_at': updated_at, 'hospitals': hospital_data}
+    return data
 
 
 def safe_home_scrapper():
     safe_home_data = get_daily_safe_home_data()
-    return safe_home_data
-
-
-def extract_all_datasource():
-    hospital_data = hospital_scrapper()
-    safe_home_data = safe_home_scrapper()
     yesterday = get_yesterday()
     updated_at = get_updated_at_time()
-    data = {'date': yesterday, 'updated_at': updated_at, 'hospitals': hospital_data, 'safe_homes': safe_home_data}
-    pprint.pprint(data)
+    data = {'date': yesterday, 'updated_at': updated_at, 'safe_homes': safe_home_data}
+    return data
+
+
+def ambulance_scrapper():
+    ambulance_data = get_daily_ambulance_data()
+    yesterday = get_yesterday()
+    updated_at = get_updated_at_time()
+    data = {'date': yesterday, 'updated_at': updated_at, 'ambulances': ambulance_data}
     return data
 
 
@@ -45,9 +48,37 @@ def connect_db():
     return MongoClient(host="localhost", port=27017)
 
 
-def get_db_collection(client):
-    db = client.covibeds
-    return db.bed_availablity_service_availablebeds
+def set_db_object_id(object_prop, object_id):
+    config = ConfigParser()
+    config.read('config.cfg')
+    db = config['mongodb']
+    db[object_prop] = f'{object_id}'
+    with open('config.cfg', 'w') as conf:
+        config.write(conf)
+
+
+def insert_hospital_beds(db, data):
+    collection = db.bed_availablity_service_availablehospitalbeds
+    action = collection.insert_one(data)
+    object_id = action.inserted_id
+    set_db_object_id('hospital_id', object_id)
+    return object_id
+
+
+def insert_safe_homes(db, data):
+    collection = db.bed_availablity_service_availablesafehomes
+    action = collection.insert_one(data)
+    object_id = action.inserted_id
+    set_db_object_id('safe_home_id', object_id)
+    return object_id
+
+
+def insert_ambulances(db, data):
+    collection = db.bed_availablity_service_availableambulances
+    action = collection.insert_one(data)
+    object_id = action.inserted_id
+    set_db_object_id('ambulance_id', object_id)
+    return object_id
 
 
 def disconnect_db(client):
@@ -56,26 +87,24 @@ def disconnect_db(client):
 
 def insert_datasource():
     start_time = time.time()
-    data = extract_all_datasource()
     client = connect_db()
-    collection = get_db_collection(client)
-    action = collection.insert_one(data)
-    object_id = action.inserted_id
-    set_db_object_id(object_id)
-    print('Data updated. Object id ', action.inserted_id)
+    db = client.covibeds
+    # insert hospital data
+    hospital_data = hospital_scrapper()
+    hospital_id = insert_hospital_beds(db, hospital_data)
+    print('Hospital data updated. Object id ', hospital_id)
+    # insert safe home data
+    safe_home_data = safe_home_scrapper()
+    safe_home_id = insert_safe_homes(db, safe_home_data)
+    print('Safe home data updated. Object id ', safe_home_id)
+    # insert ambulance data
+    ambulance_data = ambulance_scrapper()
+    ambulance_id = insert_ambulances(db, ambulance_data)
+    print('Ambulance data updated. Object id ', ambulance_id)
     disconnect_db(client)
     end_time = time.time()
     execution_time = end_time - start_time
     print(f'Time taken {str(timedelta(seconds=execution_time))}')
-
-
-def set_db_object_id(object_id):
-    config = ConfigParser()
-    config.read('config.cfg')
-    db = config['mongodb']
-    db['object_id'] = f'{object_id}'
-    with open('config.cfg', 'w') as conf:
-        config.write(conf)
 
 
 insert_datasource()

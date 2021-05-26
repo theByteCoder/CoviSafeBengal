@@ -156,9 +156,11 @@ const Router = () => {
 
   const [districtsHospital, setDistrictsHospital] = useState([]);
   const [districtsSafeHome, setDistrictsSafeHome] = useState([]);
+  const [districtsAmbulance, setDistrictsAmbulance] = useState([]);
 
   const [hospitalsData, setHospitalsData] = useState([]);
   const [safeHomesData, setSafeHomesData] = useState([]);
+  const [ambulanceData, setAmbulanceData] = useState([]);
 
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -213,14 +215,38 @@ const Router = () => {
   };
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/v2/address/all/`).then(
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/v3/address/hospitals/`).then(
       (response) => {
         if (response.ok) {
           response.json().then((response) => {
-            setDistrictsHospital(Object.keys(response.response.hospitals));
-            setDistrictsSafeHome(Object.keys(response.response.safe_homes));
-            setHospitalsData(response.response.hospitals);
-            setSafeHomesData(response.response.safe_homes);
+            setDistrictsHospital(Object.keys(response.response));
+            setHospitalsData(response.response);
+          });
+        }
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/v3/address/safehomes/`).then(
+      (response) => {
+        if (response.ok) {
+          response.json().then((response) => {
+            setDistrictsSafeHome(Object.keys(response.response));
+            setSafeHomesData(response.response);
+          });
+        }
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/v3/address/ambulances/`).then(
+      (response) => {
+        if (response.ok) {
+          response.json().then((response) => {
+            setDistrictsAmbulance(Object.keys(response.response));
+            setAmbulanceData(response.response);
           });
         }
       }
