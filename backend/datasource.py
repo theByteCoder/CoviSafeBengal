@@ -65,8 +65,8 @@ def insert_datasource():
     print('Data updated. Object id ', action.inserted_id)
     disconnect_db(client)
     end_time = time.time()
-    execution_time = start_time - end_time
-    print(f'Time taken {execution_time.strftime("%M:%S")}')
+    execution_time = end_time - start_time
+    print(f'Time taken {str(timedelta(seconds=execution_time))}')
 
 
 def set_db_object_id(object_id):
