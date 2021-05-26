@@ -3,6 +3,8 @@ import time
 import schedule
 from webscrapper import get_daily_hospital_data, get_daily_safe_home_data
 from configparser import ConfigParser
+from datetime import date, timedelta, datetime
+
 
 # this is a datasource scheduler.
 # it will be executed everyday at 6 AM
@@ -10,9 +12,12 @@ from configparser import ConfigParser
 
 
 def get_yesterday():
-    from datetime import date, timedelta
     today = date.today()
-    return today - timedelta(days=1)
+    return (today - timedelta(days=1)).strftime("%d%m%Y")
+
+
+def get_updated_at_time():
+    return datetime.now().strftime("%d%m%Y%H%M%S")
 
 
 def hospital_scrapper():
@@ -28,10 +33,11 @@ def safe_home_scrapper():
 def extract_all_datasource():
     hospital_data = hospital_scrapper()
     safe_home_data = safe_home_scrapper()
-    yesterday = get_yesterday().strftime("%d%m%Y")
-    data = {'date': yesterday, 'hospitals': hospital_data, 'safe_homes': safe_home_data}
+    yesterday = get_yesterday()
+    updated_at = get_updated_at_time()
+    data = {'date': yesterday, 'updated_at': updated_at, 'hospitals': hospital_data, 'safe_homes': safe_home_data}
     pprint.pprint(data)
-    return data 
+    return data
 
 
 def connect_db():

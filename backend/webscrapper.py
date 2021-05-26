@@ -50,7 +50,7 @@ def get_daily_hospital_data():
                             time.sleep(6)
                             hospital = str(each_card.find_element_by_xpath('.//div/h5').text).replace(
                                 '(Government Hospital)', '').replace('(Satellite Govt. Building)', '')
-                            capture_address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
+                            address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
                             contact = each_card.find_element_by_xpath('(.//div/div/div/a)[1]').get_attribute(
                                 'href')
                             online_registration = each_card.find_element_by_xpath(
@@ -61,8 +61,7 @@ def get_daily_hospital_data():
                             available_beds = each_card.find_element_by_xpath(
                                 '(.//div/div/div/div/ul/li/h3)[8]').text
                             last_updated = each_card.find_element_by_xpath('.//div/small').text
-                            location = generate_geolocation(f'{hospital}, {capture_address}')
-                            address = location['results'][0]['formatted_address']
+                            location = generate_geolocation(f'{hospital}, {district}')
                             lat = location['results'][0]['geometry']['location']['lat']
                             lng = location['results'][0]['geometry']['location']['lng']
                             govt = {'hospital': hospital, 'address': address, 'total_beds': total_beds,
@@ -82,7 +81,7 @@ def get_daily_hospital_data():
                                 time.sleep(6)
                                 hospital = str(each_card.find_element_by_xpath('.//div/h5').text).replace(
                                     '(Govt. Requisitioned Pvt. Hospital)', '')
-                                capture_address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
+                                address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
                                 contact = each_card.find_element_by_xpath('(.//div/div/div/a)[1]').get_attribute(
                                     'href')
                                 online_registration = each_card.find_element_by_xpath(
@@ -93,8 +92,7 @@ def get_daily_hospital_data():
                                 available_beds = each_card.find_element_by_xpath(
                                     '(.//div/div/div/div/ul/li/h3)[8]').text
                                 last_updated = each_card.find_element_by_xpath('.//div/small').text
-                                location = generate_geolocation(f'{hospital}, {capture_address}')
-                                address = location['results'][0]['formatted_address']
+                                location = generate_geolocation(f'{hospital}, {district}')
                                 lat = location['results'][0]['geometry']['location']['lat']
                                 lng = location['results'][0]['geometry']['location']['lng']
                                 requisitioned = {'hospital': hospital, 'address': address, 'total_beds': total_beds,
@@ -125,7 +123,7 @@ def get_daily_hospital_data():
                                             '(Private Hospital (Self Run))', '').replace('(Satellite Hotel)',
                                                                                          '').replace(
                                             '(Satellite Pvt. Building)', '')
-                                        capture_address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
+                                        address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
                                         contact = each_card.find_element_by_xpath(
                                             '(.//div/div/div/a)[1]').get_attribute(
                                             'href')
@@ -137,8 +135,7 @@ def get_daily_hospital_data():
                                         available_beds = each_card.find_element_by_xpath(
                                             '(.//div/div/div/div/ul/li/h3)[8]').text
                                         last_updated = each_card.find_element_by_xpath('.//div/small').text
-                                        location = generate_geolocation(f'{hospital}, {capture_address}')
-                                        address = location['results'][0]['formatted_address']
+                                        location = generate_geolocation(f'{hospital}, {district}')
                                         lat = location['results'][0]['geometry']['location']['lat']
                                         lng = location['results'][0]['geometry']['location']['lng']
                                         pvt = {'hospital': hospital, 'address': address, 'total_beds': total_beds,
@@ -154,7 +151,7 @@ def get_daily_hospital_data():
                                     time.sleep(6)
                                     hospital = str(each_card.find_element_by_xpath('.//div/h5').text).replace(
                                         '(Private Hospital (Self Run))', '')
-                                    capture_address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
+                                    address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
                                     contact = each_card.find_element_by_xpath('(.//div/div/div/a)[1]').get_attribute(
                                         'href')
                                     online_registration = each_card.find_element_by_xpath(
@@ -165,8 +162,7 @@ def get_daily_hospital_data():
                                     available_beds = each_card.find_element_by_xpath(
                                         '(.//div/div/div/div/ul/li/h3)[8]').text
                                     last_updated = each_card.find_element_by_xpath('.//div/small').text
-                                    location = generate_geolocation(f'{hospital}, {capture_address}')
-                                    address = location['results'][0]['formatted_address']
+                                    location = generate_geolocation(f'{hospital}, {district}')
                                     lat = location['results'][0]['geometry']['location']['lat']
                                     lng = location['results'][0]['geometry']['location']['lng']
                                     pvt = {'hospital': hospital, 'address': address, 'total_beds': total_beds,
@@ -219,7 +215,7 @@ def get_daily_safe_home_data():
                             time.sleep(6)
                             hospital = str(each_card.find_element_by_xpath('.//div/h5').text).replace(
                                 '(Safe Home)', '')
-                            capture_address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
+                            address = each_card.find_element_by_xpath('(.//div/div/div)[1]').text
                             contact = each_card.find_element_by_xpath('(.//div/div/div/a)[1]').get_attribute(
                                 'href')
                             online_registration = each_card.find_element_by_xpath(
@@ -230,8 +226,7 @@ def get_daily_safe_home_data():
                             available_beds = each_card.find_element_by_xpath(
                                 '(.//div/div/div/div/ul/li/h3)[8]').text
                             last_updated = each_card.find_element_by_xpath('.//div/small').text
-                            location = generate_geolocation(f'{hospital}, {capture_address}')
-                            address = location['results'][0]['formatted_address']
+                            location = generate_geolocation(f'{hospital}, {district}')
                             lat = location['results'][0]['geometry']['location']['lat']
                             lng = location['results'][0]['geometry']['location']['lng']
                             data = {'hospital': hospital, 'address': address, 'total_beds': total_beds,
