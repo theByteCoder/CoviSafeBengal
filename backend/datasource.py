@@ -55,6 +55,7 @@ def disconnect_db(client):
 
 
 def insert_datasource():
+    start_time = time.time()
     data = extract_all_datasource()
     client = connect_db()
     collection = get_db_collection(client)
@@ -63,6 +64,9 @@ def insert_datasource():
     set_db_object_id(object_id)
     print('Data updated. Object id ', action.inserted_id)
     disconnect_db(client)
+    end_time = time.time()
+    execution_time = start_time - end_time
+    print(f'Time taken {execution_time.strftime("%M:%S")}')
 
 
 def set_db_object_id(object_id):
