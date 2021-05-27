@@ -73,6 +73,7 @@ const Contact = ({ handleClose, contact }) => {
     <div className={classes.popupBox}>
       <div className={classes.box}>
         <CancelIcon
+          data-test={"hook-close-button"}
           className={classes.closeIcon}
           color="secondary"
           onClick={handleClose}
@@ -81,6 +82,7 @@ const Contact = ({ handleClose, contact }) => {
           contacts.map((item, key) => {
             return (
               <Typography
+                data-test={"hook-contact-text"}
                 className={classes.contactText}
                 variant="body2"
                 color="textPrimary"
@@ -96,6 +98,7 @@ const Contact = ({ handleClose, contact }) => {
           })
         ) : (
           <Typography
+            data-test={"hook-contact-text"}
             className={classes.noInfoText}
             variant="body2"
             color="textPrimary"

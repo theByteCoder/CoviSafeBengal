@@ -51,12 +51,14 @@ const Address = ({ handleClose, address }) => {
     <div className={classes.popupBox}>
       <div className={classes.box}>
         <CancelIcon
+          data-test={"hook-close-button"}
           className={classes.closeIcon}
           color="secondary"
           onClick={handleClose}
         />
         {address.length ? (
           <Typography
+            data-test={"hook-address-text"}
             className={classes.addressText}
             variant="body2"
             color="textPrimary"
@@ -66,6 +68,7 @@ const Address = ({ handleClose, address }) => {
           </Typography>
         ) : (
           <Typography
+            data-test={"hook-address-text"}
             className={classes.addressText}
             variant="body2"
             color="textPrimary"

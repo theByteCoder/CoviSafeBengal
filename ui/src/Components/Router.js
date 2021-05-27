@@ -279,6 +279,7 @@ const Router = () => {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
+        data-test={"hook-app-bar"}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: openDrawer,
@@ -289,6 +290,7 @@ const Router = () => {
             <Grid item xs={12}>
               <Grid container>
                 <IconButton
+                  data-test={"hook-open-drawer-icon"}
                   color="inherit"
                   aria-label="open drawer"
                   onClick={handleDrawerOpen}
@@ -306,6 +308,7 @@ const Router = () => {
                 {showHospital && (
                   <FormControl className={classes.formControlDistrict}>
                     <InputLabel
+                      data-test={"hook-district-dropdown-label"}
                       className={classes.dropdownLabel}
                       shrink
                       id="label-district"
@@ -313,6 +316,7 @@ const Router = () => {
                       District
                     </InputLabel>
                     <Select
+                      data-test={"hook-district-dropdown"}
                       labelId="district"
                       id="select-district"
                       value={selectedDistrictHospital}
@@ -321,7 +325,11 @@ const Router = () => {
                       className={classes.selectEmpty}
                     >
                       {districtsHospital.map((each, key) => (
-                        <MenuItem value={each} key={key}>
+                        <MenuItem
+                          data-test={`hook-district-option-${each}`}
+                          value={each}
+                          key={key}
+                        >
                           {each}
                         </MenuItem>
                       ))}
@@ -331,6 +339,7 @@ const Router = () => {
                 {showHospital && (
                   <FormControl className={classes.formControlHospital}>
                     <InputLabel
+                      data-test={`hook-hospital-type-dropdown-label`}
                       className={classes.dropdownLabel}
                       shrink
                       id="label-hospital"
@@ -338,6 +347,7 @@ const Router = () => {
                       Hospital Type
                     </InputLabel>
                     <Select
+                      data-test={`hook-hospital-type-dropdown`}
                       labelId="government"
                       id="select-government"
                       value={hospitalType}
@@ -345,13 +355,25 @@ const Router = () => {
                       displayEmpty
                       className={classes.selectEmpty}
                     >
-                      <MenuItem value="govt" key="Government">
+                      <MenuItem
+                        value="govt"
+                        key="Government"
+                        data-test={`hook-hospital-type-option-govt`}
+                      >
                         Government
                       </MenuItem>
-                      <MenuItem value="pvt" key="Private">
+                      <MenuItem
+                        value="pvt"
+                        key="Private"
+                        data-test={`hook-hospital-type-option-pvt`}
+                      >
                         Private
                       </MenuItem>
-                      <MenuItem value="requisitioned" key="Requisitioned">
+                      <MenuItem
+                        value="requisitioned"
+                        key="Requisitioned"
+                        data-test={`hook-hospital-type-option-requ`}
+                      >
                         Government Requisitioned
                       </MenuItem>
                     </Select>
@@ -360,6 +382,7 @@ const Router = () => {
                 {showSafeHome && (
                   <FormControl className={classes.formControlDistrict}>
                     <InputLabel
+                      data-test={`hook-safe-home-dropdown-label`}
                       className={classes.dropdownLabel}
                       shrink
                       id="label-district"
@@ -367,6 +390,7 @@ const Router = () => {
                       District
                     </InputLabel>
                     <Select
+                      data-test={`hook-safe-home-dropdown`}
                       labelId="district"
                       id="select-district"
                       value={selectedDistrictSafeHome}
@@ -375,7 +399,11 @@ const Router = () => {
                       className={classes.selectEmpty}
                     >
                       {districtsSafeHome.map((each, key) => (
-                        <MenuItem value={each} key={key}>
+                        <MenuItem
+                          value={each}
+                          key={key}
+                          data-test={`hook-safe-home-option-${each}`}
+                        >
                           {each}
                         </MenuItem>
                       ))}
@@ -385,6 +413,7 @@ const Router = () => {
                 {showAmbulance && (
                   <FormControl className={classes.formControlDistrict}>
                     <InputLabel
+                      data-test={`hook-safe-ambulance-dropdown-label`}
                       className={classes.dropdownLabel}
                       shrink
                       id="label-district"
@@ -392,6 +421,7 @@ const Router = () => {
                       District
                     </InputLabel>
                     <Select
+                      data-test={`hook-safe-ambulance-dropdown`}
                       labelId="district"
                       id="select-district"
                       value={selectedDistrictAmbulance}
@@ -400,7 +430,11 @@ const Router = () => {
                       className={classes.selectEmpty}
                     >
                       {districtsAmbulance.map((each, key) => (
-                        <MenuItem value={each} key={key}>
+                        <MenuItem
+                          value={each}
+                          key={key}
+                          data-test={`hook-safe-ambulance-option-${each}`}
+                        >
                           {each}
                         </MenuItem>
                       ))}
@@ -424,14 +458,20 @@ const Router = () => {
         <List>
           <ListItem button onClick={handleShowHome} key="Home">
             <IconButton>
-              <HomeIcon className={classes.homeIcon} />
+              <HomeIcon
+                className={classes.homeIcon}
+                data-test={`hook-home-icon`}
+              />
             </IconButton>
             <ListItemText className={classes.homeIconText} primary="Home" />
           </ListItem>
           <Divider />
           <ListItem button onClick={handleShowAmbulance} key="Ambulance">
             <ListItemIcon>
-              <AirportShuttleIcon className={classes.appBarIcons} />
+              <AirportShuttleIcon
+                className={classes.appBarIcons}
+                data-test={`hook-ambulance-icon`}
+              />
             </ListItemIcon>
             <ListItemText
               className={classes.appBarIconText}
@@ -440,7 +480,10 @@ const Router = () => {
           </ListItem>
           <ListItem button onClick={handleShowHospitals} key="Hospitals">
             <ListItemIcon>
-              <LocalHospitalIcon className={classes.appBarIcons} />
+              <LocalHospitalIcon
+                className={classes.appBarIcons}
+                data-test={`hook-hospital-icon`}
+              />
             </ListItemIcon>
             <ListItemText
               className={classes.appBarIconText}
@@ -449,7 +492,10 @@ const Router = () => {
           </ListItem>
           <ListItem button onClick={handleShowSafeHome} key="SafeHomes">
             <ListItemIcon>
-              <HomeWorkIcon className={classes.appBarIcons} />
+              <HomeWorkIcon
+                className={classes.appBarIcons}
+                data-test={`hook-safe-home-icon`}
+              />
             </ListItemIcon>
             <ListItemText
               className={classes.appBarIconText}
@@ -459,7 +505,10 @@ const Router = () => {
           <Divider />
           <ListItem button onClick={handleShowInfo} key="AdditionalInformation">
             <ListItemIcon>
-              <InfoIcon className={classes.appBarIcons} />
+              <InfoIcon
+                className={classes.appBarIcons}
+                data-test={`hook-extra-info-icon`}
+              />
             </ListItemIcon>
             <ListItemText
               className={classes.appBarIconText}

@@ -81,6 +81,7 @@ const Directions = ({ handleClose, destLoc, origin }) => {
     <div className={classes.popupBox}>
       <div className={classes.box}>
         <CancelIcon
+          data-test={"hook-close-button"}
           className={classes.closeIcon}
           color="secondary"
           onClick={handleClose}
@@ -98,6 +99,7 @@ const Directions = ({ handleClose, destLoc, origin }) => {
           </GoogleMap>
         ) : (
           <Typography
+            data-test={"hook-direction-text"}
             className={classes.noInfoText}
             variant="body2"
             color="textPrimary"
