@@ -14,6 +14,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import HomeWorkIcon from "@material-ui/icons/HomeWork";
+import AirportShuttleIcon from "@material-ui/icons/AirportShuttle";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -88,9 +89,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
   },
   homeIcon: { color: "white", position: "fixed" },
-  hospitalIcon: { color: "white", position: "relative" },
+  appBarIcons: { color: "white", position: "relative" },
   homeIconText: { left: 20, position: "relative" },
-  hospitalIconText: { left: -10, position: "relative" },
+  appBarIconText: { left: -10, position: "relative" },
   dropdownLabel: { color: "rgba(255, 255, 255, 0.7)" },
   formControlDistrict: {
     marginLeft: 50,
@@ -145,14 +146,17 @@ const Router = () => {
   const [showHospital, setShowHospital] = useState(false);
   const [showSafeHome, setShowSafeHome] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [showAmbulance, setShowAmbulance] = useState(false);
   const [showHome, setShowHome] = useState(true);
   const [header, setHeader] = useState("Welcome to Covid Hospital Details");
 
   const [selectedDistrictHospital, setSelectedDistrictHospital] = useState("");
   const [selectedDistrictSafeHome, setSelectedDistrictSafeHome] = useState("");
+  const [selectedDistrictAmbulance, setSelectedDistrictAmbulance] =
+    useState("");
 
   const [hospitalType, setHospitalType] = useState("");
-  const safeHomeType = "data";
+  const defaultType = "data";
 
   const [districtsHospital, setDistrictsHospital] = useState([]);
   const [districtsSafeHome, setDistrictsSafeHome] = useState([]);
@@ -170,6 +174,7 @@ const Router = () => {
     setShowHospital(false);
     setShowInfo(false);
     setShowSafeHome(false);
+    setShowAmbulance(false);
     setShowHome(true);
     setHeader("Home");
     setOpenDrawer(false);
@@ -179,8 +184,9 @@ const Router = () => {
     setShowInfo(false);
     setShowHome(false);
     setShowSafeHome(false);
+    setShowAmbulance(false);
     setShowHospital(true);
-    setHeader("Hospitals");
+    setHeader("Hospital");
     setOpenDrawer(false);
   };
 
@@ -188,8 +194,19 @@ const Router = () => {
     setShowInfo(false);
     setShowHome(false);
     setShowHospital(false);
+    setShowAmbulance(false);
     setShowSafeHome(true);
-    setHeader("Safe Homes");
+    setHeader("Safe Home");
+    setOpenDrawer(false);
+  };
+
+  const handleShowAmbulance = () => {
+    setShowInfo(false);
+    setShowHome(false);
+    setShowHospital(false);
+    setShowSafeHome(false);
+    setShowAmbulance(true);
+    setHeader("Ambulance");
     setOpenDrawer(false);
   };
 
@@ -197,9 +214,14 @@ const Router = () => {
     setShowHospital(false);
     setShowHome(false);
     setShowSafeHome(false);
+    setShowAmbulance(false);
     setShowInfo(true);
     setHeader("Extra Information");
     setOpenDrawer(false);
+  };
+
+  const handleDistrictChangeAmbulance = (event) => {
+    setSelectedDistrictAmbulance(event.target.value);
   };
 
   const handleDistrictChangeHospital = (event) => {
@@ -335,7 +357,6 @@ const Router = () => {
                     </Select>
                   </FormControl>
                 )}
-
                 {showSafeHome && (
                   <FormControl className={classes.formControlDistrict}>
                     <InputLabel
@@ -354,6 +375,31 @@ const Router = () => {
                       className={classes.selectEmpty}
                     >
                       {districtsSafeHome.map((each, key) => (
+                        <MenuItem value={each} key={key}>
+                          {each}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                )}
+                {showAmbulance && (
+                  <FormControl className={classes.formControlDistrict}>
+                    <InputLabel
+                      className={classes.dropdownLabel}
+                      shrink
+                      id="label-district"
+                    >
+                      District
+                    </InputLabel>
+                    <Select
+                      labelId="district"
+                      id="select-district"
+                      value={selectedDistrictAmbulance}
+                      onChange={handleDistrictChangeAmbulance}
+                      displayEmpty
+                      className={classes.selectEmpty}
+                    >
+                      {districtsAmbulance.map((each, key) => (
                         <MenuItem value={each} key={key}>
                           {each}
                         </MenuItem>
@@ -383,30 +429,40 @@ const Router = () => {
             <ListItemText className={classes.homeIconText} primary="Home" />
           </ListItem>
           <Divider />
-          <ListItem button onClick={handleShowHospitals} key="Hospitals">
+          <ListItem button onClick={handleShowAmbulance} key="Ambulance">
             <ListItemIcon>
-              <LocalHospitalIcon className={classes.hospitalIcon} />
+              <AirportShuttleIcon className={classes.appBarIcons} />
             </ListItemIcon>
             <ListItemText
-              className={classes.hospitalIconText}
-              primary="Hospitals"
+              className={classes.appBarIconText}
+              primary="Ambulance"
+            />
+          </ListItem>
+          <ListItem button onClick={handleShowHospitals} key="Hospitals">
+            <ListItemIcon>
+              <LocalHospitalIcon className={classes.appBarIcons} />
+            </ListItemIcon>
+            <ListItemText
+              className={classes.appBarIconText}
+              primary="Hospital"
             />
           </ListItem>
           <ListItem button onClick={handleShowSafeHome} key="SafeHomes">
             <ListItemIcon>
-              <HomeWorkIcon className={classes.hospitalIcon} />
+              <HomeWorkIcon className={classes.appBarIcons} />
             </ListItemIcon>
             <ListItemText
-              className={classes.hospitalIconText}
-              primary="Safe Homes"
+              className={classes.appBarIconText}
+              primary="Safe Home"
             />
           </ListItem>
+          <Divider />
           <ListItem button onClick={handleShowInfo} key="AdditionalInformation">
             <ListItemIcon>
-              <InfoIcon className={classes.hospitalIcon} />
+              <InfoIcon className={classes.appBarIcons} />
             </ListItemIcon>
             <ListItemText
-              className={classes.hospitalIconText}
+              className={classes.appBarIconText}
               primary="Extra Info"
             />
           </ListItem>
@@ -422,19 +478,30 @@ const Router = () => {
           <div className={classes.drawerHeader} />
         </main>
       )}
+      {showAmbulance && (
+        <Main
+          data={ambulanceData}
+          selectedDistrict={selectedDistrictAmbulance}
+          type={defaultType}
+          cardType={2}
+          pleaseSelectText={"Please select District."}
+        />
+      )}
       {showHospital && (
         <Main
-          hospitalsData={hospitalsData}
+          data={hospitalsData}
           selectedDistrict={selectedDistrictHospital}
-          hospitalType={hospitalType}
+          type={hospitalType}
+          cardType={1}
           pleaseSelectText={"Please select District and Hospital Type."}
         />
       )}
       {showSafeHome && (
         <Main
-          hospitalsData={safeHomesData}
+          data={safeHomesData}
           selectedDistrict={selectedDistrictSafeHome}
-          hospitalType={safeHomeType}
+          type={defaultType}
+          cardType={1}
           pleaseSelectText={"Please select District."}
         />
       )}
@@ -464,8 +531,10 @@ const Router = () => {
             This application provides district wise data, for both government,
             private and government requisitioned hospitals and safe homes. Users
             can get directions to the hospital or safe home, call the hospital
-            or safe home, register for beds in the hospital or safe home. We
-            have also provided the last update date and time for convenience.
+            or safe home, register for beds in the hospital or safe home.
+            Additionally, last update date and time has been provided for
+            convenience. District-wise ambulance details have also been
+            provided.
           </Typography>
           <Typography
             className={classes.welcomeParaGap}

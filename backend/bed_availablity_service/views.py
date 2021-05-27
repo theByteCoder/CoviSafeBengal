@@ -65,7 +65,6 @@ def fetch_hospitals(request):
 def fetch_safe_homes(request):
     if request.method == 'GET':
         object_id = get_db_object_id('safe_home_id')
-        print(object_id)
         entries = AvailableSafeHomes.objects.get(_id=ObjectId(object_id))
         return JsonResponse({'response': entries.safe_homes}, safe=False)
 
