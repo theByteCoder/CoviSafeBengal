@@ -56,9 +56,12 @@ const Contact = ({ handleClose, contact }) => {
 
   useEffect(() => {
     // here format can be, tel:<number>/<number>
-    const initial = contact.replace("tel:", "");
+    const initial = contact.replace("tel:", "").replace(" ", "");
     if (initial.includes("/")) {
       const lists = initial.split("/");
+      setContacts(lists);
+    } else if (initial.includes(",")) {
+      const lists = initial.split(",");
       setContacts(lists);
     } else {
       setContacts([initial]);

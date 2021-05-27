@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     marginBottom: 10,
     height: "100%",
     fontWeight: "bold",
-    color: "rgba(255, 255, 255, 0.7)",
+    color: "white !important",
   },
   totalB: {
     marginLeft: 0,
@@ -185,7 +185,7 @@ const MapsCardTypeTwo = ({
           </Button>
         </CardActions>
         <div data-test={"hook-last-updated"} className={classes.updatedOn}>
-          Last Updated On : {lastUpdated}
+          Last Updated On: {lastUpdated}
         </div>
       </Card>
     </>
