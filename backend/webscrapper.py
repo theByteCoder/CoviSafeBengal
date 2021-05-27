@@ -1,8 +1,7 @@
 import time
 import requests
 from selenium import webdriver
-from selenium.common.exceptions import ElementNotVisibleException, ElementNotSelectableException, \
-    StaleElementReferenceException
+from selenium.common.exceptions import ElementNotVisibleException, ElementNotSelectableException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -19,8 +18,7 @@ def generate_geolocation(address):
 def wait_for_preloader(driver):
     if len(driver.find_elements_by_xpath(".//div[@id='preloader']")) > 0:
         WebDriverWait(driver, 60, poll_frequency=1,
-                      ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
-                                          StaleElementReferenceException]).until(
+                      ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException]).until(
             EC.invisibility_of_element_located((By.XPATH, ".//div[@id='preloader']")))
 
 
@@ -28,10 +26,16 @@ def wait_for_spinner(driver):
     if len(driver.find_elements_by_xpath(
             ".//div[@class='spinner-border']/parent::div/parent::div[@aria-hidden='false']")) > 0:
         WebDriverWait(driver, 60, poll_frequency=1,
-                      ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
-                                          StaleElementReferenceException]).until(EC.invisibility_of_element_located(
-            (By.XPATH, ".//div[@class='spinner-border']/parent::div/parent::div[@aria-hidden='false']"))
+                      ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException]).until(
+            EC.invisibility_of_element_located(
+                (By.XPATH, ".//div[@class='spinner-border']/parent::div/parent::div[@aria-hidden='false']"))
         )
+
+
+def wait_for_element(driver, xpath):
+    return WebDriverWait(driver, 300, poll_frequency=1,
+                         ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException]).until(
+        EC.visibility_of_element_located((By.XPATH, xpath)))
 
 
 def get_daily_hospital_data():
@@ -44,7 +48,7 @@ def get_daily_hospital_data():
     # create list of district names
     districts_list = []
     # get district dropdown
-    selects = driver.find_element_by_xpath(".//select[@class='form-control']")
+    selects = wait_for_element(driver, ".//select[@class='form-control']")
     # get district dropdown options
     for element in selects.find_elements_by_tag_name("option"):
         if element.text != "--Select--":
@@ -227,7 +231,7 @@ def get_daily_safe_home_data():
     # create list of district names
     districts_list = []
     # get district dropdown
-    selects = driver.find_element_by_xpath(".//select[@class='form-control']")
+    selects = wait_for_element(driver, ".//select[@class='form-control']")
     # get district dropdown options
     for element in selects.find_elements_by_tag_name("option"):
         if element.text != "--Select--":
@@ -307,7 +311,7 @@ def get_daily_ambulance_data():
     # create list of district names
     districts_list = []
     # get district dropdown
-    selects = driver.find_element_by_xpath("(.//select[@class='form-control'])[1]")
+    selects = wait_for_element(driver, ".//select[@class='form-control']")
     # get district dropdown options
     for element in selects.find_elements_by_tag_name("option"):
         if element.text != "--Select--":

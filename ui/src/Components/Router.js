@@ -588,12 +588,10 @@ const Router = () => {
             component="p"
           >
             This application provides district wise data, for both government,
-            private and government requisitioned hospitals and safe homes. Users
-            can get directions to the hospital or safe home, call the hospital
-            or safe home, register for beds in the hospital or safe home.
-            Additionally, last update date and time has been provided for
-            convenience. District-wise ambulance details have also been
-            provided.
+            private and government requisitioned hospitals, safe homes and
+            ambulances. Users can get directions to the hospital or safe home,
+            call the hospital or safe home or ambulances, register for beds in
+            the hospital or safe home.
           </Typography>
           <Typography
             className={classes.welcomeParaGap}
