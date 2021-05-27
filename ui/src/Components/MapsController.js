@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import MapCards from "./MapsCard";
+import MapsCardTypeOne from "./MapsCardTypeOne";
+import MapsCardTypeTwo from "./MapsCardTypeTwo";
 import DirectionController from "./DirectionController";
 import AddressController from "./AddressController";
 import ContactController from "./ContactController";
@@ -16,16 +17,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MapsController = ({ hospitalsData, selectedDistrict, type }) => {
+const MapsController = ({ data, selectedDistrict, type, cardType }) => {
   const classes = useStyles();
 
   const [requestedData, setRequestedData] = useState([]);
 
   useEffect(() => {
-    if (hospitalsData) {
-      setRequestedData(hospitalsData[selectedDistrict][type]);
+    if (data) {
+      setRequestedData(data[selectedDistrict][type]);
     }
-  }, [hospitalsData, selectedDistrict, type]);
+  }, [data, selectedDistrict, type]);
 
   const [getAddress, setGetAddress] = useState(false);
   const [address, setAddress] = useState("");
@@ -71,14 +72,25 @@ const MapsController = ({ hospitalsData, selectedDistrict, type }) => {
             {requestedData.length ? (
               requestedData.map((value, index) => (
                 <Grid key={index} item>
-                  <MapCards
-                    item={value}
-                    handleGetAddress={handleGetAddress}
-                    handleGetContact={handleGetContact}
-                    handleGetDirections={handleGetDirections}
-                    handleGetRegistration={handleGetRegistration}
-                    key={index}
-                  />
+                  {cardType === 1 && (
+                    <MapsCardTypeOne
+                      item={value}
+                      handleGetAddress={handleGetAddress}
+                      handleGetContact={handleGetContact}
+                      handleGetDirections={handleGetDirections}
+                      handleGetRegistration={handleGetRegistration}
+                      key={index}
+                    />
+                  )}
+                  {cardType === 2 && (
+                    <MapsCardTypeTwo
+                      item={value}
+                      handleGetAddress={handleGetAddress}
+                      handleGetContact={handleGetContact}
+                      handleGetDirections={handleGetDirections}
+                      key={index}
+                    />
+                  )}
                 </Grid>
               ))
             ) : (

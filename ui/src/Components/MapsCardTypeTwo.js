@@ -94,24 +94,21 @@ const useStyles = makeStyles({
   },
 });
 
-const MapCards = ({
+const MapsCardTypeTwo = ({
   item,
   handleGetAddress,
   handleGetContact,
   handleGetDirections,
-  handleGetRegistration,
 }) => {
   const classes = useStyles();
 
-  const hospital = item.hospital;
-  const totalBeds = item.total_beds;
-  const availableBeds = item.available_beds;
-  const address = item.address;
-  const contact = item.contact;
-  const onlineRegistration = item.online_registration;
-  const lastUpdated = item.last_updated;
-  const lat = item.lat;
-  const lng = item.lng;
+  const ambulance = item?.ambulance;
+  const ambulanceType = item?.ambulance_type;
+  const availableAmbulances = item?.available_ambulances;
+  const address = item?.address;
+  const contact = item?.contact;
+  const lat = item?.lat;
+  const lng = item?.lng;
   const destinationLocation = { lat: lat, lng: lng };
 
   return (
@@ -129,7 +126,7 @@ const MapCards = ({
             variant="body1"
             component="h5"
           >
-            {hospital}
+            {ambulance}
           </Typography>
           <Typography
             className={classes.totalB}
@@ -137,7 +134,7 @@ const MapCards = ({
             color="textPrimary"
             component="p"
           >
-            Total Beds - {totalBeds}
+            Provider - {ambulanceType}
           </Typography>
           <Typography
             className={classes.availableB}
@@ -145,7 +142,7 @@ const MapCards = ({
             color="textPrimary"
             component="p"
           >
-            Available Beds - {availableBeds}
+            Available Vehicles - {availableAmbulances}
           </Typography>
         </CardContent>
         <CardActions className={classes.actions}>
@@ -178,20 +175,10 @@ const MapCards = ({
           >
             Directions
           </Button>
-          <Button
-            size="medium"
-            className={classes.actionsRegister}
-            onClick={() => {
-              handleGetRegistration(onlineRegistration);
-            }}
-          >
-            Register
-          </Button>
         </CardActions>
-        <div className={classes.updatedOn}>{lastUpdated}</div>
       </Card>
     </>
   );
 };
 
-export default MapCards;
+export default MapsCardTypeTwo;

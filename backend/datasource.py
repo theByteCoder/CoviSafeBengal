@@ -107,8 +107,9 @@ def insert_datasource():
     print(f'Time taken {str(timedelta(seconds=execution_time))}')
 
 
-insert_datasource()
+# insert_datasource()
 # schedule.every().day.at("06:00").do(insert_datasource)
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+schedule.every(4).hours.do(insert_datasource)
+while True:
+    schedule.run_pending()
+    time.sleep(1)

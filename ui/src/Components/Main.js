@@ -14,23 +14,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Main = ({
-  hospitalsData,
-  selectedDistrict,
-  hospitalType,
-  pleaseSelectText,
-}) => {
+const Main = ({ data, selectedDistrict, type, cardType, pleaseSelectText }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.parent}>
-      {!isEmpty(hospitalsData) &&
-      selectedDistrict.length &&
-      hospitalType.length ? (
+      {!isEmpty(data) && selectedDistrict.length && type.length ? (
         <MapsController
-          hospitalsData={hospitalsData}
+          data={data}
           selectedDistrict={selectedDistrict}
-          type={hospitalType}
+          type={type}
+          cardType={cardType}
         />
       ) : (
         <Toastbar showSnack={true} text={pleaseSelectText} variant="info" />
