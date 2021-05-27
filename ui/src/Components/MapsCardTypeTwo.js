@@ -99,6 +99,7 @@ const MapsCardTypeTwo = ({
   handleGetAddress,
   handleGetContact,
   handleGetDirections,
+  dataUpdatedAt,
 }) => {
   const classes = useStyles();
 
@@ -107,6 +108,7 @@ const MapsCardTypeTwo = ({
   const availableAmbulances = item?.available_ambulances;
   const address = item?.address;
   const contact = item?.contact;
+  const lastUpdated = dataUpdatedAt;
   const lat = item?.lat;
   const lng = item?.lng;
   const destinationLocation = { lat: lat, lng: lng };
@@ -115,12 +117,13 @@ const MapsCardTypeTwo = ({
     <>
       <Card className={classes.root}>
         <CardActionArea className={classes.actionArea}>
-          <CardMedia className={classes.map}>
+          <CardMedia data-test={"hook-google-map"} className={classes.map}>
             <GoogleMaps lat={lat} lng={lng} showDirection={false} />
           </CardMedia>
         </CardActionArea>
         <CardContent className={classes.content}>
           <Typography
+            data-test={"hook-vehicle-name"}
             className={classes.name}
             gutterBottom
             variant="body1"
@@ -129,6 +132,7 @@ const MapsCardTypeTwo = ({
             {ambulance}
           </Typography>
           <Typography
+            data-test={"hook-provider-type"}
             className={classes.totalB}
             variant="body2"
             color="textPrimary"
@@ -137,6 +141,7 @@ const MapsCardTypeTwo = ({
             Provider - {ambulanceType}
           </Typography>
           <Typography
+            data-test={"hook-available-vehicles"}
             className={classes.availableB}
             variant="body2"
             color="textPrimary"
@@ -147,6 +152,7 @@ const MapsCardTypeTwo = ({
         </CardContent>
         <CardActions className={classes.actions}>
           <Button
+            data-test={"hook-address-button"}
             size="medium"
             className={classes.actionsAddress}
             onClick={() => {
@@ -156,6 +162,7 @@ const MapsCardTypeTwo = ({
             Address
           </Button>
           <Button
+            data-test={"hook-contact-button"}
             size="medium"
             className={classes.actionsContact}
             onClick={() => {
@@ -167,6 +174,7 @@ const MapsCardTypeTwo = ({
         </CardActions>
         <CardActions className={classes.actions}>
           <Button
+            data-test={"hook-directions-button"}
             size="medium"
             className={classes.actionsDirection}
             onClick={() => {
@@ -176,6 +184,9 @@ const MapsCardTypeTwo = ({
             Directions
           </Button>
         </CardActions>
+        <div data-test={"hook-last-updated"} className={classes.updatedOn}>
+          Last Updated On : {lastUpdated}
+        </div>
       </Card>
     </>
   );

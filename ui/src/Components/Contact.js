@@ -15,8 +15,8 @@ const useStyles = makeStyles({
   box: {
     top: 60,
     position: "relative",
-    maxWidth: "40%",
-    maxHeight: "85%",
+    maxWidth: "60%",
+    maxHeight: "90%",
     margin: "0 auto",
     marginTop: "calc(100vh - 85vh - 20px)",
     backgroundColor: "rgba(128,0,0,0.85)",
@@ -73,6 +73,7 @@ const Contact = ({ handleClose, contact }) => {
     <div className={classes.popupBox}>
       <div className={classes.box}>
         <CancelIcon
+          data-test={"hook-close-button"}
           className={classes.closeIcon}
           color="secondary"
           onClick={handleClose}
@@ -81,6 +82,7 @@ const Contact = ({ handleClose, contact }) => {
           contacts.map((item, key) => {
             return (
               <Typography
+                data-test={"hook-contact-text"}
                 className={classes.contactText}
                 variant="body2"
                 color="textPrimary"
@@ -96,6 +98,7 @@ const Contact = ({ handleClose, contact }) => {
           })
         ) : (
           <Typography
+            data-test={"hook-contact-text"}
             className={classes.noInfoText}
             variant="body2"
             color="textPrimary"

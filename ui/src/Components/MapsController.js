@@ -17,7 +17,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MapsController = ({ data, selectedDistrict, type, cardType }) => {
+const MapsController = ({
+  data,
+  selectedDistrict,
+  type,
+  dataUpdatedAt,
+  cardType,
+}) => {
   const classes = useStyles();
 
   const [requestedData, setRequestedData] = useState([]);
@@ -79,6 +85,7 @@ const MapsController = ({ data, selectedDistrict, type, cardType }) => {
                       handleGetContact={handleGetContact}
                       handleGetDirections={handleGetDirections}
                       handleGetRegistration={handleGetRegistration}
+                      dataUpdatedAt={dataUpdatedAt}
                       key={index}
                     />
                   )}
@@ -88,6 +95,7 @@ const MapsController = ({ data, selectedDistrict, type, cardType }) => {
                       handleGetAddress={handleGetAddress}
                       handleGetContact={handleGetContact}
                       handleGetDirections={handleGetDirections}
+                      dataUpdatedAt={dataUpdatedAt}
                       key={index}
                     />
                   )}

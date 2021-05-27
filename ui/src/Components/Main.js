@@ -14,7 +14,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Main = ({ data, selectedDistrict, type, cardType, pleaseSelectText }) => {
+const Main = ({
+  data,
+  selectedDistrict,
+  type,
+  cardType,
+  dataUpdatedAt,
+  pleaseSelectText,
+}) => {
   const classes = useStyles();
 
   return (
@@ -24,6 +31,7 @@ const Main = ({ data, selectedDistrict, type, cardType, pleaseSelectText }) => {
           data={data}
           selectedDistrict={selectedDistrict}
           type={type}
+          dataUpdatedAt={dataUpdatedAt}
           cardType={cardType}
         />
       ) : (

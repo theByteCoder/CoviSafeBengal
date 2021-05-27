@@ -16,7 +16,7 @@ def get_yesterday():
 
 
 def get_updated_at_time():
-    return datetime.now().strftime("%d%m%Y%H%M%S")
+    return datetime.now().strftime("%d/%m/%Y %I:%M:%S %p")
 
 
 def hospital_scrapper():
@@ -108,8 +108,7 @@ def insert_datasource():
 
 
 # insert_datasource()
-# schedule.every().day.at("06:00").do(insert_datasource)
-schedule.every(4).hours.do(insert_datasource)
+schedule.every(3).hours.do(insert_datasource)
 while True:
     schedule.run_pending()
     time.sleep(1)
