@@ -148,11 +148,14 @@ def get_daily_hospital_data():
                                     "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td"))):
                                 if driver.find_elements_by_xpath(
                                         "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td")[page].text != '1':
-                                    driver.find_elements_by_xpath(
-                                        "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td")[
-                                        page].find_element_by_xpath('.//a').click()
-                                    time.sleep(1)
-                                    wait_for_spinner(driver)
+                                    try:
+                                        driver.find_elements_by_xpath(
+                                            "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td")[
+                                            page].find_element_by_xpath('.//a').click()
+                                        time.sleep(1)
+                                        wait_for_spinner(driver)
+                                    except:
+                                        pass
                                 if len(driver.find_elements_by_xpath(".//table/tbody/tr/td/div")) > 0:
                                     for each_card in driver.find_elements_by_xpath(".//table/tbody/tr/td/div"):
                                         time.sleep(1)
@@ -341,11 +344,14 @@ def get_daily_ambulance_data():
                                 "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td/a")) > 0:
                             for page in range(len(driver.find_elements_by_xpath(
                                     "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td/a"))):
-                                driver.find_elements_by_xpath(
-                                    "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td/a")[
-                                    page].click()
-                                time.sleep(1)
-                                wait_for_spinner(driver)
+                                try:
+                                    driver.find_elements_by_xpath(
+                                        "(.//tr[@class='pagination-ys']/td/table/tbody/tr)[1]/td/a")[
+                                        page].click()
+                                    time.sleep(1)
+                                    wait_for_spinner(driver)
+                                except:
+                                    pass
                                 for each_card in range(len(driver.find_elements_by_xpath(".//table/tbody/tr/td/div"))):
                                     time.sleep(1)
                                     try:
