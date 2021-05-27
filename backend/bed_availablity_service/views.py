@@ -58,7 +58,7 @@ def fetch_hospitals(request):
     if request.method == 'GET':
         object_id = get_db_object_id('hospital_id')
         entries = AvailableHospitalBeds.objects.get(_id=ObjectId(object_id))
-        return JsonResponse({'response': entries.hospitals}, safe=False)
+        return JsonResponse({'hospitals': entries.hospitals, 'updated_at': entries.updated_at}, safe=False)
 
 
 @csrf_exempt
@@ -66,7 +66,7 @@ def fetch_safe_homes(request):
     if request.method == 'GET':
         object_id = get_db_object_id('safe_home_id')
         entries = AvailableSafeHomes.objects.get(_id=ObjectId(object_id))
-        return JsonResponse({'response': entries.safe_homes}, safe=False)
+        return JsonResponse({'safe_homes': entries.safe_homes, 'updated_at': entries.updated_at}, safe=False)
 
 
 @csrf_exempt
@@ -74,7 +74,7 @@ def fetch_ambulances(request):
     if request.method == 'GET':
         object_id = get_db_object_id('ambulance_id')
         entries = AvailableAmbulances.objects.get(_id=ObjectId(object_id))
-        return JsonResponse({'response': entries.ambulances}, safe=False)
+        return JsonResponse({'ambulances': entries.ambulances, 'updated_at': entries.updated_at}, safe=False)
 
 
 def fetch_current_location(request):

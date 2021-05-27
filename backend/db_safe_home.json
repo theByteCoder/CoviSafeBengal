@@ -12216,4 +12216,3052 @@
       ]
     }
   }
+},{
+  "_id": {
+    "$oid": "60af692e1923c99ca8f8f6b4"
+  },
+  "date": "26052021",
+  "updated_at": "27052021151102",
+  "safe_homes": {
+    "ALIPURDUAR": {
+      "data": [
+        {
+          "hospital": " Asutosh BED College, Alipurduar II ",
+          "address": "  Alipurduar II Development Block , ALIPURDUAR",
+          "total_beds": "25",
+          "available_beds": "7",
+          "contact": "tel:9735098064",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:32 AM",
+          "lat": 26.4866887,
+          "lng": 89.59926159999999
+        },
+        {
+          "hospital": " KARMATIRTHA,Kumargram ",
+          "address": "  BAROBISHA, KUMARGRAM, ALIPURDUAR , ALIPURDUAR",
+          "total_beds": "40",
+          "available_beds": "5",
+          "contact": "tel:7407497697",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:41 PM",
+          "lat": 26.4259541,
+          "lng": 89.7979857
+        },
+        {
+          "hospital": " PATHER SATHI HOTEL, MADARIHAT ",
+          "address": "  BIRPARA, MADARIHAT, ALIPURDUAR , ALIPURDUAR",
+          "total_beds": "40",
+          "available_beds": "23",
+          "contact": "tel:9002211270",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:27 PM",
+          "lat": 26.6887794,
+          "lng": 89.2780147
+        },
+        {
+          "hospital": " PTTI SILTORSHA, ALIPURDUAR-I ",
+          "address": "  VILL-SILBARIHAT, PO- SONAPUR, BLOCK-ALIPURDUAR-I , ALIPURDUAR",
+          "total_beds": "80",
+          "available_beds": "73",
+          "contact": "tel:7908448326",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 09:10 AM",
+          "lat": 26.4871862,
+          "lng": 89.52382109999999
+        },
+        {
+          "hospital": " SUN CITY Safe home, FALAKATA ",
+          "address": "  VILL-KUNJANAGAR, PO-MAIRADANGA, PS-FALAKATA, BLOCK-FALAKATA , ALIPURDUAR",
+          "total_beds": "60",
+          "available_beds": "26",
+          "contact": "tel:9832652808",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:13 AM",
+          "lat": 26.517486,
+          "lng": 89.2039195
+        }
+      ]
+    },
+    "BANKURA": {
+      "data": [
+        {
+          "hospital": " ADSR New Building ",
+          "address": "  Haripur, Indas, bankura , BANKURA",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:9434754996",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 01:11 PM",
+          "lat": 23.2332871,
+          "lng": 87.0651343
+        },
+        {
+          "hospital": " Ailakundi PTTI ",
+          "address": "  Behind Bankura SBSTC Bus Stand , BANKURA",
+          "total_beds": "30",
+          "available_beds": "23",
+          "contact": "tel:9434440300",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:45 AM",
+          "lat": 23.2727187,
+          "lng": 87.08837539999999
+        },
+        {
+          "hospital": " Bagdiha BJRCY Hostel ",
+          "address": "  Bagdiha, Indpur , BANKURA",
+          "total_beds": "27",
+          "available_beds": "17",
+          "contact": "tel:7063017340",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:30 PM",
+          "lat": 23.2378074,
+          "lng": 87.06047749999999
+        },
+        {
+          "hospital": " Banabitan Lodge ",
+          "address": "  Joypur, Bankura , BANKURA",
+          "total_beds": "23",
+          "available_beds": "11",
+          "contact": "tel:9641599486",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:35 PM",
+          "lat": 23.0479463,
+          "lng": 87.4390221
+        },
+        {
+          "hospital": " Bankura Stadium Safe Home ",
+          "address": "  Bankura Stadium, Tamlibandh, Bankura 722101 , BANKURA",
+          "total_beds": "27",
+          "available_beds": "7",
+          "contact": "tel:8695626433",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 08:35 PM",
+          "lat": 23.2315011,
+          "lng": 87.05647739999999
+        },
+        {
+          "hospital": " CCRD ",
+          "address": "  Panchmura , BANKURA",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:7001215610",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:58 PM",
+          "lat": 23.2312686,
+          "lng": 87.07838749999999
+        },
+        {
+          "hospital": " Dhansimla Bidyabhaban Hostel ",
+          "address": "  Dhansimla, Sonamukhi , BANKURA",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9749815197",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:50 PM",
+          "lat": 23.2660937,
+          "lng": 87.46640649999999
+        },
+        {
+          "hospital": " Dhenkikata Integrated Govt. School ",
+          "address": "  Dhenkikata, Mandalkuli GP , BANKURA",
+          "total_beds": "52",
+          "available_beds": "48",
+          "contact": "tel:8013470758",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:58 AM",
+          "lat": 23.2372885,
+          "lng": 87.06248629999999
+        },
+        {
+          "hospital": " Kharidungri Sports Academy Safe Home ",
+          "address": "  Kharidungri, Gorabari, Khatra, Bankura, PIN-722140 , BANKURA",
+          "total_beds": "50",
+          "available_beds": "44",
+          "contact": "tel:8972692269",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 09:14 AM",
+          "lat": 23.2403979,
+          "lng": 87.0846996
+        },
+        {
+          "hospital": " Kotulpur Safe Home ",
+          "address": "  Vivekananda Club, Vill - Bagrol, PO & PS Kotulpur, Pin 722141 , BANKURA",
+          "total_beds": "17",
+          "available_beds": "12",
+          "contact": "tel:9874162899",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:56 PM",
+          "lat": 23.0196838,
+          "lng": 87.5797067
+        }
+      ]
+    },
+    "BIRBHUM": {
+      "data": [
+        {
+          "hospital": " Ambua Govt. Model School Murarai ",
+          "address": "  Ambua,Murarai,Pin-731222 , BIRBHUM",
+          "total_beds": "100",
+          "available_beds": "93",
+          "contact": "tel:8436548938",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:01 PM",
+          "lat": 24.5477945,
+          "lng": 87.8623411
+        },
+        {
+          "hospital": " CMOH OFFICE SAFE HOME ",
+          "address": "  Old outdoor Campus,Suri, West Bengal 731101 , BIRBHUM",
+          "total_beds": "30",
+          "available_beds": "27",
+          "contact": "tel:7363092304",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:15 AM",
+          "lat": 24.1772127,
+          "lng": 87.79068989999999
+        },
+        {
+          "hospital": " Niramoy TB Sanatorium Safe Home ",
+          "address": "  Dubrajpur , West Bengal 731123 , BIRBHUM",
+          "total_beds": "150",
+          "available_beds": "128",
+          "contact": "tel:7908081168",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:14 AM",
+          "lat": 23.7903029,
+          "lng": 87.4050372
+        },
+        {
+          "hospital": " West Bengal Comprehensive Area Development Corporation -CDAC ",
+          "address": "  Office of the CADC, Nalhati Word No. 14, PO-Nalhati , PS- Nalhati, Pin No. 731220 , BIRBHUM",
+          "total_beds": "40",
+          "available_beds": "18",
+          "contact": "tel:9800584680",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:01 PM",
+          "lat": 24.2816545,
+          "lng": 87.8395846
+        }
+      ]
+    },
+    "COOCHBEHAR": {
+      "data": [
+        {
+          "hospital": " Babu Jagjivanram Kendriya Chatri Niwas ",
+          "address": "  MATHABHANGA , COOCHBEHAR",
+          "total_beds": "56",
+          "available_beds": "56",
+          "contact": "tel:9933639827",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:20 AM",
+          "lat": 26.3452397,
+          "lng": 89.4482079
+        },
+        {
+          "hospital": " COOCHBEHAR NETAJI INDOOR STADIUM SAFE HOME ",
+          "address": "  COOCHBEHAR , COOCHBEHAR",
+          "total_beds": "130",
+          "available_beds": "91",
+          "contact": "tel:9834144980",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:07 AM",
+          "lat": 26.3234551,
+          "lng": 89.4410984
+        },
+        {
+          "hospital": " Haldibari Hospital New Building ",
+          "address": "  HALDIBARI , COOCHBEHAR",
+          "total_beds": "20",
+          "available_beds": "17",
+          "contact": "tel:8900344094",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 09:47 AM",
+          "lat": 26.329801,
+          "lng": 89.45058
+        },
+        {
+          "hospital": " Karola Community Hall ",
+          "address": "  DINHATA II , COOCHBEHAR",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8116641321",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:31 AM",
+          "lat": 26.3268307,
+          "lng": 89.4385406
+        },
+        {
+          "hospital": " Mekhliganj Bus Terminus Building ",
+          "address": "  MEKLIGANJ , COOCHBEHAR",
+          "total_beds": "30",
+          "available_beds": "29",
+          "contact": "tel:9830203174",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:14 AM",
+          "lat": 26.3445757,
+          "lng": 88.90765429999999
+        },
+        {
+          "hospital": " Tufanganj Polytechnic College ",
+          "address": "  TUFANGANJ , COOCHBEHAR",
+          "total_beds": "100",
+          "available_beds": "100",
+          "contact": "tel:8972050757",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:34 AM",
+          "lat": 26.3314484,
+          "lng": 89.44319449999999
+        }
+      ]
+    },
+    "DAKSHIN 24 PARGANA": {
+      "data": [
+        {
+          "hospital": " AMTALA TRAUMA CARE SAFE HOME ",
+          "address": "  Bishnupur II Block , DAKSHIN 24 PARGANA",
+          "total_beds": "45",
+          "available_beds": "10",
+          "contact": "tel:9903714512",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:31 PM",
+          "lat": 22.3668822,
+          "lng": 88.2777344
+        },
+        {
+          "hospital": " BARUIPUR KISAN MANDI ",
+          "address": "  Vill+Post: Sitakundu, PS: Baruipur, , DAKSHIN 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "30",
+          "contact": "tel:8584030061",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:45 PM",
+          "lat": 22.3599251,
+          "lng": 88.43254619999999
+        },
+        {
+          "hospital": " BHOGALI KARMATIRTHA ",
+          "address": "  Bhogali-I GP, Bhangore-II Block , DAKSHIN 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "13",
+          "contact": "tel:9832144299",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:11 PM",
+          "lat": 22.5496247,
+          "lng": 88.6118961
+        },
+        {
+          "hospital": " DIAMOND HARBOUR SAFE HOME ",
+          "address": "  SDO GROUND, DIAMOND HARBOUR , DAKSHIN 24 PARGANA",
+          "total_beds": "100",
+          "available_beds": "72",
+          "contact": "tel:3174256475",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:47 PM",
+          "lat": 22.204827,
+          "lng": 88.18829920000002
+        },
+        {
+          "hospital": " JHOROR MORE SAFE HOME ",
+          "address": "  CANNING II Block , DAKSHIN 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "15",
+          "contact": "tel:9903714504",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:15 PM",
+          "lat": 22.1352378,
+          "lng": 88.4016041
+        },
+        {
+          "hospital": " KAKDWIP INTEGRATED GOVT SPONSORED SCHOOL SAFE HOME ",
+          "address": "  Integrated Govt Sponsored School Ramratanpur, Kakdwip , DAKSHIN 24 PARGANA",
+          "total_beds": "60",
+          "available_beds": "40",
+          "contact": "tel:7872941172",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:35 PM",
+          "lat": 21.9114433,
+          "lng": 88.21394560000002
+        },
+        {
+          "hospital": " KISMAT GOYALBERIA KARMATIRTHA ",
+          "address": "  Momrejgarh, Joynagar I , DAKSHIN 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "37",
+          "contact": "tel:9903714678",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:39 PM",
+          "lat": 22.1352378,
+          "lng": 88.4016041
+        },
+        {
+          "hospital": " MAHESHTALA MATRISADAN ",
+          "address": "  Mahestala Municipality , DAKSHIN 24 PARGANA",
+          "total_beds": "51",
+          "available_beds": "11",
+          "contact": "tel:9903966397",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:58 PM",
+          "lat": 22.5097248,
+          "lng": 88.2146238
+        },
+        {
+          "hospital": " RSM Safe Home ",
+          "address": "  Netaji Subhas banquet Hall, Kamal Gazi, RAM ward 27, Kolkata 103 , DAKSHIN 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "19",
+          "contact": "tel:8420836822",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:10 PM",
+          "lat": 22.1352378,
+          "lng": 88.4016041
+        },
+        {
+          "hospital": " SAFE HOME GANGASAGAR TEMPORARY MELA HOSPITAL ",
+          "address": "  Vill+ PO::Gangasagar, PS: Gangasagar Coastal , DAKSHIN 24 PARGANA",
+          "total_beds": "110",
+          "available_beds": "76",
+          "contact": "tel:9433287738",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:55 PM",
+          "lat": 21.6405164,
+          "lng": 88.07694289999999
+        }
+      ]
+    },
+    "DAKSHIN DINAJPUR": {
+      "data": [
+        {
+          "hospital": " BALURGHAT YOUTH HOSTEL ",
+          "address": "  MANGALPUR, BALURGHAT , DAKSHIN DINAJPUR",
+          "total_beds": "80",
+          "available_beds": "60",
+          "contact": "tel:9339676475",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:11 PM",
+          "lat": 25.2538378,
+          "lng": 88.77901279999999
+        },
+        {
+          "hospital": " BUNIADPUR ITI ",
+          "address": "  BUNIADPUR , DAKSHIN DINAJPUR",
+          "total_beds": "50",
+          "available_beds": "47",
+          "contact": "tel:9733327309",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:29 PM",
+          "lat": 25.3997668,
+          "lng": 88.4058285
+        },
+        {
+          "hospital": " GANGARAMPUR STADIUM ",
+          "address": "  GANGARAMPUR , DAKSHIN DINAJPUR",
+          "total_beds": "25",
+          "available_beds": "25",
+          "contact": "tel:7718713126",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:06 PM",
+          "lat": 25.4046658,
+          "lng": 88.5378001
+        },
+        {
+          "hospital": " Harirampur KGBV Hostel ASDM High School ",
+          "address": "  Harirampur , DAKSHIN DINAJPUR",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8900595989",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:41 PM",
+          "lat": 25.3722315,
+          "lng": 88.2644119
+        },
+        {
+          "hospital": " HILI SBS COLLEGE ",
+          "address": "  HILI , DAKSHIN DINAJPUR",
+          "total_beds": "25",
+          "available_beds": "25",
+          "contact": "tel:9007263142",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:41 PM",
+          "lat": 25.2846127,
+          "lng": 88.9917104
+        },
+        {
+          "hospital": " Kumarganj Kishan Mandi ",
+          "address": "  Kumarganj , DAKSHIN DINAJPUR",
+          "total_beds": "60",
+          "available_beds": "56",
+          "contact": "tel:03522254205",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:00 PM",
+          "lat": 25.4179735,
+          "lng": 88.7315632
+        },
+        {
+          "hospital": " Kushmandi Kishan Mandi ",
+          "address": "  Kishan Mandi, Kushmandi , DAKSHIN DINAJPUR",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:9830350069",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:01 PM",
+          "lat": 25.5251056,
+          "lng": 88.3663294
+        },
+        {
+          "hospital": " TAPAN KISHAN MANDI ",
+          "address": "  TAPAN , DAKSHIN DINAJPUR",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:7365928419",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:13 PM",
+          "lat": 25.3047855,
+          "lng": 88.5718488
+        }
+      ]
+    },
+    "DARJEELING": {
+      "data": [
+        {
+          "hospital": " BATASI ITI COVID CARE FACILITY ",
+          "address": "  Batasi ITI , Khoribari Block , DARJEELING",
+          "total_beds": "50",
+          "available_beds": "20",
+          "contact": "tel:8370842357",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:25 AM",
+          "lat": 26.5995417,
+          "lng": 88.1803557
+        },
+        {
+          "hospital": " HATIGHISA SAFE HOME ",
+          "address": "  NAXALBARI BLOCK , DARJEELING",
+          "total_beds": "50",
+          "available_beds": "25",
+          "contact": "tel:8101488095",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:52 AM",
+          "lat": 27.0414819,
+          "lng": 88.2681629
+        },
+        {
+          "hospital": " HMI COVID SAFE HOME ",
+          "address": "  HMI,Darjeeling , DARJEELING",
+          "total_beds": "48",
+          "available_beds": "43",
+          "contact": "tel:9749863940",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:38 PM",
+          "lat": 27.0585836,
+          "lng": 88.25324420000001
+        },
+        {
+          "hospital": " MOUNT VIEW SAFE HOME ",
+          "address": "  OPP. CENTRAL BUS TERMINUS, HILL CART ROAD, SILIGURI, DIST DARJEELING , DARJEELING",
+          "total_beds": "22",
+          "available_beds": "10",
+          "contact": "tel:9732854000",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:28 PM",
+          "lat": 41.6009027,
+          "lng": -72.7212579
+        },
+        {
+          "hospital": " SB DEY SANATORIUM ",
+          "address": "  KURSEONG , DARJEELING",
+          "total_beds": "25",
+          "available_beds": "20",
+          "contact": "tel:03542332141",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:23 AM",
+          "lat": 26.8819561,
+          "lng": 88.2831154
+        },
+        {
+          "hospital": " SILIGURI INDOOR STADIUM ",
+          "address": "  DESHBANDU PARA,WARD NO-29 , DARJEELING",
+          "total_beds": "70",
+          "available_beds": "39",
+          "contact": "tel:8016277748",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:00 AM",
+          "lat": 26.7134035,
+          "lng": 88.42714319999999
+        },
+        {
+          "hospital": " SURSUM CORDA SAFE HOME ",
+          "address": "  St Joseph College,Singmari,Darjeeling , DARJEELING",
+          "total_beds": "50",
+          "available_beds": "46",
+          "contact": "tel:8918925331",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:08 PM",
+          "lat": 38.9046633,
+          "lng": -77.01216939999999
+        },
+        {
+          "hospital": " TB HOSPITAL BATASIA SAFE HOME ",
+          "address": "  Ghoom, Darjeeling , DARJEELING",
+          "total_beds": "24",
+          "available_beds": "15",
+          "contact": "tel:0354-2274582",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:32 PM",
+          "lat": 27.0203062,
+          "lng": 88.25038719999999
+        }
+      ]
+    },
+    "HOOGHLY": {
+      "data": [
+        {
+          "hospital": " Chandannagar Oxygen Parlour ",
+          "address": "  Swagatam Hall Kuthir Math, Chandannagar, Hooghly , HOOGHLY",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9123736539",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:33 AM",
+          "lat": 22.8570289,
+          "lng": 88.369309
+        },
+        {
+          "hospital": " Golok Munshi Hospital ",
+          "address": "  Nabagram, Konnagar, West Bengal 712249 , HOOGHLY",
+          "total_beds": "34",
+          "available_beds": "30",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:33 PM",
+          "lat": 22.7115443,
+          "lng": 88.3342739
+        },
+        {
+          "hospital": " Pandua Karmatirtha ",
+          "address": "  Pandua, Hooghly , HOOGHLY",
+          "total_beds": "42",
+          "available_beds": "34",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:46 AM",
+          "lat": 23.0780652,
+          "lng": 88.2788636
+        },
+        {
+          "hospital": " Rishra Seva Sadan ",
+          "address": "  1, Keshub Chandra Sen Rd, Rishra, Hooghly, West Bengal 712250 , HOOGHLY",
+          "total_beds": "36",
+          "available_beds": "29",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:21 PM",
+          "lat": 22.7241696,
+          "lng": 88.3414323
+        },
+        {
+          "hospital": " Ruplal Nandy Memorial Cancer Research Centre ",
+          "address": "  Sarishapara, Chandannagar, West Bengal 712136 , HOOGHLY",
+          "total_beds": "35",
+          "available_beds": "17",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:39 AM",
+          "lat": 22.8670935,
+          "lng": 88.368501
+        },
+        {
+          "hospital": " Tarakeswar Safe Home ",
+          "address": "  Motel, Near Pearl's Rozarie School, Tarakeswar, Hooghly, West Bengal 712403 , HOOGHLY",
+          "total_beds": "30",
+          "available_beds": "28",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:38 AM",
+          "lat": 22.8923856,
+          "lng": 88.0066681
+        },
+        {
+          "hospital": " Vikdas Godown ",
+          "address": "  Goghat, Hooghly , HOOGHLY",
+          "total_beds": "70",
+          "available_beds": "69",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:05 AM",
+          "lat": 22.916036,
+          "lng": 87.733319
+        }
+      ]
+    },
+    "HOWRAH": {
+      "data": [
+        {
+          "hospital": " Baltikuri Safe Home ",
+          "address": "  Baltikuri, P.O, Bankra, Howrah, West Bengal 711403 , HOWRAH",
+          "total_beds": "100",
+          "available_beds": "90",
+          "contact": "tel:8240235865",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:36 AM",
+          "lat": 22.610594,
+          "lng": 88.2874843
+        }
+      ]
+    },
+    "JALPAIGURI": {
+      "data": [
+        {
+          "hospital": " DTC Raninagar, Safe Home, Jalpaiguri ",
+          "address": "  RANINAGAR, SADAR BLOCK, JALPAIGURI 735133 , JALPAIGURI",
+          "total_beds": "51",
+          "available_beds": "35",
+          "contact": "tel:8170017419",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:37 AM",
+          "lat": 26.5436993,
+          "lng": 88.64788399999999
+        },
+        {
+          "hospital": " ITI College, Matiali Safe Home ",
+          "address": "  MATIALI , JALPAIGURI",
+          "total_beds": "124",
+          "available_beds": "24",
+          "contact": "tel:9083354528",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:21 AM",
+          "lat": 30.36981819999999,
+          "lng": -91.0304859
+        },
+        {
+          "hospital": " Karmatirtha Building, Ambari Falakata, Safe Home ",
+          "address": "  Mogradangi, Rajganj-735135 , JALPAIGURI",
+          "total_beds": "50",
+          "available_beds": "23",
+          "contact": "tel:8116040922",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:53 AM",
+          "lat": 26.6090024,
+          "lng": 88.4863991
+        },
+        {
+          "hospital": " Khayerbari Model School Nagrakata ",
+          "address": "  Khayerbari, Sulkapara, Nagrakata, Pin-735225 , JALPAIGURI",
+          "total_beds": "100",
+          "available_beds": "63",
+          "contact": "tel:9382636214",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:54 AM",
+          "lat": 26.8809465,
+          "lng": 88.9078526
+        },
+        {
+          "hospital": " Maynaguri Polytechnic College, Safe Home ",
+          "address": "  Barnes Ghat Road Kanthalbari Domohani Maynaguri 735302 , JALPAIGURI",
+          "total_beds": "120",
+          "available_beds": "16",
+          "contact": "tel:7478020857",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:41 PM",
+          "lat": 26.5780816,
+          "lng": 88.7930482
+        },
+        {
+          "hospital": " Office Building of Small Scale Industry, Safe Home, Rajganj ",
+          "address": "  Mogradangi, Rajganj-735135 , JALPAIGURI",
+          "total_beds": "60",
+          "available_beds": "55",
+          "contact": "tel:9749350261",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:47 PM",
+          "lat": 26.5601067,
+          "lng": 88.5159151
+        },
+        {
+          "hospital": " RTC Indira Colony, Sadar Jalpaiguri ",
+          "address": "  Beside Gas Godown, Indira Colony, Jalpaiguri-735101 , JALPAIGURI",
+          "total_beds": "50",
+          "available_beds": "41",
+          "contact": "tel:7063304118",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:44 AM",
+          "lat": 26.5214579,
+          "lng": 88.7195567
+        }
+      ]
+    },
+    "JHARGRAM": {
+      "data": [
+        {
+          "hospital": " Hostel Building of Manikpara New Int. Govt. School ",
+          "address": "  Manikpara, Jhargram , JHARGRAM",
+          "total_beds": "60",
+          "available_beds": "60",
+          "contact": "tel:03221 258258",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:07 PM",
+          "lat": 22.373186,
+          "lng": 87.1255966
+        },
+        {
+          "hospital": " Pathra Karmatirtha ",
+          "address": "  Sankrail, Jhargram , JHARGRAM",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:03221 258258",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:38 PM",
+          "lat": 22.2598336,
+          "lng": 87.1560025
+        }
+      ]
+    },
+    "KALIMPONG": {
+      "data": [
+        {
+          "hospital": " ARD Farmers Training Centre Pedong ",
+          "address": "  Pedong, Kalimpong II Block , KALIMPONG",
+          "total_beds": "20",
+          "available_beds": "2",
+          "contact": "tel:9832748207",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:23 AM",
+          "lat": 42.6747868,
+          "lng": -84.48981309999999
+        },
+        {
+          "hospital": " ITI GORUBATHAN ",
+          "address": "  UPPER FAGU, GORUBATHAN , KALIMPONG",
+          "total_beds": "50",
+          "available_beds": "2",
+          "contact": "tel:9832748207",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:44 PM",
+          "lat": 26.9739259,
+          "lng": 88.69429129999999
+        },
+        {
+          "hospital": " KALIMPONG GOVT. POLYTECHNIC COLLEGE ",
+          "address": "  GAURIPUR HOUSE KALIMPONG , KALIMPONG",
+          "total_beds": "40",
+          "available_beds": "27",
+          "contact": "tel:9932606343",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:22 AM",
+          "lat": 27.0574672,
+          "lng": 88.4628535
+        }
+      ]
+    },
+    "KOLKATA METROPOLITAN AREA": {
+      "data": [
+        {
+          "hospital": " ATALANTA CLUB ",
+          "address": "  73/26 GOLF CLUBRD KOL-33 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "10",
+          "available_beds": "1",
+          "contact": "tel:9830763578",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 12:24 PM",
+          "lat": 22.4972361,
+          "lng": 88.3474042
+        },
+        {
+          "hospital": " CENTRAL FORENSIC SCIENCES LABORATORY - CFSL ",
+          "address": "  PLOT-DJ, 10/1 ACTION AREA - I, NEW TOWN, KOLKATA-7000156 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "60",
+          "available_beds": "58",
+          "contact": "tel:9433494434",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:10 PM",
+          "lat": 22.5459641,
+          "lng": 88.3703388
+        },
+        {
+          "hospital": " HK Seth Lane Safe Home ",
+          "address": "  20, Hare Krishna Seth Lane, Kolkata 50 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "44",
+          "available_beds": "28",
+          "contact": "tel:8001166052",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 08:33 AM",
+          "lat": 22.6265586,
+          "lng": 88.38718349999999
+        },
+        {
+          "hospital": " PRATIBANDHI VILLAGE, COVID INTERIM RELIEF CENTRE ",
+          "address": "  147, MUKUNDAPUR, KRISHAKPALLY, KOLKATA, WB. , KOLKATA METROPOLITAN AREA",
+          "total_beds": "29",
+          "available_beds": "16",
+          "contact": "tel:8240396468",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 07:09 PM",
+          "lat": 22.4899199,
+          "lng": 88.40112049999999
+        },
+        {
+          "hospital": " PROTIDIN ",
+          "address": "  30 MATHESHSWAR TALA ROAD, TANGRA, KOLKATA-700046 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "200",
+          "available_beds": "98",
+          "contact": "tel:9831045031",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:18 PM",
+          "lat": 22.5666816,
+          "lng": 88.3548989
+        },
+        {
+          "hospital": " UTTIRNO OPEN AIR THEATRE ",
+          "address": "  1A, REFORMATORY STREET , KOLKATA-700027 , 22 D L KHAN ROAD , KOLKATA METROPOLITAN AREA",
+          "total_beds": "500",
+          "available_beds": "413",
+          "contact": "tel:9831045031",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 08:22 PM",
+          "lat": 22.5330807,
+          "lng": 88.3361855
+        },
+        {
+          "hospital": " WARD - EIGHTY SEVEN, SAFE HOME ",
+          "address": "  33, SARDAR SANKAR ROAD, KOLKATA - 700029 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "20",
+          "available_beds": "19",
+          "contact": "tel:9830849975",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 25/05/2021 03:18 PM",
+          "lat": 22.572646,
+          "lng": 88.36389500000001
+        },
+        {
+          "hospital": " WARD - EIGHTY SIX, SAFE HOME ",
+          "address": "  218 B, LAKE TERRACE, KOLKATA - 700029 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "60",
+          "available_beds": "50",
+          "contact": "tel:9830336880",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 01:23 PM",
+          "lat": 22.572646,
+          "lng": 88.36389500000001
+        }
+      ]
+    },
+    "MALDA": {
+      "data": [
+        {
+          "hospital": " Model Madrasa English Medium Malda ",
+          "address": "  Chandan Park, PO Bagbari, PS English Bazar, Malda , MALDA",
+          "total_beds": "70",
+          "available_beds": "65",
+          "contact": "tel:9748127162",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:12 AM",
+          "lat": 25.0075779,
+          "lng": 88.1175385
+        }
+      ]
+    },
+    "MURSHIDABAD": {
+      "data": [
+        {
+          "hospital": " Amaipara Utbastu Vidyapith Safe Home, MJ Block ",
+          "address": "  Vill + P.O.- Amaipara, Dist.- Murshidabad , MURSHIDABAD",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9051548398",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:47 AM",
+          "lat": 24.2398623,
+          "lng": 88.285253
+        },
+        {
+          "hospital": " Bangabri Girls Hostel Safe Home ",
+          "address": "  Vill-Bangabari,PO:-Alampur, Dist.:-Murshidabad, Pin-742223 , MURSHIDABAD",
+          "total_beds": "15",
+          "available_beds": "15",
+          "contact": "tel:8001454563",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:10 PM",
+          "lat": 45.4271234,
+          "lng": -75.6866852
+        },
+        {
+          "hospital": " Barua Karmatirthya Safe Home ",
+          "address": "  Barua, Beldanga, Murshidabad, 742189 , MURSHIDABAD",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9007568812",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:14 PM",
+          "lat": 24.05858,
+          "lng": 88.25175589999999
+        },
+        {
+          "hospital": " Bhabta Aziziya High Madrasah Safe Home ",
+          "address": "  Bhabta, Beldanga, Murshidabad, 742134 , MURSHIDABAD",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9007568812",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:15 PM",
+          "lat": 23.988932,
+          "lng": 88.2433355
+        },
+        {
+          "hospital": " Bharatpur Model School Safe Home ",
+          "address": "  NEAR KISHAN MANDI , BHARATPUR GP, BHARATPUR - I , MURSHIDABAD",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:9732393294",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:29 PM",
+          "lat": 23.8800105,
+          "lng": 88.07188900000001
+        },
+        {
+          "hospital": " Bhatsala High Madrasah Safe Home ",
+          "address": "  Bhatsala, Domkal, Murshidabad, 742406 , MURSHIDABAD",
+          "total_beds": "12",
+          "available_beds": "12",
+          "contact": "tel:9734049108",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:49 AM",
+          "lat": 24.1061236,
+          "lng": 88.5590955
+        },
+        {
+          "hospital": " Boys Hostel, Amtala High School Safe Home, Nowda ",
+          "address": "  Amtala,Nowda, PIN-742121 , MURSHIDABAD",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9932683634",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 10:55 AM",
+          "lat": 23.9347081,
+          "lng": 88.4580084
+        },
+        {
+          "hospital": " Burwan NS High School Safe Home ",
+          "address": "  VILL & P.O. - BURWAN PIN - 742132 , MURSHIDABAD",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8391086522",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:14 PM",
+          "lat": 23.9316421,
+          "lng": 87.93451669999999
+        },
+        {
+          "hospital": " Girls Hostel of Hazi A.K. Khan College Safe Home ",
+          "address": "  Vill+PO+PS-Hariharpara, Dist-Murshidabad, Pin-742166 , MURSHIDABAD",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:9674610958",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 02:47 PM",
+          "lat": 24.0435343,
+          "lng": 88.4160474
+        },
+        {
+          "hospital": " Goas Kalikapur High School Safe Home ",
+          "address": "  Kalikapur Raninagar I PO- Goas PS- Islampur , MURSHIDABAD",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9775858424",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:08 PM",
+          "lat": 24.1791057,
+          "lng": 88.5111594
+        }
+      ]
+    },
+    "NADIA": {
+      "data": [
+        {
+          "hospital": " BAHADURPUR SAFE HOME ",
+          "address": "  VILL.- BAHADURPUR, P.S.- DHUBULIA, NADIA, PIN.- 741125 , NADIA",
+          "total_beds": "90",
+          "available_beds": "82",
+          "contact": "tel:7605057766",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 08:01 AM",
+          "lat": 23.4027688,
+          "lng": 88.49124370000001
+        },
+        {
+          "hospital": " HARINGHATA ITI COLLEGE ",
+          "address": "  VILL.- GHORAGACHA, P.O.- SIMHAT, NEAR KALYANI MORE, P.S.- HARINGHATA, PIN.- 741249 , NADIA",
+          "total_beds": "40",
+          "available_beds": "26",
+          "contact": "tel:8697604632",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 08:41 AM",
+          "lat": 22.9551422,
+          "lng": 88.5714652
+        },
+        {
+          "hospital": " Karimpur Karmatirtha ",
+          "address": "  Karimpur Farm More, P.O.+P.S.- Karimpur, nadia, Pin.- 741152 , NADIA",
+          "total_beds": "40",
+          "available_beds": "31",
+          "contact": "tel:9800252983",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:50 PM",
+          "lat": 23.4709656,
+          "lng": 88.55653099999999
+        },
+        {
+          "hospital": " MATRI MISSION O MANDIR SEVA TRUST ",
+          "address": "  RAMKRISHNAPURAM, SAHEBBAGAN, SAGUNA, NADIA , NADIA",
+          "total_beds": "12",
+          "available_beds": "11",
+          "contact": "tel:9163875366",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:09 PM",
+          "lat": 22.970072,
+          "lng": 88.4645838
+        },
+        {
+          "hospital": " PALASHIPARA KARMATIRTHA BHAWAN SAFE HOME ",
+          "address": "  VILL + P.O.- PALASHIPARA, DIST.- NADIA, WEST BENGAL, PIN.- 741155 , NADIA",
+          "total_beds": "30",
+          "available_beds": "18",
+          "contact": "tel:8597886649",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:34 AM",
+          "lat": 22.9623804,
+          "lng": 88.4284109
+        },
+        {
+          "hospital": " SANTIPUR POURO STADIUM ",
+          "address": "  WARD NO.- 4, SANTIPUR MUNICIPALITY, NADIA, PIN.- 741404 , NADIA",
+          "total_beds": "25",
+          "available_beds": "18",
+          "contact": "tel:7047444939",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:56 PM",
+          "lat": 23.2555904,
+          "lng": 88.4397697
+        },
+        {
+          "hospital": " TEHATTA KARMATIRTHA ",
+          "address": "  NATIPOTA, TEHATTA, NADIA , NADIA",
+          "total_beds": "40",
+          "available_beds": "38",
+          "contact": "tel:7319575562",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:36 PM",
+          "lat": 22.9623804,
+          "lng": 88.4284109
+        }
+      ]
+    },
+    "PASCHIM BARDHAMAN": {
+      "data": [
+        {
+          "hospital": " BOKARO SAFE HOUSE ",
+          "address": "  Hostel Avenue, Bencachity, Durgapur , PASCHIM BARDHAMAN",
+          "total_beds": "50",
+          "available_beds": "44",
+          "contact": "tel:8597042976",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:37 PM",
+          "lat": 23.66765,
+          "lng": 86.1431625
+        },
+        {
+          "hospital": " ESI SAFE HOUSE ASANSOL ",
+          "address": "  ESI Nursing Training School, Kalyanpur, Asansol , PASCHIM BARDHAMAN",
+          "total_beds": "50",
+          "available_beds": "45",
+          "contact": "tel:8597042976",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:37 PM",
+          "lat": 23.6888636,
+          "lng": 86.9660638
+        }
+      ]
+    },
+    "PASCHIM MEDINIPUR": {
+      "data": [
+        {
+          "hospital": " Club House Aurobindo Stadium. ",
+          "address": "  Ghatal , PASCHIM MEDINIPUR",
+          "total_beds": "15",
+          "available_beds": "15",
+          "contact": "tel:8001532953",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 24/05/2021 11:15 AM",
+          "lat": 22.4239625,
+          "lng": 87.32128379999999
+        },
+        {
+          "hospital": " Dasagram. PHC ",
+          "address": "  Dasagram, Sabang , PASCHIM MEDINIPUR",
+          "total_beds": "20",
+          "available_beds": "18",
+          "contact": "tel:9732672486, 9474470901",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:17 PM",
+          "lat": 22.1202498,
+          "lng": 87.5025217
+        },
+        {
+          "hospital": " Disaster Management Salboni ",
+          "address": "  Salboni , PASCHIM MEDINIPUR",
+          "total_beds": "60",
+          "available_beds": "60",
+          "contact": "tel:9432879467",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 02:09 PM",
+          "lat": 22.6408471,
+          "lng": 87.3249659
+        },
+        {
+          "hospital": " Karmatirtha, Abas, Medinipur ",
+          "address": "  Khasjungle, Medinipur , PASCHIM MEDINIPUR",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:9733866539",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 23/05/2021 12:34 PM",
+          "lat": 22.4526971,
+          "lng": 87.3175164
+        },
+        {
+          "hospital": " Keshiary Kishan Mandi. ",
+          "address": "  Keshiary , PASCHIM MEDINIPUR",
+          "total_beds": "25",
+          "available_beds": "25",
+          "contact": "tel:9564519593",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 24/05/2021 11:23 AM",
+          "lat": 22.1167426,
+          "lng": 87.23446419999999
+        },
+        {
+          "hospital": " Night Shelter, MMCH ",
+          "address": "  Medinipur Medical College & Hospital, Medinipur , PASCHIM MEDINIPUR",
+          "total_beds": "45",
+          "available_beds": "40",
+          "contact": "tel:6294114658",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:00 AM",
+          "lat": 32.7448689,
+          "lng": -97.31323739999999
+        },
+        {
+          "hospital": " Vidyasagar Multipurpose Flood Centre ",
+          "address": "  Akabpur, Mohanpur, Ghatal, Paschim Medinipur , PASCHIM MEDINIPUR",
+          "total_beds": "50",
+          "available_beds": "50",
+          "contact": "tel:9002110962",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:17 AM",
+          "lat": 22.4223904,
+          "lng": 87.3272102
+        }
+      ]
+    },
+    "PURBA BARDHHAMAN": {
+      "data": [
+        {
+          "hospital": " CHETANA SAFE HOME UNDER ABSK ",
+          "address": "  JINGUTI, P.O- FAGUPUR, PIN- 713102 (BESIDE SAI COMPLEX), PURBA BARDHAMAN , PURBA BARDHHAMAN",
+          "total_beds": "30",
+          "available_beds": "29",
+          "contact": "tel:8101472241",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:45 AM",
+          "lat": 23.2455709,
+          "lng": 87.8654893
+        },
+        {
+          "hospital": " COVID FIELD HOSPITAL SAFE HOME ",
+          "address": "  LAKURDI, JALKAL MATH, PRANTIK MARRIAGE HALL, PURBA BARDHAMAN, PIN-713102 , PURBA BARDHHAMAN",
+          "total_beds": "20",
+          "available_beds": "14",
+          "contact": "tel:9883832512,9564386622",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:20 AM",
+          "lat": 23.2409261,
+          "lng": 87.8512155
+        },
+        {
+          "hospital": " FLOOD SHELTER, KATWA MUNICIPALITY ",
+          "address": "  KASHIGANJ PARA, WARD NO-17, KATWA MUNICIPALITY , PURBA BARDHHAMAN",
+          "total_beds": "48",
+          "available_beds": "25",
+          "contact": "tel:9647240010",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:03 AM",
+          "lat": 23.6403783,
+          "lng": 88.1299373
+        },
+        {
+          "hospital": " Kalna Safe Home Manisi Lodge ",
+          "address": "  STKK Road, Jewdhara, Kalna, Purba Bardhaman , PURBA BARDHHAMAN",
+          "total_beds": "48",
+          "available_beds": "35",
+          "contact": "tel:9434152490",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:45 AM",
+          "lat": 23.2383412,
+          "lng": 87.86543089999999
+        },
+        {
+          "hospital": " Krishi Bhawan Safe Home ",
+          "address": "  Kalna Gate, Near Agriculture Farm, Purba Bardhaman , PURBA BARDHHAMAN",
+          "total_beds": "100",
+          "available_beds": "98",
+          "contact": "tel:9883532450",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:21 AM",
+          "lat": 23.2324214,
+          "lng": 87.8614793
+        },
+        {
+          "hospital": " SAFE HOME ANNEXE- SRIRAMPUR RH ",
+          "address": "  PURBASTHALI 1, PS-PURBASTHALI, PURBA BARDHAMAN , PURBA BARDHHAMAN",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8420065218",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:16 PM",
+          "lat": 23.2409261,
+          "lng": 87.8512155
+        }
+      ]
+    },
+    "PURBA MEDINIPUR": {
+      "data": [
+        {
+          "hospital": " Digha Youth Hostel Safe Home ",
+          "address": "  NEW DIGHA YOUTH HOSTEL BUILDING , PURBA MEDINIPUR",
+          "total_beds": "70",
+          "available_beds": "49",
+          "contact": "tel:9564337879",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:53 AM",
+          "lat": 21.6230537,
+          "lng": 87.501932
+        },
+        {
+          "hospital": " EGRA SAFE HOME ",
+          "address": "  EGRA JHATU LAL HIGH SCHOOL BOY'S HOSTEL, EGRA, PURBA MEDINIPUR , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "84",
+          "contact": "tel:7364045140",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:07 AM",
+          "lat": 21.8892075,
+          "lng": 87.5381033
+        },
+        {
+          "hospital": " HALDIA SAFE HOME ",
+          "address": "  SATISH SAMANTA TRADE CENTRE, HALDIA, PURBA MEDINIPUR , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "83",
+          "contact": "tel:7364045140",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:42 AM",
+          "lat": 22.0793893,
+          "lng": 88.14167979999999
+        },
+        {
+          "hospital": " NANDAKUMAR SAFE HOME ",
+          "address": "  NANDAKUMAR OLD COLLEGE BUILDING, NANDAKUMAR, PURBA MEDINIPUR. , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "81",
+          "contact": "tel:7364045140",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:46 AM",
+          "lat": 22.2008957,
+          "lng": 87.924302
+        },
+        {
+          "hospital": " RAGHUNATH AYURVED COLLEGE, CONTAI SAFE HOME ",
+          "address": "  CONTAI, PURBA MEDINIPUR , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "5",
+          "contact": "tel:9932873556",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:02 PM",
+          "lat": 21.7759715,
+          "lng": 87.734668
+        }
+      ]
+    },
+    "PURULIA": {
+      "data": [
+        {
+          "hospital": " KALLOLI BPHC SAFE HOME ",
+          "address": "  KALLOLI RURAL HOSPITAL, KASHIPUR , PURULIA",
+          "total_beds": "30",
+          "available_beds": "21",
+          "contact": "tel:9635778829",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:08 AM",
+          "lat": 23.439152,
+          "lng": 86.68501599999999
+        },
+        {
+          "hospital": " MOTHER TERESA SAFE HOME ",
+          "address": "  GOSHALA MORE, PURULIA , PURULIA",
+          "total_beds": "50",
+          "available_beds": "39",
+          "contact": "tel:9635778829",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:08 AM",
+          "lat": 23.3285317,
+          "lng": 86.3680869
+        },
+        {
+          "hospital": " RAGHUNATHPUR SDH OLD BUILDING SAFE HOME ",
+          "address": "  RAGHUNATHPUR SDH, RAGHUNATHPUR- I , PURULIA",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:8597376921",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:09 AM",
+          "lat": 42.28391430000001,
+          "lng": -83.7332766
+        }
+      ]
+    },
+    "UTTAR 24 PARGANA": {
+      "data": [
+        {
+          "hospital": " Banipur Welfare Home ",
+          "address": "  Habra Banipur , UTTAR 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "15",
+          "contact": "tel:9434401039",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:30 PM",
+          "lat": 22.8207133,
+          "lng": 88.63468929999999
+        },
+        {
+          "hospital": " Bankimjali stadium Naihati ",
+          "address": "  Naihati, West Bengal 743165 , UTTAR 24 PARGANA",
+          "total_beds": "273",
+          "available_beds": "47",
+          "contact": "tel:9748395256",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:30 PM",
+          "lat": 22.8931034,
+          "lng": 88.4259998
+        },
+        {
+          "hospital": " Barrackpore Stadium ",
+          "address": "  Wireless Crossing Barrackpore , UTTAR 24 PARGANA",
+          "total_beds": "25",
+          "available_beds": "16",
+          "contact": "tel:8017242936",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:30 PM",
+          "lat": 22.7674278,
+          "lng": 88.3883455
+        },
+        {
+          "hospital": " Bhabla Polytechnic College ",
+          "address": "  Bhabla , Bashirhat , UTTAR 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "39",
+          "contact": "tel:9832192594",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:30 PM",
+          "lat": 22.6501809,
+          "lng": 88.85220849999999
+        },
+        {
+          "hospital": " Cooperative building ",
+          "address": "  N.S Road New Barrackpore , UTTAR 24 PARGANA",
+          "total_beds": "30",
+          "available_beds": "7",
+          "contact": "tel:7044535152",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:31 PM",
+          "lat": 22.5909548,
+          "lng": 88.41726109999999
+        },
+        {
+          "hospital": " Haripur College ",
+          "address": "  Asoknagar , UTTAR 24 PARGANA",
+          "total_beds": "100",
+          "available_beds": "74",
+          "contact": "tel:8695125908",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:31 PM",
+          "lat": 22.5893387,
+          "lng": 88.90545639999999
+        },
+        {
+          "hospital": " Horticulture Training Office, Barasat ",
+          "address": "  Barasat 700125 , UTTAR 24 PARGANA",
+          "total_beds": "100",
+          "available_beds": "69",
+          "contact": "tel:9830720951",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:32 PM",
+          "lat": 22.7256311,
+          "lng": 88.47841299999999
+        },
+        {
+          "hospital": " Kabi Guru Safe Home ",
+          "address": "  Birati, Mrinalini Dutta Mahavidyapith, Kolkata-700051 , UTTAR 24 PARGANA",
+          "total_beds": "58",
+          "available_beds": "31",
+          "contact": "tel:8777479760",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:32 PM",
+          "lat": 22.949915,
+          "lng": 88.4358705
+        },
+        {
+          "hospital": " Kasturi lodge ",
+          "address": "  New Barrackpore , UTTAR 24 PARGANA",
+          "total_beds": "30",
+          "available_beds": "10",
+          "contact": "tel:7044535152",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:32 PM",
+          "lat": 22.6898221,
+          "lng": 88.4463708
+        },
+        {
+          "hospital": " Khardah Stadium ",
+          "address": "  Dangapara, Rahara, Kolkata - 700118 , UTTAR 24 PARGANA",
+          "total_beds": "61",
+          "available_beds": "11",
+          "contact": "tel:8777346447",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:32 PM",
+          "lat": 22.7334094,
+          "lng": 88.3823413
+        }
+      ]
+    },
+    "UTTAR DINAJPUR": {
+      "data": [
+        {
+          "hospital": " Central Training Institute ",
+          "address": "  GOTHLU ITAHAR, UTTAR DINAJPUR , UTTAR DINAJPUR",
+          "total_beds": "130",
+          "available_beds": "120",
+          "contact": "tel:9433400657,7063590299, 7063590298",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 09:30 AM",
+          "lat": 25.4701816,
+          "lng": 88.16966959999999
+        },
+        {
+          "hospital": " KARANDIGHI MODEL SCHOOL ",
+          "address": "  KARANDIGHI UTTAR DINAJPUR , UTTAR DINAJPUR",
+          "total_beds": "50",
+          "available_beds": "50",
+          "contact": "tel:9007143179",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:01 PM",
+          "lat": 25.8129883,
+          "lng": 87.917957
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "60afa2be28e4f05d7bb6dbd7"
+  },
+  "date": "26052021",
+  "updated_at": "27/05/2021 07:16:38 PM",
+  "safe_homes": {
+    "ALIPURDUAR": {
+      "data": [
+        {
+          "hospital": " Asutosh BED College, Alipurduar II ",
+          "address": "  Alipurduar II Development Block , ALIPURDUAR",
+          "total_beds": "25",
+          "available_beds": "8",
+          "contact": "tel:9735098064",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:41 PM",
+          "lat": 26.4866887,
+          "lng": 89.59926159999999
+        },
+        {
+          "hospital": " KARMATIRTHA,Kumargram ",
+          "address": "  BAROBISHA, KUMARGRAM, ALIPURDUAR , ALIPURDUAR",
+          "total_beds": "40",
+          "available_beds": "3",
+          "contact": "tel:7407497697",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:48 PM",
+          "lat": 26.4259541,
+          "lng": 89.7979857
+        },
+        {
+          "hospital": " PATHER SATHI HOTEL, MADARIHAT ",
+          "address": "  BIRPARA, MADARIHAT, ALIPURDUAR , ALIPURDUAR",
+          "total_beds": "40",
+          "available_beds": "23",
+          "contact": "tel:9002211270",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:03 PM",
+          "lat": 26.6887794,
+          "lng": 89.2780147
+        },
+        {
+          "hospital": " PTTI SILTORSHA, ALIPURDUAR-I ",
+          "address": "  VILL-SILBARIHAT, PO- SONAPUR, BLOCK-ALIPURDUAR-I , ALIPURDUAR",
+          "total_beds": "80",
+          "available_beds": "73",
+          "contact": "tel:7908448326",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 03:35 PM",
+          "lat": 26.4871862,
+          "lng": 89.52382109999999
+        },
+        {
+          "hospital": " SUN CITY Safe home, FALAKATA ",
+          "address": "  VILL-KUNJANAGAR, PO-MAIRADANGA, PS-FALAKATA, BLOCK-FALAKATA , ALIPURDUAR",
+          "total_beds": "60",
+          "available_beds": "31",
+          "contact": "tel:9832652808",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:33 PM",
+          "lat": 26.517486,
+          "lng": 89.2039195
+        }
+      ]
+    },
+    "BANKURA": {
+      "data": [
+        {
+          "hospital": " ADSR New Building ",
+          "address": "  Haripur, Indas, bankura , BANKURA",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:9434754996",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:20 PM",
+          "lat": 23.2332871,
+          "lng": 87.0651343
+        },
+        {
+          "hospital": " Ailakundi PTTI ",
+          "address": "  Behind Bankura SBSTC Bus Stand , BANKURA",
+          "total_beds": "30",
+          "available_beds": "23",
+          "contact": "tel:9434440300",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:45 AM",
+          "lat": 23.2727187,
+          "lng": 87.08837539999999
+        },
+        {
+          "hospital": " Bagdiha BJRCY Hostel ",
+          "address": "  Bagdiha, Indpur , BANKURA",
+          "total_beds": "27",
+          "available_beds": "17",
+          "contact": "tel:7063017340",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:30 PM",
+          "lat": 23.2378074,
+          "lng": 87.06047749999999
+        },
+        {
+          "hospital": " Banabitan Lodge ",
+          "address": "  Joypur, Bankura , BANKURA",
+          "total_beds": "23",
+          "available_beds": "11",
+          "contact": "tel:9641599486",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:35 PM",
+          "lat": 23.0479463,
+          "lng": 87.4390221
+        },
+        {
+          "hospital": " Bankura Stadium Safe Home ",
+          "address": "  Bankura Stadium, Tamlibandh, Bankura 722101 , BANKURA",
+          "total_beds": "23",
+          "available_beds": "7",
+          "contact": "tel:8695626433",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 03:49 PM",
+          "lat": 23.2315011,
+          "lng": 87.05647739999999
+        },
+        {
+          "hospital": " CCRD ",
+          "address": "  Panchmura , BANKURA",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:7001215610",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:58 PM",
+          "lat": 22.9670983,
+          "lng": 87.1680379
+        },
+        {
+          "hospital": " Dhansimla Bidyabhaban Hostel ",
+          "address": "  Dhansimla, Sonamukhi , BANKURA",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9749815197",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:50 PM",
+          "lat": 23.2660937,
+          "lng": 87.46640649999999
+        },
+        {
+          "hospital": " Dhenkikata Integrated Govt. School ",
+          "address": "  Dhenkikata, Mandalkuli GP , BANKURA",
+          "total_beds": "52",
+          "available_beds": "48",
+          "contact": "tel:8013470758",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:58 AM",
+          "lat": 23.2372885,
+          "lng": 87.06248629999999
+        },
+        {
+          "hospital": " Kharidungri Sports Academy Safe Home ",
+          "address": "  Kharidungri, Gorabari, Khatra, Bankura, PIN-722140 , BANKURA",
+          "total_beds": "50",
+          "available_beds": "44",
+          "contact": "tel:8972692269",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 09:14 AM",
+          "lat": 23.2403979,
+          "lng": 87.0846996
+        },
+        {
+          "hospital": " Kotulpur Safe Home ",
+          "address": "  Vivekananda Club, Vill - Bagrol, PO & PS Kotulpur, Pin 722141 , BANKURA",
+          "total_beds": "17",
+          "available_beds": "12",
+          "contact": "tel:9874162899",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:56 PM",
+          "lat": 23.0196838,
+          "lng": 87.5797067
+        }
+      ]
+    },
+    "BIRBHUM": {
+      "data": [
+        {
+          "hospital": " Ambua Govt. Model School Murarai ",
+          "address": "  Ambua,Murarai,Pin-731222 , BIRBHUM",
+          "total_beds": "100",
+          "available_beds": "93",
+          "contact": "tel:8436548938",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:45 PM",
+          "lat": 24.5477945,
+          "lng": 87.8623411
+        },
+        {
+          "hospital": " CMOH OFFICE SAFE HOME ",
+          "address": "  Old outdoor Campus,Suri, West Bengal 731101 , BIRBHUM",
+          "total_beds": "30",
+          "available_beds": "27",
+          "contact": "tel:7363092304",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:45 PM",
+          "lat": 24.1772127,
+          "lng": 87.79068989999999
+        },
+        {
+          "hospital": " Niramoy TB Sanatorium Safe Home ",
+          "address": "  Dubrajpur , West Bengal 731123 , BIRBHUM",
+          "total_beds": "150",
+          "available_beds": "132",
+          "contact": "tel:7908081168",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:21 PM",
+          "lat": 23.7903029,
+          "lng": 87.4050372
+        },
+        {
+          "hospital": " West Bengal Comprehensive Area Development Corporation -CDAC ",
+          "address": "  Office of the CADC, Nalhati Word No. 14, PO-Nalhati , PS- Nalhati, Pin No. 731220 , BIRBHUM",
+          "total_beds": "40",
+          "available_beds": "16",
+          "contact": "tel:9800584680",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:56 PM",
+          "lat": 24.2816545,
+          "lng": 87.8395846
+        }
+      ]
+    },
+    "COOCHBEHAR": {
+      "data": [
+        {
+          "hospital": " Babu Jagjivanram Kendriya Chatri Niwas ",
+          "address": "  MATHABHANGA , COOCHBEHAR",
+          "total_beds": "56",
+          "available_beds": "56",
+          "contact": "tel:9933639827",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:44 PM",
+          "lat": 26.3452397,
+          "lng": 89.4482079
+        },
+        {
+          "hospital": " BATRIGACH COMMUNITY HALL ",
+          "address": "  BATRIGACH COMMUNITY HALL SAFE HOME , COOCHBEHAR",
+          "total_beds": "60",
+          "available_beds": "60",
+          "contact": "tel:9933672818",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:34 PM",
+          "lat": 26.318479,
+          "lng": 89.445779
+        },
+        {
+          "hospital": " COOCHBEHAR NETAJI INDOOR STADIUM SAFE HOME ",
+          "address": "  COOCHBEHAR , COOCHBEHAR",
+          "total_beds": "130",
+          "available_beds": "92",
+          "contact": "tel:9834144980",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:48 PM",
+          "lat": 26.3234551,
+          "lng": 89.4410984
+        },
+        {
+          "hospital": " Haldibari Hospital New Building ",
+          "address": "  HALDIBARI , COOCHBEHAR",
+          "total_beds": "20",
+          "available_beds": "17",
+          "contact": "tel:8900344094",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:04 PM",
+          "lat": 26.329801,
+          "lng": 89.45058
+        },
+        {
+          "hospital": " KARMATIRTHA SITAI SAFE HOME ",
+          "address": "  SITAI , COOCHBEHAR",
+          "total_beds": "35",
+          "available_beds": "35",
+          "contact": "tel:9735413071",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:38 PM",
+          "lat": 26.0486643,
+          "lng": 89.3203233
+        },
+        {
+          "hospital": " Karola Community Hall ",
+          "address": "  DINHATA II , COOCHBEHAR",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8116641321",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:32 PM",
+          "lat": 26.3268307,
+          "lng": 89.4385406
+        },
+        {
+          "hospital": " KISAN MANDI KRISHI MELA ",
+          "address": "  DINHATA I , COOCHBEHAR",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9933672818",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:34 PM",
+          "lat": 26.3179683,
+          "lng": 89.44756319999999
+        },
+        {
+          "hospital": " Mekhliganj Bus Terminus Building ",
+          "address": "  MEKLIGANJ , COOCHBEHAR",
+          "total_beds": "30",
+          "available_beds": "29",
+          "contact": "tel:9830203174",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:31 PM",
+          "lat": 26.3445757,
+          "lng": 88.90765429999999
+        },
+        {
+          "hospital": " Tufanganj Polytechnic College ",
+          "address": "  TUFANGANJ , COOCHBEHAR",
+          "total_beds": "100",
+          "available_beds": "100",
+          "contact": "tel:8972050757",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:20 PM",
+          "lat": 26.3314484,
+          "lng": 89.44319449999999
+        }
+      ]
+    },
+    "DAKSHIN 24 PARGANA": {
+      "data": []
+    },
+    "DAKSHIN DINAJPUR": {
+      "data": [
+        {
+          "hospital": " BALURGHAT YOUTH HOSTEL ",
+          "address": "  MANGALPUR, BALURGHAT , DAKSHIN DINAJPUR",
+          "total_beds": "80",
+          "available_beds": "62",
+          "contact": "tel:9339676475",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:12 PM",
+          "lat": 25.2538378,
+          "lng": 88.77901279999999
+        },
+        {
+          "hospital": " BUNIADPUR ITI ",
+          "address": "  BUNIADPUR , DAKSHIN DINAJPUR",
+          "total_beds": "50",
+          "available_beds": "47",
+          "contact": "tel:9733327309",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:45 PM",
+          "lat": 25.3997668,
+          "lng": 88.4058285
+        },
+        {
+          "hospital": " GANGARAMPUR STADIUM ",
+          "address": "  GANGARAMPUR , DAKSHIN DINAJPUR",
+          "total_beds": "25",
+          "available_beds": "25",
+          "contact": "tel:7718713126",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:01 PM",
+          "lat": 25.4046658,
+          "lng": 88.5378001
+        },
+        {
+          "hospital": " Harirampur KGBV Hostel ASDM High School ",
+          "address": "  Harirampur , DAKSHIN DINAJPUR",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8900595989",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:48 PM",
+          "lat": 25.3722315,
+          "lng": 88.2644119
+        },
+        {
+          "hospital": " HILI SBS COLLEGE ",
+          "address": "  HILI , DAKSHIN DINAJPUR",
+          "total_beds": "25",
+          "available_beds": "25",
+          "contact": "tel:9007263142",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:06 PM",
+          "lat": 25.2846127,
+          "lng": 88.9917104
+        },
+        {
+          "hospital": " Kumarganj Kishan Mandi ",
+          "address": "  Kumarganj , DAKSHIN DINAJPUR",
+          "total_beds": "60",
+          "available_beds": "56",
+          "contact": "tel:03522254205",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:58 PM",
+          "lat": 25.4179735,
+          "lng": 88.7315632
+        },
+        {
+          "hospital": " Kushmandi Kishan Mandi ",
+          "address": "  Kishan Mandi, Kushmandi , DAKSHIN DINAJPUR",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:9830350069",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:06 PM",
+          "lat": 25.5251056,
+          "lng": 88.3663294
+        },
+        {
+          "hospital": " TAPAN KISHAN MANDI ",
+          "address": "  TAPAN , DAKSHIN DINAJPUR",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:7365928419",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:02 PM",
+          "lat": 25.3047855,
+          "lng": 88.5718488
+        }
+      ]
+    },
+    "DARJEELING": {
+      "data": [
+        {
+          "hospital": " BATASI ITI COVID CARE FACILITY ",
+          "address": "  Batasi ITI , Khoribari Block , DARJEELING",
+          "total_beds": "50",
+          "available_beds": "20",
+          "contact": "tel:8370842357",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:09 PM",
+          "lat": 26.5995417,
+          "lng": 88.1803557
+        },
+        {
+          "hospital": " HATIGHISA SAFE HOME ",
+          "address": "  NAXALBARI BLOCK , DARJEELING",
+          "total_beds": "50",
+          "available_beds": "23",
+          "contact": "tel:8101488095",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:34 PM",
+          "lat": 27.0414819,
+          "lng": 88.2681629
+        },
+        {
+          "hospital": " HMI COVID SAFE HOME ",
+          "address": "  HMI,Darjeeling , DARJEELING",
+          "total_beds": "48",
+          "available_beds": "43",
+          "contact": "tel:9749863940",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:38 PM",
+          "lat": 27.0585836,
+          "lng": 88.25324420000001
+        },
+        {
+          "hospital": " MOUNT VIEW SAFE HOME ",
+          "address": "  OPP. CENTRAL BUS TERMINUS, HILL CART ROAD, SILIGURI, DIST DARJEELING , DARJEELING",
+          "total_beds": "22",
+          "available_beds": "9",
+          "contact": "tel:9732854000",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:05 PM",
+          "lat": 41.6009027,
+          "lng": -72.7212579
+        },
+        {
+          "hospital": " SB DEY SANATORIUM ",
+          "address": "  KURSEONG , DARJEELING",
+          "total_beds": "25",
+          "available_beds": "20",
+          "contact": "tel:03542332141",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:09 PM",
+          "lat": 26.8819561,
+          "lng": 88.2831154
+        },
+        {
+          "hospital": " SILIGURI INDOOR STADIUM ",
+          "address": "  DESHBANDU PARA,WARD NO-29 , DARJEELING",
+          "total_beds": "70",
+          "available_beds": "39",
+          "contact": "tel:8016277748",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:03 PM",
+          "lat": 26.7134035,
+          "lng": 88.42714319999999
+        },
+        {
+          "hospital": " SURSUM CORDA SAFE HOME ",
+          "address": "  St Joseph College,Singmari,Darjeeling , DARJEELING",
+          "total_beds": "50",
+          "available_beds": "45",
+          "contact": "tel:8918925331",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:35 PM",
+          "lat": 38.9046633,
+          "lng": -77.01216939999999
+        },
+        {
+          "hospital": " TB HOSPITAL BATASIA SAFE HOME ",
+          "address": "  Ghoom, Darjeeling , DARJEELING",
+          "total_beds": "24",
+          "available_beds": "13",
+          "contact": "tel:0354-2274582",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:04 PM",
+          "lat": 39.739205,
+          "lng": -104.942453
+        }
+      ]
+    },
+    "HOOGHLY": {
+      "data": [
+        {
+          "hospital": " Chandannagar Oxygen Parlour ",
+          "address": "  Swagatam Hall Kuthir Math, Chandannagar, Hooghly , HOOGHLY",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9123736539",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:33 AM",
+          "lat": 22.8570289,
+          "lng": 88.369309
+        },
+        {
+          "hospital": " Golok Munshi Hospital ",
+          "address": "  Nabagram, Konnagar, West Bengal 712249 , HOOGHLY",
+          "total_beds": "34",
+          "available_beds": "30",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:33 PM",
+          "lat": 22.7115443,
+          "lng": 88.3342739
+        },
+        {
+          "hospital": " Pandua Karmatirtha ",
+          "address": "  Pandua, Hooghly , HOOGHLY",
+          "total_beds": "42",
+          "available_beds": "34",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:46 AM",
+          "lat": 23.0780652,
+          "lng": 88.2788636
+        },
+        {
+          "hospital": " Rishra Seva Sadan ",
+          "address": "  1, Keshub Chandra Sen Rd, Rishra, Hooghly, West Bengal 712250 , HOOGHLY",
+          "total_beds": "36",
+          "available_beds": "29",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:21 PM",
+          "lat": 22.7241696,
+          "lng": 88.3414323
+        },
+        {
+          "hospital": " Ruplal Nandy Memorial Cancer Research Centre ",
+          "address": "  Sarishapara, Chandannagar, West Bengal 712136 , HOOGHLY",
+          "total_beds": "35",
+          "available_beds": "17",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:39 AM",
+          "lat": 22.8670935,
+          "lng": 88.368501
+        },
+        {
+          "hospital": " Tarakeswar Safe Home ",
+          "address": "  Motel, Near Pearl's Rozarie School, Tarakeswar, Hooghly, West Bengal 712403 , HOOGHLY",
+          "total_beds": "30",
+          "available_beds": "28",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:38 AM",
+          "lat": 22.8923856,
+          "lng": 88.0066681
+        },
+        {
+          "hospital": " Vikdas Godown ",
+          "address": "  Goghat, Hooghly , HOOGHLY",
+          "total_beds": "70",
+          "available_beds": "69",
+          "contact": "tel:7605059328",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:01 PM",
+          "lat": 22.916036,
+          "lng": 87.733319
+        }
+      ]
+    },
+    "HOWRAH": {
+      "data": [
+        {
+          "hospital": " Baltikuri Safe Home ",
+          "address": "  Baltikuri, P.O, Bankra, Howrah, West Bengal 711403 , HOWRAH",
+          "total_beds": "100",
+          "available_beds": "90",
+          "contact": "tel:8240235865",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:35 PM",
+          "lat": 22.610594,
+          "lng": 88.2874843
+        }
+      ]
+    },
+    "JALPAIGURI": {
+      "data": [
+        {
+          "hospital": " DTC Raninagar, Safe Home, Jalpaiguri ",
+          "address": "  RANINAGAR, SADAR BLOCK, JALPAIGURI 735133 , JALPAIGURI",
+          "total_beds": "51",
+          "available_beds": "36",
+          "contact": "tel:8170017419",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:12 PM",
+          "lat": 26.5436993,
+          "lng": 88.64788399999999
+        },
+        {
+          "hospital": " ITI College, Matiali Safe Home ",
+          "address": "  MATIALI , JALPAIGURI",
+          "total_beds": "124",
+          "available_beds": "21",
+          "contact": "tel:9083354528",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:34 PM",
+          "lat": 30.36981819999999,
+          "lng": -91.0304859
+        },
+        {
+          "hospital": " Karmatirtha Building, Ambari Falakata, Safe Home ",
+          "address": "  Mogradangi, Rajganj-735135 , JALPAIGURI",
+          "total_beds": "50",
+          "available_beds": "23",
+          "contact": "tel:8116040922",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:17 PM",
+          "lat": 26.6090024,
+          "lng": 88.4863991
+        },
+        {
+          "hospital": " Khayerbari Model School Nagrakata ",
+          "address": "  Khayerbari, Sulkapara, Nagrakata, Pin-735225 , JALPAIGURI",
+          "total_beds": "100",
+          "available_beds": "63",
+          "contact": "tel:9382636214",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:16 PM",
+          "lat": 26.8809465,
+          "lng": 88.9078526
+        },
+        {
+          "hospital": " Maynaguri Polytechnic College, Safe Home ",
+          "address": "  Barnes Ghat Road Kanthalbari Domohani Maynaguri 735302 , JALPAIGURI",
+          "total_beds": "120",
+          "available_beds": "31",
+          "contact": "tel:7478020857",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:29 PM",
+          "lat": 26.5780816,
+          "lng": 88.7930482
+        },
+        {
+          "hospital": " Office Building of Small Scale Industry, Safe Home, Rajganj ",
+          "address": "  Mogradangi, Rajganj-735135 , JALPAIGURI",
+          "total_beds": "60",
+          "available_beds": "55",
+          "contact": "tel:9749350261",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:18 PM",
+          "lat": 26.5601067,
+          "lng": 88.5159151
+        },
+        {
+          "hospital": " RTC Indira Colony, Sadar Jalpaiguri ",
+          "address": "  Beside Gas Godown, Indira Colony, Jalpaiguri-735101 , JALPAIGURI",
+          "total_beds": "50",
+          "available_beds": "41",
+          "contact": "tel:7063304118",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:17 PM",
+          "lat": 26.5214579,
+          "lng": 88.7195567
+        }
+      ]
+    },
+    "JHARGRAM": {
+      "data": [
+        {
+          "hospital": " Hostel Building of Manikpara New Int. Govt. School ",
+          "address": "  Manikpara, Jhargram , JHARGRAM",
+          "total_beds": "60",
+          "available_beds": "60",
+          "contact": "tel:03221 258258",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:04 PM",
+          "lat": 22.373186,
+          "lng": 87.1255966
+        },
+        {
+          "hospital": " Pathra Karmatirtha ",
+          "address": "  Sankrail, Jhargram , JHARGRAM",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:03221 258258",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:04 PM",
+          "lat": 22.2598336,
+          "lng": 87.1560025
+        }
+      ]
+    },
+    "KALIMPONG": {
+      "data": [
+        {
+          "hospital": " ITI GORUBATHAN ",
+          "address": "  UPPER FAGU, GORUBATHAN , KALIMPONG",
+          "total_beds": "50",
+          "available_beds": "2",
+          "contact": "tel:9832748207",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:40 PM",
+          "lat": 26.9739259,
+          "lng": 88.69429129999999
+        },
+        {
+          "hospital": " KALIMPONG GOVT. POLYTECHNIC COLLEGE ",
+          "address": "  GAURIPUR HOUSE KALIMPONG , KALIMPONG",
+          "total_beds": "40",
+          "available_beds": "25",
+          "contact": "tel:9932606343",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:40 PM",
+          "lat": 27.0574672,
+          "lng": 88.4628535
+        }
+      ]
+    },
+    "KOLKATA METROPOLITAN AREA": {
+      "data": [
+        {
+          "hospital": " ATALANTA CLUB ",
+          "address": "  73/26 GOLF CLUBRD KOL-33 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "10",
+          "available_beds": "1",
+          "contact": "tel:9830763578",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 12:24 PM",
+          "lat": 22.6592215,
+          "lng": 88.362785
+        },
+        {
+          "hospital": " CENTRAL FORENSIC SCIENCES LABORATORY - CFSL ",
+          "address": "  PLOT-DJ, 10/1 ACTION AREA - I, NEW TOWN, KOLKATA-7000156 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "60",
+          "available_beds": "58",
+          "contact": "tel:9433494434",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:02 PM",
+          "lat": 22.5459641,
+          "lng": 88.3703388
+        },
+        {
+          "hospital": " HK Seth Lane Safe Home ",
+          "address": "  20, Hare Krishna Seth Lane, Kolkata 50 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "44",
+          "available_beds": "28",
+          "contact": "tel:8001166052",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 08:33 AM",
+          "lat": 22.6265586,
+          "lng": 88.38718349999999
+        },
+        {
+          "hospital": " PRATIBANDHI VILLAGE, COVID INTERIM RELIEF CENTRE ",
+          "address": "  147, MUKUNDAPUR, KRISHAKPALLY, KOLKATA, WB. , KOLKATA METROPOLITAN AREA",
+          "total_beds": "29",
+          "available_beds": "16",
+          "contact": "tel:8240396468",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 07:09 PM",
+          "lat": 22.4899199,
+          "lng": 88.40112049999999
+        },
+        {
+          "hospital": " PROTIDIN ",
+          "address": "  30 MATHESHSWAR TALA ROAD, TANGRA, KOLKATA-700046 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "200",
+          "available_beds": "96",
+          "contact": "tel:9831045031",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:37 PM",
+          "lat": 22.5666816,
+          "lng": 88.3548989
+        },
+        {
+          "hospital": " UTTIRNO OPEN AIR THEATRE ",
+          "address": "  1A, REFORMATORY STREET , KOLKATA-700027 , 22 D L KHAN ROAD , KOLKATA METROPOLITAN AREA",
+          "total_beds": "500",
+          "available_beds": "413",
+          "contact": "tel:9831045031",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 08:22 PM",
+          "lat": 22.5330807,
+          "lng": 88.3361855
+        },
+        {
+          "hospital": " WARD - EIGHTY SEVEN, SAFE HOME ",
+          "address": "  33, SARDAR SANKAR ROAD, KOLKATA - 700029 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "20",
+          "available_beds": "19",
+          "contact": "tel:9830849975",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 25/05/2021 03:18 PM",
+          "lat": 22.572646,
+          "lng": 88.36389500000001
+        },
+        {
+          "hospital": " WARD - EIGHTY SIX, SAFE HOME ",
+          "address": "  218 B, LAKE TERRACE, KOLKATA - 700029 , KOLKATA METROPOLITAN AREA",
+          "total_beds": "60",
+          "available_beds": "50",
+          "contact": "tel:9830336880",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 01:23 PM",
+          "lat": 22.572646,
+          "lng": 88.36389500000001
+        }
+      ]
+    },
+    "MALDA": {
+      "data": [
+        {
+          "hospital": " Model Madrasa English Medium Malda ",
+          "address": "  Chandan Park, PO Bagbari, PS English Bazar, Malda , MALDA",
+          "total_beds": "70",
+          "available_beds": "65",
+          "contact": "tel:9748127162",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:12 AM",
+          "lat": 25.0075779,
+          "lng": 88.1175385
+        }
+      ]
+    },
+    "MURSHIDABAD": {
+      "data": [
+        {
+          "hospital": " Amaipara Utbastu Vidyapith Safe Home, MJ Block ",
+          "address": "  Vill + P.O.- Amaipara, Dist.- Murshidabad , MURSHIDABAD",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9051548398",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:47 AM",
+          "lat": 24.2398623,
+          "lng": 88.285253
+        },
+        {
+          "hospital": " Bangabri Girls Hostel Safe Home ",
+          "address": "  Vill-Bangabari,PO:-Alampur, Dist.:-Murshidabad, Pin-742223 , MURSHIDABAD",
+          "total_beds": "15",
+          "available_beds": "15",
+          "contact": "tel:8001454563",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:10 PM",
+          "lat": 45.4271234,
+          "lng": -75.6866852
+        },
+        {
+          "hospital": " Barua Karmatirthya Safe Home ",
+          "address": "  Barua, Beldanga, Murshidabad, 742189 , MURSHIDABAD",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9007568812",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:14 PM",
+          "lat": 24.05858,
+          "lng": 88.25175589999999
+        },
+        {
+          "hospital": " Bhabta Aziziya High Madrasah Safe Home ",
+          "address": "  Bhabta, Beldanga, Murshidabad, 742134 , MURSHIDABAD",
+          "total_beds": "10",
+          "available_beds": "10",
+          "contact": "tel:9007568812",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:15 PM",
+          "lat": 23.988932,
+          "lng": 88.2433355
+        },
+        {
+          "hospital": " Bharatpur Model School Safe Home ",
+          "address": "  NEAR KISHAN MANDI , BHARATPUR GP, BHARATPUR - I , MURSHIDABAD",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:9732393294",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:29 PM",
+          "lat": 23.8800105,
+          "lng": 88.07188900000001
+        },
+        {
+          "hospital": " Bhatsala High Madrasah Safe Home ",
+          "address": "  Bhatsala, Domkal, Murshidabad, 742406 , MURSHIDABAD",
+          "total_beds": "12",
+          "available_beds": "12",
+          "contact": "tel:9734049108",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 10:49 AM",
+          "lat": 24.1061236,
+          "lng": 88.5590955
+        },
+        {
+          "hospital": " Boys Hostel, Amtala High School Safe Home, Nowda ",
+          "address": "  Amtala,Nowda, PIN-742121 , MURSHIDABAD",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9932683634",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 10:55 AM",
+          "lat": 23.9347081,
+          "lng": 88.4580084
+        },
+        {
+          "hospital": " Burwan NS High School Safe Home ",
+          "address": "  VILL & P.O. - BURWAN PIN - 742132 , MURSHIDABAD",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8391086522",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 01:14 PM",
+          "lat": 23.9316421,
+          "lng": 87.93451669999999
+        },
+        {
+          "hospital": " Girls Hostel of Hazi A.K. Khan College Safe Home ",
+          "address": "  Vill+PO+PS-Hariharpara, Dist-Murshidabad, Pin-742166 , MURSHIDABAD",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:9674610958",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 03:41 PM",
+          "lat": 24.0435343,
+          "lng": 88.4160474
+        },
+        {
+          "hospital": " Goas Kalikapur High School Safe Home ",
+          "address": "  Kalikapur Raninagar I PO- Goas PS- Islampur , MURSHIDABAD",
+          "total_beds": "20",
+          "available_beds": "20",
+          "contact": "tel:9775858424",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 04:08 PM",
+          "lat": 24.1791057,
+          "lng": 88.5111594
+        }
+      ]
+    },
+    "NADIA": {
+      "data": [
+        {
+          "hospital": " BAHADURPUR SAFE HOME ",
+          "address": "  VILL.- BAHADURPUR, P.S.- DHUBULIA, NADIA, PIN.- 741125 , NADIA",
+          "total_beds": "90",
+          "available_beds": "82",
+          "contact": "tel:7605057766",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:30 PM",
+          "lat": 23.4027688,
+          "lng": 88.49124370000001
+        },
+        {
+          "hospital": " HARINGHATA ITI COLLEGE ",
+          "address": "  VILL.- GHORAGACHA, P.O.- SIMHAT, NEAR KALYANI MORE, P.S.- HARINGHATA, PIN.- 741249 , NADIA",
+          "total_beds": "40",
+          "available_beds": "25",
+          "contact": "tel:8697604632",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:32 PM",
+          "lat": 22.9551422,
+          "lng": 88.5714652
+        },
+        {
+          "hospital": " Karimpur Karmatirtha ",
+          "address": "  Karimpur Farm More, P.O.+P.S.- Karimpur, nadia, Pin.- 741152 , NADIA",
+          "total_beds": "40",
+          "available_beds": "31",
+          "contact": "tel:9800252983",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:02 PM",
+          "lat": 23.4709656,
+          "lng": 88.55653099999999
+        },
+        {
+          "hospital": " MATRI MISSION O MANDIR SEVA TRUST ",
+          "address": "  RAMKRISHNAPURAM, SAHEBBAGAN, SAGUNA, NADIA , NADIA",
+          "total_beds": "12",
+          "available_beds": "11",
+          "contact": "tel:9163875366",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:09 PM",
+          "lat": 22.970072,
+          "lng": 88.4645838
+        },
+        {
+          "hospital": " PALASHIPARA KARMATIRTHA BHAWAN SAFE HOME ",
+          "address": "  VILL + P.O.- PALASHIPARA, DIST.- NADIA, WEST BENGAL, PIN.- 741155 , NADIA",
+          "total_beds": "30",
+          "available_beds": "18",
+          "contact": "tel:8597886649",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:35 PM",
+          "lat": 22.9623804,
+          "lng": 88.4284109
+        },
+        {
+          "hospital": " SANTIPUR POURO STADIUM ",
+          "address": "  WARD NO.- 4, SANTIPUR MUNICIPALITY, NADIA, PIN.- 741404 , NADIA",
+          "total_beds": "25",
+          "available_beds": "18",
+          "contact": "tel:7047444939",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:56 PM",
+          "lat": 23.2555904,
+          "lng": 88.4397697
+        },
+        {
+          "hospital": " TEHATTA KARMATIRTHA ",
+          "address": "  NATIPOTA, TEHATTA, NADIA , NADIA",
+          "total_beds": "40",
+          "available_beds": "38",
+          "contact": "tel:7319575562",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 12:36 PM",
+          "lat": 22.9623804,
+          "lng": 88.4284109
+        }
+      ]
+    },
+    "PASCHIM BARDHAMAN": {
+      "data": [
+        {
+          "hospital": " BOKARO SAFE HOUSE ",
+          "address": "  Hostel Avenue, Bencachity, Durgapur , PASCHIM BARDHAMAN",
+          "total_beds": "50",
+          "available_beds": "44",
+          "contact": "tel:8597042976",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:03 PM",
+          "lat": 23.6643713,
+          "lng": 86.1476181
+        },
+        {
+          "hospital": " ESI SAFE HOUSE ASANSOL ",
+          "address": "  ESI Nursing Training School, Kalyanpur, Asansol , PASCHIM BARDHAMAN",
+          "total_beds": "50",
+          "available_beds": "45",
+          "contact": "tel:8597042976",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:03 PM",
+          "lat": 23.6888636,
+          "lng": 86.9660638
+        },
+        {
+          "hospital": " Loreto Convent School,Asansol ",
+          "address": "  GT Road, Chelidanga area, ward no.49, Asansol , PASCHIM BARDHAMAN",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:03412253650",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:29 PM",
+          "lat": 23.6888911,
+          "lng": 86.9598867
+        },
+        {
+          "hospital": " Rupnarayanpur ITI college ",
+          "address": "  Rupnarayanpur, Salanpur , PASCHIM BARDHAMAN",
+          "total_beds": "32",
+          "available_beds": "32",
+          "contact": "tel:7797510993",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:04 PM",
+          "lat": 23.8313982,
+          "lng": 86.89893149999999
+        },
+        {
+          "hospital": " Saint Joseph School, Asansol ",
+          "address": "  GT Road, Chelidanga, Asansol- 713301 , PASCHIM BARDHAMAN",
+          "total_beds": "60",
+          "available_beds": "60",
+          "contact": "tel:03412253650",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:32 PM",
+          "lat": 23.6896666,
+          "lng": 86.9627225
+        }
+      ]
+    },
+    "PASCHIM MEDINIPUR": {
+      "data": [
+        {
+          "hospital": " Club House Aurobindo Stadium. ",
+          "address": "  Ghatal , PASCHIM MEDINIPUR",
+          "total_beds": "15",
+          "available_beds": "15",
+          "contact": "tel:8001532953",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 24/05/2021 11:15 AM",
+          "lat": 22.4239625,
+          "lng": 87.32128379999999
+        },
+        {
+          "hospital": " Dasagram. PHC ",
+          "address": "  Dasagram, Sabang , PASCHIM MEDINIPUR",
+          "total_beds": "20",
+          "available_beds": "18",
+          "contact": "tel:9732672486, 9474470901",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:02 PM",
+          "lat": 22.1202498,
+          "lng": 87.5025217
+        },
+        {
+          "hospital": " Disaster Management Salboni ",
+          "address": "  Salboni , PASCHIM MEDINIPUR",
+          "total_beds": "60",
+          "available_beds": "60",
+          "contact": "tel:9432879467",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 26/05/2021 02:09 PM",
+          "lat": 22.6408471,
+          "lng": 87.3249659
+        },
+        {
+          "hospital": " Karmatirtha, Abas, Medinipur ",
+          "address": "  Khasjungle, Medinipur , PASCHIM MEDINIPUR",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:9733866539",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 23/05/2021 12:34 PM",
+          "lat": 22.4526971,
+          "lng": 87.3175164
+        },
+        {
+          "hospital": " Keshiary Kishan Mandi. ",
+          "address": "  Keshiary , PASCHIM MEDINIPUR",
+          "total_beds": "25",
+          "available_beds": "25",
+          "contact": "tel:9564519593",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 24/05/2021 11:23 AM",
+          "lat": 22.1167426,
+          "lng": 87.23446419999999
+        },
+        {
+          "hospital": " Night Shelter, MMCH ",
+          "address": "  Medinipur Medical College & Hospital, Medinipur , PASCHIM MEDINIPUR",
+          "total_beds": "45",
+          "available_beds": "40",
+          "contact": "tel:6294114658",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:25 PM",
+          "lat": 32.7448689,
+          "lng": -97.31323739999999
+        },
+        {
+          "hospital": " Vidyasagar Multipurpose Flood Centre ",
+          "address": "  Akabpur, Mohanpur, Ghatal, Paschim Medinipur , PASCHIM MEDINIPUR",
+          "total_beds": "50",
+          "available_beds": "50",
+          "contact": "tel:9002110962",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 03:25 PM",
+          "lat": 22.4223904,
+          "lng": 87.3272102
+        }
+      ]
+    },
+    "PURBA BARDHHAMAN": {
+      "data": [
+        {
+          "hospital": " CHETANA SAFE HOME UNDER ABSK ",
+          "address": "  JINGUTI, P.O- FAGUPUR, PIN- 713102 (BESIDE SAI COMPLEX), PURBA BARDHAMAN , PURBA BARDHHAMAN",
+          "total_beds": "30",
+          "available_beds": "28",
+          "contact": "tel:8101472241",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:56 PM",
+          "lat": 23.2455709,
+          "lng": 87.8654893
+        },
+        {
+          "hospital": " COVID FIELD HOSPITAL SAFE HOME ",
+          "address": "  LAKURDI, JALKAL MATH, PRANTIK MARRIAGE HALL, PURBA BARDHAMAN, PIN-713102 , PURBA BARDHHAMAN",
+          "total_beds": "20",
+          "available_beds": "13",
+          "contact": "tel:9883832512,9564386622",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:35 PM",
+          "lat": 23.2324214,
+          "lng": 87.8614793
+        },
+        {
+          "hospital": " FLOOD SHELTER, KATWA MUNICIPALITY ",
+          "address": "  KASHIGANJ PARA, WARD NO-17, KATWA MUNICIPALITY , PURBA BARDHHAMAN",
+          "total_beds": "48",
+          "available_beds": "25",
+          "contact": "tel:9647240010",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 06:53 PM",
+          "lat": 23.6403783,
+          "lng": 88.1299373
+        },
+        {
+          "hospital": " Kalna Safe Home Manisi Lodge ",
+          "address": "  STKK Road, Jewdhara, Kalna, Purba Bardhaman , PURBA BARDHHAMAN",
+          "total_beds": "48",
+          "available_beds": "34",
+          "contact": "tel:9434152490",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:36 PM",
+          "lat": 23.2383412,
+          "lng": 87.86543089999999
+        },
+        {
+          "hospital": " Krishi Bhawan Safe Home ",
+          "address": "  Kalna Gate, Near Agriculture Farm, Purba Bardhaman , PURBA BARDHHAMAN",
+          "total_beds": "100",
+          "available_beds": "96",
+          "contact": "tel:9883532450",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:18 PM",
+          "lat": 23.2324214,
+          "lng": 87.8614793
+        },
+        {
+          "hospital": " SAFE HOME ANNEXE- SRIRAMPUR RH ",
+          "address": "  PURBASTHALI 1, PS-PURBASTHALI, PURBA BARDHAMAN , PURBA BARDHHAMAN",
+          "total_beds": "30",
+          "available_beds": "30",
+          "contact": "tel:8420065218",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:38 PM",
+          "lat": 23.2409261,
+          "lng": 87.8512155
+        }
+      ]
+    },
+    "PURBA MEDINIPUR": {
+      "data": [
+        {
+          "hospital": " Digha Youth Hostel Safe Home ",
+          "address": "  NEW DIGHA YOUTH HOSTEL BUILDING , PURBA MEDINIPUR",
+          "total_beds": "70",
+          "available_beds": "49",
+          "contact": "tel:9564337879",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 11:53 AM",
+          "lat": 21.6230537,
+          "lng": 87.501932
+        },
+        {
+          "hospital": " EGRA SAFE HOME ",
+          "address": "  EGRA JHATU LAL HIGH SCHOOL BOY'S HOSTEL, EGRA, PURBA MEDINIPUR , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "83",
+          "contact": "tel:7364045140",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:05 PM",
+          "lat": 21.8892075,
+          "lng": 87.5381033
+        },
+        {
+          "hospital": " HALDIA SAFE HOME ",
+          "address": "  SATISH SAMANTA TRADE CENTRE, HALDIA, PURBA MEDINIPUR , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "83",
+          "contact": "tel:7364045140",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:19 PM",
+          "lat": 22.0793893,
+          "lng": 88.14167979999999
+        },
+        {
+          "hospital": " NANDAKUMAR SAFE HOME ",
+          "address": "  NANDAKUMAR OLD COLLEGE BUILDING, NANDAKUMAR, PURBA MEDINIPUR. , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "82",
+          "contact": "tel:7364045140",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:08 PM",
+          "lat": 22.2008957,
+          "lng": 87.924302
+        },
+        {
+          "hospital": " RAGHUNATH AYURVED COLLEGE, CONTAI SAFE HOME ",
+          "address": "  CONTAI, PURBA MEDINIPUR , PURBA MEDINIPUR",
+          "total_beds": "100",
+          "available_beds": "12",
+          "contact": "tel:9932873556",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:11 PM",
+          "lat": 21.7759715,
+          "lng": 87.734668
+        }
+      ]
+    },
+    "PURULIA": {
+      "data": [
+        {
+          "hospital": " KALLOLI BPHC SAFE HOME ",
+          "address": "  KALLOLI RURAL HOSPITAL, KASHIPUR , PURULIA",
+          "total_beds": "30",
+          "available_beds": "21",
+          "contact": "tel:9635778829",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:49 PM",
+          "lat": 23.439152,
+          "lng": 86.68501599999999
+        },
+        {
+          "hospital": " MOTHER TERESA SAFE HOME ",
+          "address": "  GOSHALA MORE, PURULIA , PURULIA",
+          "total_beds": "50",
+          "available_beds": "39",
+          "contact": "tel:9635778829",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:49 PM",
+          "lat": 23.3285317,
+          "lng": 86.3680869
+        },
+        {
+          "hospital": " RAGHUNATHPUR SDH OLD BUILDING SAFE HOME ",
+          "address": "  RAGHUNATHPUR SDH, RAGHUNATHPUR- I , PURULIA",
+          "total_beds": "40",
+          "available_beds": "40",
+          "contact": "tel:8597376921",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 05:50 PM",
+          "lat": 42.28391430000001,
+          "lng": -83.7332766
+        }
+      ]
+    },
+    "UTTAR 24 PARGANA": {
+      "data": [
+        {
+          "hospital": " Amdanga Jugalkishor Mahavidlaya ",
+          "address": "  Amdanga , UTTAR 24 PARGANA",
+          "total_beds": "40",
+          "available_beds": "36",
+          "contact": "tel:7001363959",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:36 PM",
+          "lat": 22.8420843,
+          "lng": 88.5244283
+        },
+        {
+          "hospital": " Bankimjali stadium Naihati ",
+          "address": "  Naihati, West Bengal 743165 , UTTAR 24 PARGANA",
+          "total_beds": "273",
+          "available_beds": "55",
+          "contact": "tel:9748395256",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:30 PM",
+          "lat": 22.8931034,
+          "lng": 88.4259998
+        },
+        {
+          "hospital": " Barrackpore Stadium ",
+          "address": "  Wireless Crossing Barrackpore , UTTAR 24 PARGANA",
+          "total_beds": "25",
+          "available_beds": "17",
+          "contact": "tel:8017242936",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:30 PM",
+          "lat": 22.7674278,
+          "lng": 88.3883455
+        },
+        {
+          "hospital": " Belley Shankarpur Rajib Gandhi Memorial Ayurvedic College and Hospital ",
+          "address": "  Kushdanga Barrackpore , UTTAR 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "34",
+          "contact": "tel:9830750207",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:37 PM",
+          "lat": 22.848629,
+          "lng": 88.4481533
+        },
+        {
+          "hospital": " Bhabla Polytechnic College ",
+          "address": "  Bhabla , Bashirhat , UTTAR 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "34",
+          "contact": "tel:9832192594",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:36 PM",
+          "lat": 22.6501809,
+          "lng": 88.85220849999999
+        },
+        {
+          "hospital": " Bhauban Mohani Marriage Hall ",
+          "address": "  Kamarhati , UTTAR 24 PARGANA",
+          "total_beds": "30",
+          "available_beds": "26",
+          "contact": "tel:7980934346",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:38 PM",
+          "lat": 22.6662663,
+          "lng": 88.3793288
+        },
+        {
+          "hospital": " Cooperative building ",
+          "address": "  N.S Road New Barrackpore , UTTAR 24 PARGANA",
+          "total_beds": "30",
+          "available_beds": "6",
+          "contact": "tel:7044535152",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:27 PM",
+          "lat": 22.5909548,
+          "lng": 88.41726109999999
+        },
+        {
+          "hospital": " Haripur College ",
+          "address": "  Asoknagar , UTTAR 24 PARGANA",
+          "total_beds": "100",
+          "available_beds": "74",
+          "contact": "tel:8695125908",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:33 PM",
+          "lat": 22.5893387,
+          "lng": 88.90545639999999
+        },
+        {
+          "hospital": " Hiralal Mazumder Memorial College ",
+          "address": "  Kamarhati , UTTAR 24 PARGANA",
+          "total_beds": "50",
+          "available_beds": "27",
+          "contact": "tel:7980934346",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:37 PM",
+          "lat": 22.6565953,
+          "lng": 88.36056549999999
+        },
+        {
+          "hospital": " Horticulture Training Office, Barasat ",
+          "address": "  Barasat 700125 , UTTAR 24 PARGANA",
+          "total_beds": "100",
+          "available_beds": "71",
+          "contact": "tel:9830720951",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 04:23 PM",
+          "lat": 22.7256311,
+          "lng": 88.47841299999999
+        }
+      ]
+    },
+    "UTTAR DINAJPUR": {
+      "data": [
+        {
+          "hospital": " Central Training Institute ",
+          "address": "  GOTHLU ITAHAR, UTTAR DINAJPUR , UTTAR DINAJPUR",
+          "total_beds": "130",
+          "available_beds": "120",
+          "contact": "tel:9433400657,7063590299, 7063590298",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 07:04 PM",
+          "lat": 25.4701816,
+          "lng": 88.16966959999999
+        },
+        {
+          "hospital": " KARANDIGHI MODEL SCHOOL ",
+          "address": "  KARANDIGHI UTTAR DINAJPUR , UTTAR DINAJPUR",
+          "total_beds": "50",
+          "available_beds": "50",
+          "contact": "tel:9007143179",
+          "online_registration": "http://iccma.wbhealth.gov.in/public.php",
+          "last_updated": "Last Updated On : 27/05/2021 02:01 PM",
+          "lat": 25.8129883,
+          "lng": 87.917957
+        }
+      ]
+    }
+  }
 }]

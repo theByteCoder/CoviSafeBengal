@@ -164,7 +164,11 @@ const Router = () => {
 
   const [hospitalsData, setHospitalsData] = useState([]);
   const [safeHomesData, setSafeHomesData] = useState([]);
-  const [ambulanceData, setAmbulanceData] = useState([]);
+  const [ambulancesData, setAmbulancesData] = useState([]);
+
+  const [hospitalsDataUpdatedAt, setHospitalsDataUpdatedAt] = useState("");
+  const [safeHomesDataUpdatedAt, setSafeHomesDataUpdatedAt] = useState("");
+  const [ambulancesDataUpdatedAt, setAmbulancesDataUpdatedAt] = useState("");
 
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -241,8 +245,9 @@ const Router = () => {
       (response) => {
         if (response.ok) {
           response.json().then((response) => {
-            setDistrictsHospital(Object.keys(response.response));
-            setHospitalsData(response.response);
+            setDistrictsHospital(Object.keys(response.hospitals));
+            setHospitalsData(response.hospitals);
+            setHospitalsDataUpdatedAt(response.updated_at);
           });
         }
       }
@@ -254,8 +259,9 @@ const Router = () => {
       (response) => {
         if (response.ok) {
           response.json().then((response) => {
-            setDistrictsSafeHome(Object.keys(response.response));
-            setSafeHomesData(response.response);
+            setDistrictsSafeHome(Object.keys(response.safe_homes));
+            setSafeHomesData(response.safe_homes);
+            setSafeHomesDataUpdatedAt(response.updated_at);
           });
         }
       }
@@ -267,8 +273,9 @@ const Router = () => {
       (response) => {
         if (response.ok) {
           response.json().then((response) => {
-            setDistrictsAmbulance(Object.keys(response.response));
-            setAmbulanceData(response.response);
+            setDistrictsAmbulance(Object.keys(response.ambulances));
+            setAmbulancesData(response.ambulances);
+            setAmbulancesDataUpdatedAt(response.updated_at);
           });
         }
       }
@@ -529,10 +536,11 @@ const Router = () => {
       )}
       {showAmbulance && (
         <Main
-          data={ambulanceData}
+          data={ambulancesData}
           selectedDistrict={selectedDistrictAmbulance}
           type={defaultType}
           cardType={2}
+          dataUpdatedAt={ambulancesDataUpdatedAt}
           pleaseSelectText={"Please select District."}
         />
       )}
@@ -542,6 +550,7 @@ const Router = () => {
           selectedDistrict={selectedDistrictHospital}
           type={hospitalType}
           cardType={1}
+          dataUpdatedAt={hospitalsDataUpdatedAt}
           pleaseSelectText={"Please select District and Hospital Type."}
         />
       )}
@@ -551,6 +560,7 @@ const Router = () => {
           selectedDistrict={selectedDistrictSafeHome}
           type={defaultType}
           cardType={1}
+          dataUpdatedAt={safeHomesDataUpdatedAt}
           pleaseSelectText={"Please select District."}
         />
       )}

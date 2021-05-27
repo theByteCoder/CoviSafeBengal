@@ -99,6 +99,7 @@ const MapsCardTypeTwo = ({
   handleGetAddress,
   handleGetContact,
   handleGetDirections,
+  dataUpdatedAt,
 }) => {
   const classes = useStyles();
 
@@ -107,6 +108,7 @@ const MapsCardTypeTwo = ({
   const availableAmbulances = item?.available_ambulances;
   const address = item?.address;
   const contact = item?.contact;
+  const lastUpdated = dataUpdatedAt;
   const lat = item?.lat;
   const lng = item?.lng;
   const destinationLocation = { lat: lat, lng: lng };
@@ -182,6 +184,9 @@ const MapsCardTypeTwo = ({
             Directions
           </Button>
         </CardActions>
+        <div data-test={"hook-last-updated"} className={classes.updatedOn}>
+          Last Updated On : {lastUpdated}
+        </div>
       </Card>
     </>
   );
