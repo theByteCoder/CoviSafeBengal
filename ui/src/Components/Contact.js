@@ -92,7 +92,7 @@ const Contact = ({ handleClose, contact }) => {
                 component="p"
                 key={key}
                 onClick={() => {
-                  handleClick(`tel:${item}`);
+                  handleClick(`tel:+91${item}`);
                 }}
               >
                 {item}
