@@ -11,7 +11,7 @@ chrome_driver = 'chromedriver.exe'
 
 def generate_geolocation(address):
     r = requests.get(
-        f'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key=AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk')
+        f'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key=<api key here>')
     return r.json()
 
 
