@@ -34,7 +34,7 @@ def generate_geolocation(data):
             search += f'{compos}+'
         search += each['district']
         r = requests.get(
-            f'https://maps.googleapis.com/maps/api/geocode/json?address={search}&key=AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk')
+            f'https://maps.googleapis.com/maps/api/geocode/json?address={search}&key=<api key here>')
         new_data = {'hospital': each['hospital'], 'district': each['district'],
                     'total_beds': each['total_beds'], 'available_beds': each['available_beds'], 'address': r.json()}
         govt_response.append(new_data)
@@ -46,7 +46,7 @@ def generate_geolocation(data):
             search += f'{compos}+'
         search += each['district']
         r = requests.get(
-            f'https://maps.googleapis.com/maps/api/geocode/json?address={search}&key=AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk')
+            f'https://maps.googleapis.com/maps/api/geocode/json?address={search}&key=<api key here>')
         new_data = {'hospital': each['hospital'], 'district': each['district'],
                     'total_beds': each['total_beds'], 'available_beds': each['available_beds'], 'address': r.json()}
         pvt_response.append(new_data)
@@ -80,7 +80,7 @@ def fetch_ambulances(request):
 def fetch_current_location(request):
     if request.method == 'GET':
         r = requests.post(
-            'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk')
+            'https://www.googleapis.com/geolocation/v1/geolocate?key=<api key here>')
         loc = r.json()
         return JsonResponse({'response': {'lat': loc['location']['lat'], 'lng': loc['location']['lng']}})
     return JsonResponse({'response': {}})
