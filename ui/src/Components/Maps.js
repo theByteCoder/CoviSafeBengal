@@ -13,7 +13,7 @@ const GoogleMaps = ({ lat, lng }) => {
   };
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAbXbGA2ISQnS26IYk-wsnp54EL-o9q4Vk",
+    googleMapsApiKey: "<api key here>",
   });
 
   if (loadError) return "Error loading Maps";
