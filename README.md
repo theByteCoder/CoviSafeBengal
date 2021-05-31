@@ -4,6 +4,13 @@
 * **Application is currently hosted on ngrok URI** https://08b1f7e2426b.ngrok.io
 
 
+* Generate Google api key with below libraries -
+1. Directions API
+2. Geocoding API
+3. Geolocation API
+4. Maps JavaScript API
+
+
 * **Clone git repository**
 
 
