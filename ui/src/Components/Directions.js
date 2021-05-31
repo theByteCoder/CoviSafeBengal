@@ -66,7 +66,7 @@ const Directions = ({ handleClose, destLoc, origin }) => {
   };
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "<api key here>",
+    googleMapsApiKey: `${process.env.REACT_APP_GOOGLE_API_KEY}`,
   });
 
   const places = [

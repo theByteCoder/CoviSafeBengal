@@ -5,13 +5,16 @@ from selenium.common.exceptions import ElementNotVisibleException, ElementNotSel
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from common import get_db_object_id
+
 
 chrome_driver = 'chromedriver.exe'
 
 
 def generate_geolocation(address):
+    api_key = get_db_object_id('google', 'api_key')
     r = requests.get(
-        f'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key=<api key here>')
+        f'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}')
     return r.json()
 
 

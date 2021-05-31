@@ -3,6 +3,7 @@ import schedule
 from webscrapper import get_daily_hospital_data, get_daily_safe_home_data, get_daily_ambulance_data
 from configparser import ConfigParser
 from datetime import date, timedelta, datetime
+from common import set_db_object_id
 
 
 # this is a datasource scheduler.
@@ -48,20 +49,11 @@ def connect_db():
     return MongoClient(host="localhost", port=27017)
 
 
-def set_db_object_id(object_prop, object_id):
-    config = ConfigParser()
-    config.read('config.cfg')
-    db = config['mongodb']
-    db[object_prop] = f'{object_id}'
-    with open('config.cfg', 'w') as conf:
-        config.write(conf)
-
-
 def insert_hospital_beds(db, data):
     collection = db.bed_availablity_service_availablehospitalbeds
     action = collection.insert_one(data)
     object_id = action.inserted_id
-    set_db_object_id('hospital_id', object_id)
+    set_db_object_id('mongodb', 'hospital_id', object_id)
     return object_id
 
 
@@ -69,7 +61,7 @@ def insert_safe_homes(db, data):
     collection = db.bed_availablity_service_availablesafehomes
     action = collection.insert_one(data)
     object_id = action.inserted_id
-    set_db_object_id('safe_home_id', object_id)
+    set_db_object_id('mongodb', 'safe_home_id', object_id)
     return object_id
 
 
@@ -77,7 +69,7 @@ def insert_ambulances(db, data):
     collection = db.bed_availablity_service_availableambulances
     action = collection.insert_one(data)
     object_id = action.inserted_id
-    set_db_object_id('ambulance_id', object_id)
+    set_db_object_id('mongodb', 'ambulance_id', object_id)
     return object_id
 
 
@@ -105,9 +97,10 @@ def insert_datasource():
     end_time = time.time()
     execution_time = end_time - start_time
     print(f'Time taken {str(timedelta(seconds=execution_time))}')
+    print(f'Last update at {datetime.now()}')
 
 
-# insert_datasource()
+insert_datasource()
 schedule.every(3).hours.do(insert_datasource)
 while True:
     schedule.run_pending()
