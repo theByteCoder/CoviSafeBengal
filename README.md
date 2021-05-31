@@ -19,11 +19,12 @@
 2. Start mongod service, make sure the service is running on port 27017
 3. Add database covibeds
 4. On terminal/ cmd, navigate to **../coviBeds/backend** directory
-5. Make sure python 3.7 or above is installed
-6. Start a virtual environment
-7. install python requirement from requirements.txt file **pip install -r requirements.txt**
-8. Run commands python **manage.py makemigrations** and python **python manage.py migrate**. Some collections should be added to covibeds database. Confirm following collections have been added - _bed_availablity_service_availableambulances_, _bed_availablity_service_availablehospitalbeds_, _bed_availablity_service_availablesafehomes_
-9. Optionally, initial data data can be imported to collections from below -
+5. Add Google Api key in **config.cfg** file **[google] api_key = <_api key here_>**
+6. Make sure python 3.7 or above is installed
+7. Start a virtual environment
+8. install python requirement from requirements.txt file **pip install -r requirements.txt**
+9. Run commands python **manage.py makemigrations** and python **python manage.py migrate**. Some collections should be added to covibeds database. Confirm following collections have been added - _bed_availablity_service_availableambulances_, _bed_availablity_service_availablehospitalbeds_, _bed_availablity_service_availablesafehomes_
+10. Optionally, initial data data can be imported to collections from below -
     - **bed_availablity_service_availableambulances**: _/coviBeds/backend/db_ambulance.json_
     - **bed_availablity_service_availableambulances**: _/coviBeds/backend/db_safe_home.json_
     - **bed_availablity_service_availablehospitalbeds**: _/coviBeds/backend/db_hospital.json_
@@ -36,8 +37,9 @@
 2. We are using nvm > 12, make sure nvm is set to 12
 3. Install yarn
 4. Navigate to **../coviBeds/ui** directory
-5. Run command **yarn install**
-6. Run command **yarn start**
+5. Add Google Api key in **.env** file **REACT_APP_GOOGLE_API_KEY = <_api key here_>**
+6. Run command **yarn install**
+7. Run command **yarn start**
 
 
 * **Steps to host on ngrok** -
