@@ -10,4 +10,3 @@ djangorestframework==3.12.4
 django-cors-headers==3.7.0
 selenium==3.141.0
 configparser==5.0.2
-BeautifulSoup==3.2.2
