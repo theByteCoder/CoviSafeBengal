@@ -25,7 +25,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InfoIcon from "@material-ui/icons/Info";
 import Daily from "./Daily";
-
+import Spinner from "./Spinner";
 const drawerWidth = 189;
 
 const useStyles = makeStyles((theme) => ({
@@ -148,7 +148,7 @@ const Router = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [showAmbulance, setShowAmbulance] = useState(false);
   const [showHome, setShowHome] = useState(true);
-  const [header, setHeader] = useState("Welcome to Covid Hospital Details");
+  const [header, setHeader] = useState("Covid Safe Bengal");
 
   const [selectedDistrictHospital, setSelectedDistrictHospital] = useState("");
   const [selectedDistrictSafeHome, setSelectedDistrictSafeHome] = useState("");
@@ -169,6 +169,14 @@ const Router = () => {
   const [hospitalsDataUpdatedAt, setHospitalsDataUpdatedAt] = useState("");
   const [safeHomesDataUpdatedAt, setSafeHomesDataUpdatedAt] = useState("");
   const [ambulancesDataUpdatedAt, setAmbulancesDataUpdatedAt] = useState("");
+
+  const [isHospitalRequestCompleted, setHospitalRequestCompleted] =
+    useState(false);
+  const [isSafeHomeRequestCompleted, setSafeHomeRequestCompleted] =
+    useState(false);
+  const [isAmbulanceRequestCompleted, setAmbulanceRequestCompleted] =
+    useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -241,6 +249,8 @@ const Router = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
+    // get hospital data
     fetch(`${process.env.REACT_APP_API_BASE_URL}/v3/address/hospitals/`).then(
       (response) => {
         if (response.ok) {
@@ -250,11 +260,10 @@ const Router = () => {
             setHospitalsDataUpdatedAt(response.updated_at);
           });
         }
+        setHospitalRequestCompleted(true);
       }
     );
-  }, []);
-
-  useEffect(() => {
+    // get safe home data
     fetch(`${process.env.REACT_APP_API_BASE_URL}/v3/address/safehomes/`).then(
       (response) => {
         if (response.ok) {
@@ -264,11 +273,10 @@ const Router = () => {
             setSafeHomesDataUpdatedAt(response.updated_at);
           });
         }
+        setSafeHomeRequestCompleted(true);
       }
     );
-  }, []);
-
-  useEffect(() => {
+    // get ambulance data
     fetch(`${process.env.REACT_APP_API_BASE_URL}/v3/address/ambulances/`).then(
       (response) => {
         if (response.ok) {
@@ -278,433 +286,455 @@ const Router = () => {
             setAmbulancesDataUpdatedAt(response.updated_at);
           });
         }
+        setAmbulanceRequestCompleted(true);
       }
     );
   }, []);
 
+  useEffect(() => {
+    isHospitalRequestCompleted &&
+      isSafeHomeRequestCompleted &&
+      isAmbulanceRequestCompleted &&
+      setLoading(false);
+  }, [
+    isHospitalRequestCompleted,
+    isSafeHomeRequestCompleted,
+    isAmbulanceRequestCompleted,
+  ]);
+
   return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <AppBar
-        data-test={"hook-app-bar"}
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: openDrawer,
-        })}
-      >
-        <Toolbar>
-          <Grid container spacing={0}>
-            <Grid item xs={12}>
-              <Grid container>
-                <IconButton
-                  data-test={"hook-open-drawer-icon"}
-                  color="inherit"
-                  aria-label="open drawer"
-                  onClick={handleDrawerOpen}
-                  edge="start"
-                  className={clsx(
-                    classes.menuButton,
-                    openDrawer && classes.hide
-                  )}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Typography variant="h6" className={classes.welcome} noWrap>
-                  {header}
-                </Typography>
-                {showHospital && (
-                  <FormControl className={classes.formControlDistrict}>
-                    <InputLabel
-                      data-test={"hook-district-dropdown-label"}
-                      className={classes.dropdownLabel}
-                      shrink
-                      id="label-district"
+    <>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div className={classes.root}>
+          <CssBaseline />
+          <AppBar
+            data-test={"hook-app-bar"}
+            position="fixed"
+            className={clsx(classes.appBar, {
+              [classes.appBarShift]: openDrawer,
+            })}
+          >
+            <Toolbar>
+              <Grid container spacing={0}>
+                <Grid item xs={12}>
+                  <Grid container>
+                    <IconButton
+                      data-test={"hook-open-drawer-icon"}
+                      color="inherit"
+                      aria-label="open drawer"
+                      onClick={handleDrawerOpen}
+                      edge="start"
+                      className={clsx(
+                        classes.menuButton,
+                        openDrawer && classes.hide
+                      )}
                     >
-                      District
-                    </InputLabel>
-                    <Select
-                      data-test={"hook-district-dropdown"}
-                      labelId="district"
-                      id="select-district"
-                      value={selectedDistrictHospital}
-                      onChange={handleDistrictChangeHospital}
-                      displayEmpty
-                      className={classes.selectEmpty}
-                    >
-                      {districtsHospital.map((each, key) => (
-                        <MenuItem
-                          data-test={`hook-district-option-${each}`}
-                          value={each}
-                          key={key}
+                      <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6" className={classes.welcome} noWrap>
+                      {header}
+                    </Typography>
+                    {showHospital && (
+                      <FormControl className={classes.formControlDistrict}>
+                        <InputLabel
+                          data-test={"hook-district-dropdown-label"}
+                          className={classes.dropdownLabel}
+                          shrink
+                          id="label-district"
                         >
-                          {each}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                )}
-                {showHospital && (
-                  <FormControl className={classes.formControlHospital}>
-                    <InputLabel
-                      data-test={`hook-hospital-type-dropdown-label`}
-                      className={classes.dropdownLabel}
-                      shrink
-                      id="label-hospital"
-                    >
-                      Hospital Type
-                    </InputLabel>
-                    <Select
-                      data-test={`hook-hospital-type-dropdown`}
-                      labelId="government"
-                      id="select-government"
-                      value={hospitalType}
-                      onChange={handleHospitalChange}
-                      displayEmpty
-                      className={classes.selectEmpty}
-                    >
-                      <MenuItem
-                        value="govt"
-                        key="Government"
-                        data-test={`hook-hospital-type-option-govt`}
-                      >
-                        Government
-                      </MenuItem>
-                      <MenuItem
-                        value="pvt"
-                        key="Private"
-                        data-test={`hook-hospital-type-option-pvt`}
-                      >
-                        Private
-                      </MenuItem>
-                      <MenuItem
-                        value="requisitioned"
-                        key="Requisitioned"
-                        data-test={`hook-hospital-type-option-requ`}
-                      >
-                        Government Requisitioned
-                      </MenuItem>
-                    </Select>
-                  </FormControl>
-                )}
-                {showSafeHome && (
-                  <FormControl className={classes.formControlDistrict}>
-                    <InputLabel
-                      data-test={`hook-safe-home-dropdown-label`}
-                      className={classes.dropdownLabel}
-                      shrink
-                      id="label-district"
-                    >
-                      District
-                    </InputLabel>
-                    <Select
-                      data-test={`hook-safe-home-dropdown`}
-                      labelId="district"
-                      id="select-district"
-                      value={selectedDistrictSafeHome}
-                      onChange={handleDistrictChangeSafeHome}
-                      displayEmpty
-                      className={classes.selectEmpty}
-                    >
-                      {districtsSafeHome.map((each, key) => (
-                        <MenuItem
-                          value={each}
-                          key={key}
-                          data-test={`hook-safe-home-option-${each}`}
+                          District
+                        </InputLabel>
+                        <Select
+                          data-test={"hook-district-dropdown"}
+                          labelId="district"
+                          id="select-district"
+                          value={selectedDistrictHospital}
+                          onChange={handleDistrictChangeHospital}
+                          displayEmpty
+                          className={classes.selectEmpty}
                         >
-                          {each}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                )}
-                {showAmbulance && (
-                  <FormControl className={classes.formControlDistrict}>
-                    <InputLabel
-                      data-test={`hook-safe-ambulance-dropdown-label`}
-                      className={classes.dropdownLabel}
-                      shrink
-                      id="label-district"
-                    >
-                      District
-                    </InputLabel>
-                    <Select
-                      data-test={`hook-safe-ambulance-dropdown`}
-                      labelId="district"
-                      id="select-district"
-                      value={selectedDistrictAmbulance}
-                      onChange={handleDistrictChangeAmbulance}
-                      displayEmpty
-                      className={classes.selectEmpty}
-                    >
-                      {districtsAmbulance.map((each, key) => (
-                        <MenuItem
-                          value={each}
-                          key={key}
-                          data-test={`hook-safe-ambulance-option-${each}`}
+                          {districtsHospital.map((each, key) => (
+                            <MenuItem
+                              data-test={`hook-district-option-${each}`}
+                              value={each}
+                              key={key}
+                            >
+                              {each}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
+                    )}
+                    {showHospital && (
+                      <FormControl className={classes.formControlHospital}>
+                        <InputLabel
+                          data-test={`hook-hospital-type-dropdown-label`}
+                          className={classes.dropdownLabel}
+                          shrink
+                          id="label-hospital"
                         >
-                          {each}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                )}
+                          Hospital Type
+                        </InputLabel>
+                        <Select
+                          data-test={`hook-hospital-type-dropdown`}
+                          labelId="government"
+                          id="select-government"
+                          value={hospitalType}
+                          onChange={handleHospitalChange}
+                          displayEmpty
+                          className={classes.selectEmpty}
+                        >
+                          <MenuItem
+                            value="govt"
+                            key="Government"
+                            data-test={`hook-hospital-type-option-govt`}
+                          >
+                            Government
+                          </MenuItem>
+                          <MenuItem
+                            value="pvt"
+                            key="Private"
+                            data-test={`hook-hospital-type-option-pvt`}
+                          >
+                            Private
+                          </MenuItem>
+                          <MenuItem
+                            value="requisitioned"
+                            key="Requisitioned"
+                            data-test={`hook-hospital-type-option-requ`}
+                          >
+                            Government Requisitioned
+                          </MenuItem>
+                        </Select>
+                      </FormControl>
+                    )}
+                    {showSafeHome && (
+                      <FormControl className={classes.formControlDistrict}>
+                        <InputLabel
+                          data-test={`hook-safe-home-dropdown-label`}
+                          className={classes.dropdownLabel}
+                          shrink
+                          id="label-district"
+                        >
+                          District
+                        </InputLabel>
+                        <Select
+                          data-test={`hook-safe-home-dropdown`}
+                          labelId="district"
+                          id="select-district"
+                          value={selectedDistrictSafeHome}
+                          onChange={handleDistrictChangeSafeHome}
+                          displayEmpty
+                          className={classes.selectEmpty}
+                        >
+                          {districtsSafeHome.map((each, key) => (
+                            <MenuItem
+                              value={each}
+                              key={key}
+                              data-test={`hook-safe-home-option-${each}`}
+                            >
+                              {each}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
+                    )}
+                    {showAmbulance && (
+                      <FormControl className={classes.formControlDistrict}>
+                        <InputLabel
+                          data-test={`hook-safe-ambulance-dropdown-label`}
+                          className={classes.dropdownLabel}
+                          shrink
+                          id="label-district"
+                        >
+                          District
+                        </InputLabel>
+                        <Select
+                          data-test={`hook-safe-ambulance-dropdown`}
+                          labelId="district"
+                          id="select-district"
+                          value={selectedDistrictAmbulance}
+                          onChange={handleDistrictChangeAmbulance}
+                          displayEmpty
+                          className={classes.selectEmpty}
+                        >
+                          {districtsAmbulance.map((each, key) => (
+                            <MenuItem
+                              value={each}
+                              key={key}
+                              data-test={`hook-safe-ambulance-option-${each}`}
+                            >
+                              {each}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
+                    )}
+                  </Grid>
+                </Grid>
               </Grid>
-            </Grid>
-          </Grid>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={openDrawer}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <List>
-          <ListItem button onClick={handleShowHome} key="Home">
-            <IconButton>
-              <HomeIcon
-                className={classes.homeIcon}
-                data-test={`hook-home-icon`}
-              />
-            </IconButton>
-            <ListItemText className={classes.homeIconText} primary="Home" />
-          </ListItem>
-          <Divider />
-          <ListItem button onClick={handleShowAmbulance} key="Ambulance">
-            <ListItemIcon>
-              <AirportShuttleIcon
-                className={classes.appBarIcons}
-                data-test={`hook-ambulance-icon`}
-              />
-            </ListItemIcon>
-            <ListItemText
-              className={classes.appBarIconText}
-              primary="Ambulance"
+            </Toolbar>
+          </AppBar>
+          <Drawer
+            className={classes.drawer}
+            variant="persistent"
+            anchor="left"
+            open={openDrawer}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <List>
+              <ListItem button onClick={handleShowHome} key="Home">
+                <IconButton>
+                  <HomeIcon
+                    className={classes.homeIcon}
+                    data-test={`hook-home-icon`}
+                  />
+                </IconButton>
+                <ListItemText className={classes.homeIconText} primary="Home" />
+              </ListItem>
+              <Divider />
+              <ListItem button onClick={handleShowAmbulance} key="Ambulance">
+                <ListItemIcon>
+                  <AirportShuttleIcon
+                    className={classes.appBarIcons}
+                    data-test={`hook-ambulance-icon`}
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.appBarIconText}
+                  primary="Ambulance"
+                />
+              </ListItem>
+              <ListItem button onClick={handleShowHospitals} key="Hospitals">
+                <ListItemIcon>
+                  <LocalHospitalIcon
+                    className={classes.appBarIcons}
+                    data-test={`hook-hospital-icon`}
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.appBarIconText}
+                  primary="Hospital"
+                />
+              </ListItem>
+              <ListItem button onClick={handleShowSafeHome} key="SafeHomes">
+                <ListItemIcon>
+                  <HomeWorkIcon
+                    className={classes.appBarIcons}
+                    data-test={`hook-safe-home-icon`}
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.appBarIconText}
+                  primary="Safe Home"
+                />
+              </ListItem>
+              <Divider />
+              <ListItem
+                button
+                onClick={handleShowInfo}
+                key="AdditionalInformation"
+              >
+                <ListItemIcon>
+                  <InfoIcon
+                    className={classes.appBarIcons}
+                    data-test={`hook-extra-info-icon`}
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.appBarIconText}
+                  primary="Extra Info"
+                />
+              </ListItem>
+            </List>
+            <Divider />
+          </Drawer>
+          {showHospital && (
+            <main
+              className={clsx(classes.content, {
+                [classes.contentShift]: openDrawer,
+              })}
+            >
+              <div className={classes.drawerHeader} />
+            </main>
+          )}
+          {showAmbulance && (
+            <Main
+              data={ambulancesData}
+              selectedDistrict={selectedDistrictAmbulance}
+              type={defaultType}
+              cardType={2}
+              dataUpdatedAt={ambulancesDataUpdatedAt}
+              pleaseSelectText={"Please select District."}
             />
-          </ListItem>
-          <ListItem button onClick={handleShowHospitals} key="Hospitals">
-            <ListItemIcon>
-              <LocalHospitalIcon
-                className={classes.appBarIcons}
-                data-test={`hook-hospital-icon`}
-              />
-            </ListItemIcon>
-            <ListItemText
-              className={classes.appBarIconText}
-              primary="Hospital"
+          )}
+          {showHospital && (
+            <Main
+              data={hospitalsData}
+              selectedDistrict={selectedDistrictHospital}
+              type={hospitalType}
+              cardType={1}
+              dataUpdatedAt={hospitalsDataUpdatedAt}
+              pleaseSelectText={"Please select District and Hospital Type."}
             />
-          </ListItem>
-          <ListItem button onClick={handleShowSafeHome} key="SafeHomes">
-            <ListItemIcon>
-              <HomeWorkIcon
-                className={classes.appBarIcons}
-                data-test={`hook-safe-home-icon`}
-              />
-            </ListItemIcon>
-            <ListItemText
-              className={classes.appBarIconText}
-              primary="Safe Home"
+          )}
+          {showSafeHome && (
+            <Main
+              data={safeHomesData}
+              selectedDistrict={selectedDistrictSafeHome}
+              type={defaultType}
+              cardType={1}
+              dataUpdatedAt={safeHomesDataUpdatedAt}
+              pleaseSelectText={"Please select District."}
             />
-          </ListItem>
-          <Divider />
-          <ListItem button onClick={handleShowInfo} key="AdditionalInformation">
-            <ListItemIcon>
-              <InfoIcon
-                className={classes.appBarIcons}
-                data-test={`hook-extra-info-icon`}
-              />
-            </ListItemIcon>
-            <ListItemText
-              className={classes.appBarIconText}
-              primary="Extra Info"
-            />
-          </ListItem>
-        </List>
-        <Divider />
-      </Drawer>
-      {showHospital && (
-        <main
-          className={clsx(classes.content, {
-            [classes.contentShift]: openDrawer,
-          })}
-        >
-          <div className={classes.drawerHeader} />
-        </main>
-      )}
-      {showAmbulance && (
-        <Main
-          data={ambulancesData}
-          selectedDistrict={selectedDistrictAmbulance}
-          type={defaultType}
-          cardType={2}
-          dataUpdatedAt={ambulancesDataUpdatedAt}
-          pleaseSelectText={"Please select District."}
-        />
-      )}
-      {showHospital && (
-        <Main
-          data={hospitalsData}
-          selectedDistrict={selectedDistrictHospital}
-          type={hospitalType}
-          cardType={1}
-          dataUpdatedAt={hospitalsDataUpdatedAt}
-          pleaseSelectText={"Please select District and Hospital Type."}
-        />
-      )}
-      {showSafeHome && (
-        <Main
-          data={safeHomesData}
-          selectedDistrict={selectedDistrictSafeHome}
-          type={defaultType}
-          cardType={1}
-          dataUpdatedAt={safeHomesDataUpdatedAt}
-          pleaseSelectText={"Please select District."}
-        />
-      )}
-      {showHome && (
-        <div className={classes.hello}>
-          <Typography
-            className={classes.welcomeHeaderGap}
-            variant="body1"
-            component="p"
-          >
-            Welcome,
-          </Typography>
-          <Typography
-            className={classes.welcomeParaGap}
-            variant="body1"
-            component="p"
-          >
-            We have developed this application to help users find suitable
-            hospitals and safe homes in West Bengal, that have available beds
-            for Covid patients.
-          </Typography>
-          <Typography
-            className={classes.welcomeParaGap}
-            variant="body1"
-            component="p"
-          >
-            This application provides district wise data, for both government,
-            private and government requisitioned hospitals, safe homes and
-            ambulances. Users can get directions to the hospital or safe home,
-            call the hospital or safe home or ambulances, register for beds in
-            the hospital or safe home.
-          </Typography>
-          <Typography
-            className={classes.welcomeParaGap}
-            variant="body1"
-            component="p"
-          >
-            Disclaimer - All data is provided by the honourable{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="http://www.wbhealth.gov.in/"
-                target="_blank"
-                rel="noreferrer"
+          )}
+          {showHome && (
+            <div className={classes.hello}>
+              <Typography
+                className={classes.welcomeHeaderGap}
+                variant="body1"
+                component="p"
               >
-                Government of West Bengal
-              </a>
-            }
-            . We claim no ownership of the data. We will add other states in
-            India to the application, as and when we find reliable data sources
-            from states.
-          </Typography>
-          <Typography
-            className={classes.welcomeAuthorGap}
-            variant="body2"
-            component="p"
-          >
-            Authors -{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://www.linkedin.com/in/piyu-paul-9a059299/"
-                target="_blank"
-                rel="noreferrer"
+                Welcome,
+              </Typography>
+              <Typography
+                className={classes.welcomeParaGap}
+                variant="body1"
+                component="p"
               >
-                Piyu Paul
-              </a>
-            }
-            ,{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://www.facebook.com/profile.php?id=100010634407989"
-                target="_blank"
-                rel="noreferrer"
+                We have developed this application to help users find suitable
+                hospitals and safe homes in West Bengal, that have available
+                beds for Covid patients.
+              </Typography>
+              <Typography
+                className={classes.welcomeParaGap}
+                variant="body1"
+                component="p"
               >
-                Rimi Ghosh
-              </a>
-            }
-            ,{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://www.linkedin.com/in/subhasish-ghosh-00102897/"
-                target="_blank"
-                rel="noreferrer"
+                This application provides district wise data, for both
+                government, private and government requisitioned hospitals, safe
+                homes and ambulances. Users can get directions to the hospital
+                or safe home, call the hospital or safe home or ambulances,
+                register for beds in the hospital or safe home.
+              </Typography>
+              <Typography
+                className={classes.welcomeParaGap}
+                variant="body1"
+                component="p"
               >
-                Subhasish Ghosh
-              </a>
-            }
-            ,{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://www.linkedin.com/in/sk-asik/"
-                target="_blank"
-                rel="noreferrer"
+                Disclaimer - All data is provided by the honourable{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="http://www.wbhealth.gov.in/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Government of West Bengal
+                  </a>
+                }
+                . We claim no ownership of the data. We will add other states in
+                India to the application, as and when we find reliable data
+                sources from states.
+              </Typography>
+              <Typography
+                className={classes.welcomeAuthorGap}
+                variant="body2"
+                component="p"
               >
-                Sk Asik
-              </a>
-            }
-            ,{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://mobile.twitter.com/debdutta91"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Deb Dutta
-              </a>
-            }
-            ,{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://www.linkedin.com/in/manmohan-singh-81259589/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Manmohan Singh
-              </a>
-            }
-            ,{" "}
-            {
-              <a
-                className={classes.whiteLink}
-                href="https://www.linkedin.com/in/sourabh-paul-45b9b0132/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Sourabh Paul
-              </a>
-            }
-            .
-          </Typography>
+                Authors -{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://www.linkedin.com/in/piyu-paul-9a059299/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Piyu Paul
+                  </a>
+                }
+                ,{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://www.facebook.com/profile.php?id=100010634407989"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Rimi Ghosh
+                  </a>
+                }
+                ,{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://www.linkedin.com/in/subhasish-ghosh-00102897/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Subhasish Ghosh
+                  </a>
+                }
+                ,{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://www.linkedin.com/in/sk-asik/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Sk Asik
+                  </a>
+                }
+                ,{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://mobile.twitter.com/debdutta91"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Deb Dutta
+                  </a>
+                }
+                ,{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://www.linkedin.com/in/manmohan-singh-81259589/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Manmohan Singh
+                  </a>
+                }
+                ,{" "}
+                {
+                  <a
+                    className={classes.whiteLink}
+                    href="https://www.linkedin.com/in/sourabh-paul-45b9b0132/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Sourabh Paul
+                  </a>
+                }
+                .
+              </Typography>
+            </div>
+          )}
+          {showInfo && (
+            <div className={classes.chart}>
+              <Daily />
+            </div>
+          )}
         </div>
       )}
-      {showInfo && (
-        <div className={classes.chart}>
-          <Daily />
-        </div>
-      )}
-    </div>
+    </>
   );
 };
 
