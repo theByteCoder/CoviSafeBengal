@@ -14,7 +14,7 @@
 * **Clone git repository**
 
 
-* **Steps to setup backend** -
+## Steps to setup backend -
 1. Install mongo db
 2. Start mongod service, make sure the service is running on port 27017
 3. Add database covibeds
@@ -32,7 +32,7 @@
 12. Finally, run **python manage.py runserver**. Django should be started on localhost
 
 
-* **Steps to setup frontend** -
+## Steps to setup frontend -
 1. Install node.js
 2. We are using nvm > 12, make sure nvm is set to 12
 3. Install yarn
@@ -42,7 +42,7 @@
 7. Run command **yarn start**
 
 
-* **Steps to host on ngrok** -
+## Steps to host on ngrok -
 1. Setup ngrok
 2. Login to ngrok and get the **auth_token**
 3. On .ngrok2/ngrok.yml file, make the following entries -
